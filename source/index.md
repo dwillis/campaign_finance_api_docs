@@ -762,7 +762,7 @@ This endpoint retrieves an array of FEC candidates for a given state (and option
 Parameter | Description
 --------- | -----------
 state | Two-letter state abbreviation
-chamber | `house` | `senate` (optional)
+chamber | `house` or `senate` (optional)
 district | Specify the district number. Use `1` for states with a single representative. (House requests only - districts with Senate requests will be ignored.)
 
 
@@ -1065,3 +1065,1101 @@ This endpoint retrieves the 20 most recently added FEC candidates.
 ### HTTP Request
 
 `GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/new`
+
+# Committees
+
+## Search for Committees
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Committee.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "cycle":2016,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016",
+   "num_results":8,
+   "offset":null,
+   "results":[
+      {
+         "id":"C00570788",
+         "relative_uri":"/committees/C00570788.json",
+         "name":"AMERICANS FOR A BETTER TOMORROW TODAY",
+         "party":"",
+         "treasurer":"EVAN WICK",
+         "address":"FLC 7788 1000 RIM DRIVE",
+         "leadership":false,
+         "city":"DURANGO",
+         "state":"CO",
+         "zip":"81301",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570788/"
+      },
+      {
+         "id":"C00560243",
+         "relative_uri":"/committees/C00560243.json",
+         "name":"AMERICANS FOR A BETTER FUTURE",
+         "party":"",
+         "treasurer":"NICK MANIS",
+         "address":"11 DRINKING BROOK RD",
+         "leadership":false,
+         "city":"MONMOUTH JCT",
+         "state":"NJ",
+         "zip":"08852",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00560243/"
+      },
+      {
+         "id":"C00404566",
+         "relative_uri":"/committees/C00404566.json",
+         "name":"AMERICANS FOR A BETTER WAY",
+         "party":"",
+         "treasurer":"ERLENBORN, ERIN",
+         "address":"213 F STREET NE",
+         "leadership":false,
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20002",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00404566/"
+      },
+      {
+         "id":"C00533125",
+         "relative_uri":"/committees/C00533125.json",
+         "name":"AMERICANS FOR A BETTER TOMORROW PERIOD",
+         "party":"",
+         "treasurer":"DONAHUE, JOSEPH GERARD",
+         "address":"701 CITY AVENUE #A-407",
+         "leadership":false,
+         "city":"MERION STATION",
+         "state":"PA",
+         "zip":"19066",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00533125/"
+      },
+      {
+         "id":"C00567255",
+         "relative_uri":"/committees/C00567255.json",
+         "name":"AMERICANS FOR A BETTER YESTERDAY, TOMORROW",
+         "party":"",
+         "treasurer":"WILLIAM MCCABE CZERWINSKI",
+         "address":"27475 BLUE RIDGE LANE",
+         "leadership":false,
+         "city":"EXCELSIOR",
+         "state":"MN",
+         "zip":"55331",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00567255/"
+      },
+      {
+         "id":"C00567776",
+         "relative_uri":"/committees/C00567776.json",
+         "name":"MIDDLE AMERICANS FOR A BETTER TOMORROW",
+         "party":"",
+         "treasurer":"LISA WERDERMAN",
+         "address":"1602 2ND AVE",
+         "leadership":false,
+         "city":"SAN MATEO",
+         "state":"CA",
+         "zip":"94401",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00567776/"
+      },
+      {
+         "id":"C00567784",
+         "relative_uri":"/committees/C00567784.json",
+         "name":"BLACK AMERICANS FOR A BETTER FUTURE",
+         "party":"",
+         "treasurer":"MARSTON, CHRIS",
+         "address":"45 N HILL DR",
+         "leadership":false,
+         "city":"WARRENTON",
+         "state":"VA",
+         "zip":"20186",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00567784/"
+      },
+      {
+         "id":"C00570481",
+         "relative_uri":"/committees/C00570481.json",
+         "name":"AMERICANS FOR A BETTER YESTERDAY",
+         "party":"",
+         "treasurer":"BRANDON SCOTT ALLEN CLARK",
+         "address":"9813 TOBIN CIR",
+         "leadership":false,
+         "city":"NORMAN",
+         "state":"OK",
+         "zip":"73026",
+         "candidate":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570481/"
+      }
+   ]
+}
+```
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/search`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+query | The name of the committee
+
+
+## Get a Specific Committee
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -H "Authorization: meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "cycle":2016,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "results":[
+      {
+         "id":"C00553560",
+         "name":"VIGOP (VIRGIN ISLANDS REPUBLICAN PARTY)",
+         "party":"REP",
+         "treasurer":"MACKENZIE, SCOTT B",
+         "address":"PO BOX 295",
+         "city":"CHRISTIANSTED",
+         "state":"VI",
+         "zip":"00821",
+         "total_receipts":1210554.8,
+         "total_from_individuals":1206010.8,
+         "total_from_pacs":190.0,
+         "total_contributions":1206200.8,
+         "total_disbursements":1187888.77,
+         "begin_cash":45482.65,
+         "end_cash":68148.68,
+         "total_refunds":0.0,
+         "display_type":"PAC",
+         "debts_owed":226265.94,
+         "date_coverage_from":"2015-01-01",
+         "date_coverage_to":"2015-11-30",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/",
+         "total_independent_expenditures":0.0,
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "total_candidate_contributions":2500.0,
+         "transfers_in":0.0,
+         "designation":"U",
+         "filing_frequency":"M",
+         "committee_type":"Q",
+         "interest_group":null,
+         "total_coordinated_expenditures":null,
+         "end_date":"2015-11-30",
+         "next_filing_date":"2016-01-31",
+         "other_cycles":[2014]
+      }
+   ]
+}
+```
+
+This endpoint retrieves a specific FEC committee for a given campaign cycle.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's official FEC ID, use a committee search request or the [FEC web site](http://www.fec.gov).
+
+## Get Recently Added Committees
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+ -H "Authorization: meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+```
+
+This endpoint retrieves the 20 most recently added FEC committees.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
+
+## Get Committee Filings
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+ -H "Authorization: meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "committee":"/committees/C00553560.json",
+   "fec_committee_id":"C00553560",
+   "offset":null,
+   "results":[
+      {
+         "id":1035569,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-12-13",
+         "date_coverage_to":"2015-11-30",
+         "date_coverage_from":"2015-11-01",
+         "report_title":"DEC MONTHLY",
+         "report_period":"M12",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1035569/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":155272.7,
+         "cash_on_hand":68148.68,
+         "disbursements_total":113494.27,
+         "receipts_total":157043.7
+      },
+      {
+         "id":1032959,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-11-16",
+         "date_coverage_to":"2015-10-31",
+         "date_coverage_from":"2015-10-01",
+         "report_title":"NOV MONTHLY",
+         "report_period":"M11",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1032959/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":173500.79,
+         "cash_on_hand":24599.25,
+         "disbursements_total":196765.57,
+         "receipts_total":173584.79
+      },
+      {
+         "id":1030722,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-10-20",
+         "date_coverage_to":"2015-09-30",
+         "date_coverage_from":"2015-09-01",
+         "report_title":"OCT MONTHLY",
+         "report_period":"M10",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1030722/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":96139.78,
+         "cash_on_hand":47780.03,
+         "disbursements_total":101543.31,
+         "receipts_total":96181.78
+      },
+      {
+         "id":1025866,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-09-20",
+         "date_coverage_to":"2015-08-31",
+         "date_coverage_from":"2015-08-01",
+         "report_title":"SEP MONTHLY",
+         "report_period":"M9",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1025866/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":152725.15,
+         "cash_on_hand":53141.56,
+         "disbursements_total":107782.84,
+         "receipts_total":152738.15
+      },
+      {
+         "id":1016418,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-07-18",
+         "date_coverage_to":"2015-06-30",
+         "date_coverage_from":"2015-06-01",
+         "report_title":"JUL MONTHLY",
+         "report_period":"M7",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1016418/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":86970.46,
+         "cash_on_hand":8959.51,
+         "disbursements_total":96117.86,
+         "receipts_total":86997.46
+      },
+      {
+         "id":1011437,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-06-20",
+         "date_coverage_to":"2015-05-31",
+         "date_coverage_from":"2015-05-01",
+         "report_title":"JUN MONTHLY",
+         "report_period":"M6",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1011437/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":113864.19,
+         "cash_on_hand":18079.91,
+         "disbursements_total":126883.76,
+         "receipts_total":113935.19
+      },
+      {
+         "id":1007741,
+         "cycle":2016,
+         "form_type":"F1M",
+         "date_filed":"2015-05-18",
+         "date_coverage_to":null,
+         "date_coverage_from":null,
+         "report_title":"NOTIFICATION OF MULTICANDIDATE STATUS",
+         "report_period":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1007741/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null
+      },
+      {
+         "id":1007739,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-05-18",
+         "date_coverage_to":"2015-04-30",
+         "date_coverage_from":"2015-04-01",
+         "report_title":"MAY MONTHLY",
+         "report_period":"M5",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1007739/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":154150.89,
+         "cash_on_hand":31028.48,
+         "disbursements_total":148489.36,
+         "receipts_total":155222.89
+      },
+      {
+         "id":1005430,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-04-20",
+         "date_coverage_to":"2015-03-31",
+         "date_coverage_from":"2015-03-01",
+         "report_title":"APR MONTHLY",
+         "report_period":"M4",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/1005430/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":62721.86,
+         "cash_on_hand":24294.95,
+         "disbursements_total":72980.51,
+         "receipts_total":63179.86
+      },
+      {
+         "id":999014,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-03-20",
+         "date_coverage_to":"2015-02-28",
+         "date_coverage_from":"2015-02-01",
+         "report_title":"MAR MONTHLY",
+         "report_period":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/999014/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":72137.94,
+         "cash_on_hand":34095.6,
+         "disbursements_total":55743.77,
+         "receipts_total":72953.94
+      },
+      {
+         "id":995134,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-02-20",
+         "date_coverage_to":"2015-01-31",
+         "date_coverage_from":"2015-01-01",
+         "report_title":"FEB MONTHLY",
+         "report_period":"M2",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/995134/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":56024.79,
+         "cash_on_hand":16885.43,
+         "disbursements_total":84622.01,
+         "receipts_total":56024.79
+      },
+      {
+         "id":993773,
+         "cycle":2016,
+         "form_type":"F1",
+         "date_filed":"2015-02-17",
+         "date_coverage_to":null,
+         "date_coverage_from":null,
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "report_period":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/993773/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null
+      },
+      {
+         "id":991995,
+         "cycle":2016,
+         "form_type":"F1",
+         "date_filed":"2015-02-01",
+         "date_coverage_to":null,
+         "date_coverage_from":null,
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "report_period":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/991995/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null
+      },
+      {
+         "id":988038,
+         "cycle":2016,
+         "form_type":"F3",
+         "date_filed":"2015-01-28",
+         "date_coverage_to":"2014-12-31",
+         "date_coverage_from":"2014-11-25",
+         "report_title":"YEAR-END",
+         "report_period":"YE",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553560/988038/",
+         "paper":false,
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"Q",
+         "contributions_total":89894.16,
+         "cash_on_hand":45482.65,
+         "disbursements_total":83431.31,
+         "receipts_total":89894.16
+      }
+   ]
+}
+```
+
+This endpoint retrieves the 20 most recently added FEC committees. Electronic filings are available back to 2001. Paper filings by Senate candidate committees and senatorial party committees go back to 1999.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/filings`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's official FEC ID, use a committee search request or the [FEC web site](http://www.fec.gov).
+
+## Get Recently Added Committees
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+ -H "Authorization: meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+```
+
+This endpoint retrieves the 20 most recently added FEC committees.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
+
+## Get Leadership Committees
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+ -H "Authorization: meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "cycle":2016,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "offset":null,
+   "results":[
+      {
+         "id":"C00602789",
+         "relative_uri":"/committees/C00602789.json",
+         "name":"POLITICS AND THE DEAF",
+         "address":"2901 MACARTHUR BLVD",
+         "city":"OAKLAND",
+         "state":"CA",
+         "zip":"94602",
+         "treasurer":"PATTERSON, MELVIN L",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00602789/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"MELVIN   L  PATTERSON",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00540187",
+         "relative_uri":"/committees/C00540187.json",
+         "name":"MORE CONSERVATIVES PAC (MCPAC)",
+         "address":"228 S WASHINGTON ST STE 115",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22314",
+         "treasurer":"LISKER, LISA",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00540187/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"MCHENRY, PATRICK TIMOTHY",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":""
+      },
+      {
+         "id":"C00502591",
+         "relative_uri":"/committees/C00502591.json",
+         "name":"MARKETPLACE IDEAS AND CONSERVATIVE KNOWLEDGE PAC-MICK PAC",
+         "address":"228 S WASHINGTON ST STE 115",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22314",
+         "treasurer":"LISA LISKER",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00502591/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"JOHN MICHAEL 'MICK' MULVANEY",
+         "designation":"D",
+         "filing_frequency":"M",
+         "committee_type":"N",
+         "interest_group":null
+      },
+      {
+         "id":"C00502096",
+         "relative_uri":"/committees/C00502096.json",
+         "name":"MICHIGAN'S FUTURE PAC",
+         "address":"PO BOX 402",
+         "city":"FLINT",
+         "state":"MI",
+         "zip":"48501",
+         "treasurer":"HOLTZ, DAVID",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00502096/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"DAN KILDEE, DANEIL",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":""
+      },
+      {
+         "id":"C00599092",
+         "relative_uri":"/committees/C00599092.json",
+         "name":"WOLF PACK",
+         "address":"11 DUPONT CIRCLE",
+         "city":"WASHINGTON",
+         "state":"MD",
+         "zip":"20036",
+         "treasurer":"ALEXANDER, JIM",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599092/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"EMANUEL  CLEAVER  II",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00571521",
+         "relative_uri":"/committees/C00571521.json",
+         "name":"FREEDOM 21: FIGHTING FOR FREEDOM IN THE 21ST CENTURY",
+         "address":"PO BOX 657",
+         "city":"LEHI",
+         "state":"UT",
+         "zip":"84043",
+         "treasurer":"NILSSON, JACE",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00571521/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"STEWART, CHRIS",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00553271",
+         "relative_uri":"/committees/C00553271.json",
+         "name":"AMERICAN LEADERSHIP NOW (ALN PAC)",
+         "address":"ATTN: VINCENT DEVITO ESQ BOWDITCH ",
+         "city":"BOSTON",
+         "state":"MA",
+         "zip":"02110",
+         "treasurer":"VINCENT DEVITO",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00553271/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"PETER T KING",
+         "designation":"D",
+         "filing_frequency":"T",
+         "committee_type":"N",
+         "interest_group":null
+      },
+      {
+         "id":"C00497594",
+         "relative_uri":"/committees/C00497594.json",
+         "name":"DEFENDING AMERICA'S VALUES EVERYWHERE (TEAM DAVE)",
+         "address":"228 S WASHINGTON STREET SUITE 115",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22314",
+         "treasurer":"KEITH A. DAVIS",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00497594/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"SCHWEIKERT, DAVID",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":null
+      },
+      {
+         "id":"C00464644",
+         "relative_uri":"/committees/C00464644.json",
+         "name":"HARRIS COUNTY CONSERVATIVE CONGRESSIONAL CAMPAIGN",
+         "address":"1701 HERMANN DR #2206",
+         "city":"HOUSTON",
+         "state":"TX",
+         "zip":"77004",
+         "treasurer":"CHRIS HOLMES",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00464644/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"FAULK FOR CONGRESS",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00440032",
+         "relative_uri":"/committees/C00440032.json",
+         "name":"PROMOTING OUR REPUBLICAN TEAM PAC",
+         "address":"8331 LITTLE HARBOR DRIVE",
+         "city":"CINCINNATI",
+         "state":"OH",
+         "zip":"45244",
+         "treasurer":"BAUR, NATALIE MRS.",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00440032/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"PORTMAN VICTORY COMMITTEE",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":""
+      },
+      {
+         "id":"C00392738",
+         "relative_uri":"/committees/C00392738.json",
+         "name":"HOLDING ONTO OREGON'S PRIORITIES",
+         "address":"PO BOX 3314",
+         "city":"PORTLAND",
+         "state":"OR",
+         "zip":"97208",
+         "treasurer":"MICHELS, F. STEPHEN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00392738/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"WYDEN FOR OREGON",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":""
+      },
+      {
+         "id":"C00392134",
+         "relative_uri":"/committees/C00392134.json",
+         "name":"MAKING BUSINESS EXCEL POLITICAL ACTION COMMITTEE",
+         "address":"PO BOX 2687",
+         "city":"CODY",
+         "state":"WY",
+         "zip":"82414",
+         "treasurer":"TOPE, JUNE V. MS.",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00392134/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"ENZI FOR US SENATE",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"Q",
+         "interest_group":""
+      },
+      {
+         "id":"C00597062",
+         "relative_uri":"/committees/C00597062.json",
+         "name":"BUDDY PAC",
+         "address":"824 S  MILLEDGE AVE STE 101",
+         "city":"ATHENS",
+         "state":"GA",
+         "zip":"30605",
+         "treasurer":"KILGORE, PAUL",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00597062/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"EARL  LEROY  CARTER",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00593244",
+         "relative_uri":"/committees/C00593244.json",
+         "name":"FRIENDS OF VALENCIA ST LOUIS LAROSE CONGRESSIONAL LEADERSHIP PAC",
+         "address":"1900 WEST OAKLAND PARK BLVD.",
+         "city":"FORT LAUDERDALE",
+         "state":"FL",
+         "zip":"33310",
+         "treasurer":"ST LOUIS LAROSE, VALENCIA",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00593244/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00591461",
+         "relative_uri":"/committees/C00591461.json",
+         "name":"NEW MEXICO WORKS PAC",
+         "address":"611 PENNSYLVANIA AVE. SE",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20003",
+         "treasurer":"ARMSTRONG, DEBORAH",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00591461/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"MICHELLE  LUJAN  GRISHAM",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00589309",
+         "relative_uri":"/committees/C00589309.json",
+         "name":"LEADERSHIP, INTEGRITY, ENGAGEMENT, UNITY PAC",
+         "address":"16633 VENTURA BLVD # 1008",
+         "city":"ENCINO",
+         "state":"CA",
+         "zip":"91436",
+         "treasurer":"LEIDERMAN, JANE FED",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589309/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"TED LIEU",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00584805",
+         "relative_uri":"/committees/C00584805.json",
+         "name":"BFB PAC",
+         "address":"499 S. CAPITOL STREET, SW",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20003",
+         "treasurer":"ANGERHOLZER, LINDSAY",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00584805/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"HON.  BRENDAN  BOYLE",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00581751",
+         "relative_uri":"/committees/C00581751.json",
+         "name":"ASSOCIATION OF MISSOURI NURSE PRACTITIONER'S POLITICAL ACTION COMMITTEE",
+         "address":"104 KINGSLEY DR",
+         "city":"MONETT",
+         "state":"MO",
+         "zip":"65708",
+         "treasurer":"JANICE JONES, DNP APRN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00581751/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":"C"
+      },
+      {
+         "id":"C00576975",
+         "relative_uri":"/committees/C00576975.json",
+         "name":"LATINO LEADERS FOR EQUALITY GROWTH OPPORTUNITY PROGRESSIVE ACTION & CHANGE (LLEGO-PAC)",
+         "address":"1050 17TH ST NW STE 590",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20036",
+         "treasurer":"INGRID DURAN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00576975/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"RUBEN GALLEGO",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      },
+      {
+         "id":"C00573709",
+         "relative_uri":"/committees/C00573709.json",
+         "name":"CA LUV PAC (CALIFORNIA LEADERSHIP UNITED FOR VICTORY PAC)",
+         "address":"410 1ST ST, SE",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20003",
+         "treasurer":"MAY, JENNIFER",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00573709/",
+         "candidate":null,
+         "leadership":true,
+         "super_pac":false,
+         "sponsor_name":"PETE  AGUILAR",
+         "designation":"D",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":""
+      }
+   ]
+}
+```
+
+This endpoint retrieves committees designated as "[leadership PACs](http://www.fec.gov/finance/disclosure/metadata/metadataLeadershipPacList.shtml)" by the FEC.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/leadership`
