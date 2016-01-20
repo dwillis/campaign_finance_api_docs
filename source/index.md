@@ -4334,3 +4334,2619 @@ Parameter | Description
 year | The four-digit year from 2001-2016
 month | The two-digit month from 01-12
 day | The two-digit day from 01-31
+
+## Get Electronic Filing Form Types
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "id":"F1",
+         "name":"STATEMENT OF ORGANIZATION"
+      },
+      {
+         "id":"F10",
+         "name":"24-HOUR NOTICE OF EXPENDITURES FROM CANDIDATE PERSONAL FUNDS"
+      },
+      {
+         "id":"F11",
+         "name":"24-HOUR NOTICE OF EXPENDITURES FROM OPPONENT'S PERSONAL FUNDS"
+      },
+      {
+         "id":"F12",
+         "name":"24-HOUR NOTICE OF SUSPENSION OF INDIVIDUAL CONTRIBUTION LIMITS"
+      },
+      {
+         "id":"F13",
+         "name":"90 DAY POST PRESIDENTIAL INAUGURATION REPORT"
+      },
+      {
+         "id":"F1M",
+         "name":"NOTIFICATION OF MULTICANDIDATE STATUS"
+      },
+      {
+         "id":"F2",
+         "name":"STATEMENT OF CANDIDACY"
+      },
+      {
+         "id":"F24",
+         "name":"24 HOUR NOTICE"
+      },
+      {
+         "id":"F3",
+         "name":"REPORT OF RECEIPTS AND DISBURSEMENTS"
+      },
+      {
+         "id":"F3L",
+         "name":"REPORT OF CONTRIBUTIONS BUNDLED BY LOBBYIST"
+      },
+      {
+         "id":"F4",
+         "name":"REPORT OF RECEIPTS AND DISBURSEMENTS - CONVENTION"
+      },
+      {
+         "id":"F5",
+         "name":"REPORT OF INDEPENDENT EXPENDITURES MADE"
+      },
+      {
+         "id":"F6",
+         "name":"48-HOUR NOTICE OF CONTRIBUTIONS/LOANS RECEIVED"
+      },
+      {
+         "id":"F7",
+         "name":"REPORT OF COMMUNICATION COSTS"
+      },
+      {
+         "id":"F8",
+         "name":"DEBT SETTLEMENT PLAN"
+      },
+      {
+         "id":"F9",
+         "name":"24-HOUR NOTICE OF DISBURSEMENT FOR ELECTIONEERING COMMUNICATIONS"
+      },
+      {
+         "id":"F99",
+         "name":"MISCELLANEOUS SUBMISSION"
+      }
+   ]
+}
+```
+
+This endpoint retrieves a list of available form types for FEC electronic filings.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/types`
+
+## Get Electronic Filings By Type
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "date":null,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "offset":null,
+   "results":[
+      {
+         "filing_id":1040806,
+         "fec_committee_id":"C00575373",
+         "committee":"/committees/C00575373.json",
+         "committee_name":"KEEP THE PROMISE I",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575373/1040806/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":183616.58,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040805,
+         "fec_committee_id":"C00575373",
+         "committee":"/committees/C00575373.json",
+         "committee_name":"KEEP THE PROMISE I",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575373/1040805/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":694005.46,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040788,
+         "fec_committee_id":"C00581868",
+         "committee":"/committees/C00581868.json",
+         "committee_name":"NEW DAY FOR AMERICA",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00581868/1040788/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":372000.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040772,
+         "fec_committee_id":"C00541292",
+         "committee":"/committees/C00541292.json",
+         "committee_name":"CONSERVATIVE SOLUTIONS PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00541292/1040772/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":1197922.68,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040771,
+         "fec_committee_id":"C00541292",
+         "committee":"/committees/C00541292.json",
+         "committee_name":"CONSERVATIVE SOLUTIONS PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00541292/1040771/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":624420.02,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040769,
+         "fec_committee_id":"C00541292",
+         "committee":"/committees/C00541292.json",
+         "committee_name":"CONSERVATIVE SOLUTIONS PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00541292/1040769/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":1500367.44,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040726,
+         "fec_committee_id":"C00489815",
+         "committee":"/committees/C00489815.json",
+         "committee_name":"NEA ADVOCACY FUND",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00489815/1040726/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":11894.84,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040703,
+         "fec_committee_id":"C00573055",
+         "committee":"/committees/C00573055.json",
+         "committee_name":"AMERICA LEADS",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00573055/1040703/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":935534.52,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040693,
+         "fec_committee_id":"C00575423",
+         "committee":"/committees/C00575423.json",
+         "committee_name":"KEEP THE PROMISE III",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575423/1040693/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":1891.98,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040678,
+         "fec_committee_id":"C00544569",
+         "committee":"/committees/C00544569.json",
+         "committee_name":"PURPLE PAC INC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00544569/1040678/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":269853.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040666,
+         "fec_committee_id":"C00532572",
+         "committee":"/committees/C00532572.json",
+         "committee_name":"AMERICA'S LIBERTY PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00532572/1040666/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":53428.57,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040665,
+         "fec_committee_id":"C00532572",
+         "committee":"/committees/C00532572.json",
+         "committee_name":"AMERICA'S LIBERTY PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00532572/1040665/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":450000.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040528,
+         "fec_committee_id":"C00571372",
+         "committee":"/committees/C00571372.json",
+         "committee_name":"RIGHT TO RISE USA",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00571372/1040528/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":24508.52,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040527,
+         "fec_committee_id":"C00571372",
+         "committee":"/committees/C00571372.json",
+         "committee_name":"RIGHT TO RISE USA",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00571372/1040527/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":950.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040526,
+         "fec_committee_id":"C00571372",
+         "committee":"/committees/C00571372.json",
+         "committee_name":"RIGHT TO RISE USA",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00571372/1040526/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":"24H",
+         "original_filing":1040331,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00571372/1040331/",
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":303.34,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040512,
+         "fec_committee_id":"C00575415",
+         "committee":"/committees/C00575415.json",
+         "committee_name":"KEEP THE PROMISE PAC",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575415/1040512/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":755675.35,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040510,
+         "fec_committee_id":"C00573055",
+         "committee":"/committees/C00573055.json",
+         "committee_name":"AMERICA LEADS",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00573055/1040510/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":2144.99,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040487,
+         "fec_committee_id":"C00575373",
+         "committee":"/committees/C00575373.json",
+         "committee_name":"KEEP THE PROMISE I",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575373/1040487/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":5965.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040486,
+         "fec_committee_id":"C00575373",
+         "committee":"/committees/C00575373.json",
+         "committee_name":"KEEP THE PROMISE I",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00575373/1040486/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":3000.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040479,
+         "fec_committee_id":"C00569905",
+         "committee":"/committees/C00569905.json",
+         "committee_name":"2016 COMMITTEE; THE",
+         "form_type":"F24",
+         "report_title":"24 HOUR NOTICE",
+         "date_filed":"2016-01-18",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00569905/1040479/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":null,
+         "report_period":"24H",
+         "original_filing":null,
+         "original_uri":null,
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":1000.0,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      }
+   ]
+}
+```
+
+This endpoint retrieves the most recent electronic filings by form type.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/types/{form-type-id}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+form-type-id | `F` + integer. To get form type IDs, use an electronic filing form types request.
+
+## Get Summary for a Specific Electronic Filing
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":{
+      "form_type":"F3PA",
+      "filer_committee_id_number":"C00580100",
+      "committee_name":"DONALD J. TRUMP FOR PRESIDENT, INC.",
+      "change_of_address":null,
+      "street_1":"725 FIFTH AVENUE",
+      "street_2":null,
+      "city":"NEW YORK",
+      "state":"NY",
+      "zip_code":"10022",
+      "activity_primary":null,
+      "activity_general":null,
+      "report_code":"Q3",
+      "election_code":null,
+      "date_of_election":null,
+      "state_of_election":null,
+      "coverage_from_date":"20150701",
+      "coverage_through_date":"20150930",
+      "treasurer_last_name":"JOST",
+      "treasurer_first_name":"TIMOTHY",
+      "treasurer_middle_name":null,
+      "treasurer_prefix":null,
+      "treasurer_suffix":null,
+      "date_signed":"20151217",
+      "col_a_cash_on_hand_beginning_period":"487736.16",
+      "col_a_total_receipts":"3926511.65",
+      "col_a_subtotal":"4414247.81",
+      "col_a_total_disbursements":"4159474.93",
+      "col_a_cash_on_hand_close_of_period":"254772.88",
+      "col_a_debts_to":"0.00",
+      "col_a_debts_by":"1804747.23",
+      "col_a_expenditures_subject_to_limits":"0.00",
+      "col_a_net_contributions":"3930766.57",
+      "col_a_net_operating_expenditures":"5440690.92",
+      "col_a_federal_funds":"0.00",
+      "col_a_individuals_itemized":"1041004.55",
+      "col_a_individuals_unitemized":"2776974.38",
+      "col_a_individual_contribution_total":"3817978.93",
+      "col_a_political_party_committees_receipts":"57.62",
+      "col_a_other_political_committees_pacs":"0.00",
+      "col_a_the_candidate":"100779.63",
+      "col_a_total_contributions":"3918816.18",
+      "col_a_transfers_from_aff_other_party_cmttees":"0.00",
+      "col_a_received_from_or_guaranteed_by_cand":"0.00",
+      "col_a_other_loans":"0.00",
+      "col_a_total_loans":"0.00",
+      "col_a_operating":"7695.47",
+      "col_a_fundraising":"0.00",
+      "col_a_legal_and_accounting":"0.00",
+      "col_a_total_offsets_to_expenditures":"7695.47",
+      "col_a_other_receipts":"0.00",
+      "col_a_operating_expenditures":"4035076.35",
+      "col_a_transfers_to_other_authorized_committees":"40050.00",
+      "col_a_fundraising_disbursements":"0.00",
+      "col_a_exempt_legal_accounting_disbursement":"0.00",
+      "col_a_made_or_guaranteed_by_candidate":"0.00",
+      "col_a_other_repayments":"0.00",
+      "col_a_total_loan_repayments_made":"0.00",
+      "col_a_individuals":"84348.58",
+      "col_a_political_party_committees_refunds":"0.00",
+      "col_a_other_political_committees":"0.00",
+      "col_a_total_contributions_refunds":"84348.58",
+      "col_a_other_disbursements":"0.00",
+      "col_a_items_on_hand_to_be_liquidated":"0.00",
+      "col_a_alabama":"0.00",
+      "col_a_alaska":"0.00",
+      "col_a_arizona":"0.00",
+      "col_a_arkansas":"0.00",
+      "col_a_california":"0.00",
+      "col_a_colorado":"0.00",
+      "col_a_connecticut":"0.00",
+      "col_a_delaware":"0.00",
+      "col_a_dist_of_columbia":"0.00",
+      "col_a_florida":"0.00",
+      "col_a_georgia":"0.00",
+      "col_a_hawaii":"0.00",
+      "col_a_idaho":"0.00",
+      "col_a_illinois":"0.00",
+      "col_a_indiana":"0.00",
+      "col_a_iowa":"0.00",
+      "col_a_kansas":"0.00",
+      "col_a_kentucky":"0.00",
+      "col_a_louisiana":"0.00",
+      "col_a_maine":"0.00",
+      "col_a_maryland":"0.00",
+      "col_a_massachusetts":"0.00",
+      "col_a_michigan":"0.00",
+      "col_a_minnesota":"0.00",
+      "col_a_mississippi":"0.00",
+      "col_a_missouri":"0.00",
+      "col_a_montana":"0.00",
+      "col_a_nebraska":"0.00",
+      "col_a_nevada":"0.00",
+      "col_a_new_hampshire":"0.00",
+      "col_a_new_jersey":"0.00",
+      "col_a_new_mexico":"0.00",
+      "col_a_new_york":"0.00",
+      "col_a_north_carolina":"0.00",
+      "col_a_north_dakota":"0.00",
+      "col_a_ohio":"0.00",
+      "col_a_oklahoma":"0.00",
+      "col_a_oregon":"0.00",
+      "col_a_pennsylvania":"0.00",
+      "col_a_rhode_island":"0.00",
+      "col_a_south_carolina":"0.00",
+      "col_a_south_dakota":"0.00",
+      "col_a_tennessee":"0.00",
+      "col_a_texas":"0.00",
+      "col_a_utah":"0.00",
+      "col_a_vermont":"0.00",
+      "col_a_virginia":"0.00",
+      "col_a_washington":"0.00",
+      "col_a_west_virginia":"0.00",
+      "col_a_wisconsin":"0.00",
+      "col_a_wyoming":"0.00",
+      "col_a_puerto_rico":"0.00",
+      "col_a_guam":"0.00",
+      "col_a_virgin_islands":"0.00",
+      "col_a_totals":"0.00",
+      "col_b_federal_funds":"0.00",
+      "col_b_individuals_itemized":"1094079.55",
+      "col_b_individuals_unitemized":"2816148.71",
+      "col_b_individual_contribution_total":"3910228.26",
+      "col_b_political_party_committees_receipts":"57.62",
+      "col_b_other_political_committees_pacs":"0.00",
+      "col_b_the_candidate":"104829.27",
+      "col_b_total_contributions_other_than_loans":"4015115.15",
+      "col_b_transfers_from_aff_other_party_cmttees":"0.00",
+      "col_b_received_from_or_guaranteed_by_cand":"1804747.23",
+      "col_b_other_loans":"0.00",
+      "col_b_total_loans":"1804747.23",
+      "col_b_operating":"9059.72",
+      "col_b_fundraising":"0.00",
+      "col_b_legal_and_accounting":"0.00",
+      "col_b_total_offsets_to_operating_expenditures":"9059.72",
+      "col_b_other_receipts":"0.00",
+      "col_b_total_receipts":"5828922.10",
+      "col_b_operating_expenditures":"5449750.64",
+      "col_b_transfers_to_other_authorized_committees":"40050.00",
+      "col_b_fundraising_disbursements":"0.00",
+      "col_b_exempt_legal_accounting_disbursement":"0.00",
+      "col_b_made_or_guaranteed_by_the_candidate":"0.00",
+      "col_b_other_repayments":"0.00",
+      "col_b_total_loan_repayments_made":"0.00",
+      "col_b_individuals":"84348.58",
+      "col_b_political_party_committees_refunds":"0.00",
+      "col_b_other_political_committees":"0.00",
+      "col_b_total_contributions_refunds":"84348.58",
+      "col_b_other_disbursements":"0.00",
+      "col_b_total_disbursements":"5574149.22",
+      "col_b_alabama":"0.00",
+      "col_b_alaska":"0.00",
+      "col_b_arizona":"0.00",
+      "col_b_arkansas":"0.00",
+      "col_b_california":"0.00",
+      "col_b_colorado":"0.00",
+      "col_b_connecticut":"0.00",
+      "col_b_delaware":"0.00",
+      "col_b_dist_of_columbia":"0.00",
+      "col_b_florida":"0.00",
+      "col_b_georgia":"0.00",
+      "col_b_hawaii":"0.00",
+      "col_b_idaho":"0.00",
+      "col_b_illinois":"0.00",
+      "col_b_indiana":"0.00",
+      "col_b_iowa":"0.00",
+      "col_b_kansas":"0.00",
+      "col_b_kentucky":"0.00",
+      "col_b_louisiana":"0.00",
+      "col_b_maine":"0.00",
+      "col_b_maryland":"0.00",
+      "col_b_massachusetts":"0.00",
+      "col_b_michigan":"0.00",
+      "col_b_minnesota":"0.00",
+      "col_b_mississippi":"0.00",
+      "col_b_missouri":"0.00",
+      "col_b_montana":"0.00",
+      "col_b_nebraska":"0.00",
+      "col_b_nevada":"0.00",
+      "col_b_new_hampshire":"0.00",
+      "col_b_new_jersey":"0.00",
+      "col_b_new_mexico":"0.00",
+      "col_b_new_york":"0.00",
+      "col_b_north_carolina":"0.00",
+      "col_b_north_dakota":"0.00",
+      "col_b_ohio":"0.00",
+      "col_b_oklahoma":"0.00",
+      "col_b_oregon":"0.00",
+      "col_b_pennsylvania":"0.00",
+      "col_b_rhode_island":"0.00",
+      "col_b_south_carolina":"0.00",
+      "col_b_south_dakota":"0.00",
+      "col_b_tennessee":"0.00",
+      "col_b_texas":"0.00",
+      "col_b_utah":"0.00",
+      "col_b_vermont":"0.00",
+      "col_b_virginia":"0.00",
+      "col_b_washington":"0.00",
+      "col_b_west_virginia":"0.00",
+      "col_b_wisconsin":"0.00",
+      "col_b_wyoming":"0.00",
+      "col_b_puerto_rico":"0.00",
+      "col_b_guam":"0.00",
+      "col_b_virgin_islands":"0.00",
+      "col_b_totals":"0.00"
+   }
+}
+```
+
+This endpoint retrieves summary figures from a specific FEC electronic filing (Form 3 filings only).
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/{filing_id}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+filing_id | Integer representing the ID of a Form 3 electronic filing.
+
+## Get Recent Amendments
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "offset":null,
+   "results":[
+      {
+         "filing_id":1040839,
+         "fec_committee_id":"C00235036",
+         "committee":"/committees/C00235036.json",
+         "committee_name":"ZURICH HOLDING COMPANY OF AMERICA COMMITTEE FOR GOOD GOVERNMENT (Z-PAC)",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-20",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00235036/1040839/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00235036//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040834,
+         "fec_committee_id":"C00603787",
+         "committee":"/committees/C00603787.json",
+         "committee_name":"Steve Isakson for Congress",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-20",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603787/1040834/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603787//",
+         "committee_type":"A",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040812,
+         "fec_committee_id":"C00490136",
+         "committee":"/committees/C00490136.json",
+         "committee_name":"THE LINCOLN CLUB OF ORANGE COUNTY FEDERAL IE COMMITTEE",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00490136/1040812/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00490136//",
+         "committee_type":"O",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040807,
+         "fec_committee_id":"C00454819",
+         "committee":"/committees/C00454819.json",
+         "committee_name":"MAF FREEDOM PAC - MOVE AMERICA FORWARD FREEDOM PAC - MAF PAC",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00454819/1040807/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00454819//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040801,
+         "fec_committee_id":"C00589440",
+         "committee":"/committees/C00589440.json",
+         "committee_name":"SHEPHERD FOR CONGRESS",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589440/1040801/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589440//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040799,
+         "fec_committee_id":"C00589440",
+         "committee":"/committees/C00589440.json",
+         "committee_name":"SHEPHERD FOR CONGRESS",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589440/1040799/",
+         "amended":true,
+         "amended_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589440/1040801/",
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00589440//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040797,
+         "fec_committee_id":"C00224691",
+         "committee":"/committees/C00224691.json",
+         "committee_name":"ROHRABACHER FOR CONGRESS",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00224691/1040797/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00224691//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040792,
+         "fec_committee_id":"C00318766",
+         "committee":"/committees/C00318766.json",
+         "committee_name":"CALIFORNIA INDEPENDENT PETROLEUM ASSOCIATION FEDERAL PAC",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00318766/1040792/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00318766//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040789,
+         "fec_committee_id":"C00491605",
+         "committee":"/committees/C00491605.json",
+         "committee_name":"STAR PARKER PAC",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00491605/1040789/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00491605//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040786,
+         "fec_committee_id":"C00552430",
+         "committee":"/committees/C00552430.json",
+         "committee_name":"GORELL FOR CONGRESS",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00552430/1040786/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00552430//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040784,
+         "fec_committee_id":"C00136853",
+         "committee":"/committees/C00136853.json",
+         "committee_name":"CONTRA COSTA REPUBLICAN PARTY (FED)",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00136853/1040784/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00136853//",
+         "committee_type":"Y",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040783,
+         "fec_committee_id":"C00461251",
+         "committee":"/committees/C00461251.json",
+         "committee_name":"MAC PAC",
+         "form_type":"F3",
+         "report_title":"YEAR-END",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":"2015-07-01",
+         "date_coverage_to":"2015-12-31",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00461251/1040783/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":"YE",
+         "original_filing":1040778,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00461251/1040778/",
+         "committee_type":"N",
+         "contributions_total":2000.0,
+         "cash_on_hand":5590.74,
+         "disbursements_total":7042.5,
+         "receipts_total":2000.0,
+         "loans_total":"0.0",
+         "debts_total":"0.0"
+      },
+      {
+         "filing_id":1040777,
+         "fec_committee_id":"C00570168",
+         "committee":"/committees/C00570168.json",
+         "committee_name":"NEWPORT BEACH WOMEN'S DEMOCRATIC CLUB FEDERAL PAC",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570168/1040777/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570168//",
+         "committee_type":"N",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040776,
+         "fec_committee_id":"C00570168",
+         "committee":"/committees/C00570168.json",
+         "committee_name":"NEWPORT BEACH WOMEN'S DEMOCRATIC CLUB FEDERAL PAC",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570168/1040776/",
+         "amended":true,
+         "amended_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570168/1040777/",
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00570168//",
+         "committee_type":"N",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040774,
+         "fec_committee_id":"C00500074",
+         "committee":"/committees/C00500074.json",
+         "committee_name":"FRIENDS OF GARY DELONG",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00500074/1040774/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00500074//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040767,
+         "fec_committee_id":"C00509554",
+         "committee":"/committees/C00509554.json",
+         "committee_name":"BRAD MITZELFELT FOR U.S. CONGRESS",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00509554/1040767/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00509554//",
+         "committee_type":"H",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040763,
+         "fec_committee_id":"C00129627",
+         "committee":"/committees/C00129627.json",
+         "committee_name":"PIPEFITTERS POLITICAL ACTION COMMITTEE",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00129627/1040763/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00129627//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040760,
+         "fec_committee_id":"C00387555",
+         "committee":"/committees/C00387555.json",
+         "committee_name":"COUNCIL FOR A LIVABLE WORLD CANDIDATE FUND",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00387555/1040760/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00387555//",
+         "committee_type":"Q",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040757,
+         "fec_committee_id":"C00515064",
+         "committee":"/committees/C00515064.json",
+         "committee_name":"YOUNG DEMOCRATS OF AMERICA POLITICAL ACTION COMMITTEE",
+         "form_type":"F1",
+         "report_title":"STATEMENT OF ORGANIZATION",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":null,
+         "date_coverage_to":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00515064/1040757/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":null,
+         "original_filing":null,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00515064//",
+         "committee_type":"V",
+         "contributions_total":null,
+         "cash_on_hand":null,
+         "disbursements_total":null,
+         "receipts_total":null,
+         "loans_total":null,
+         "debts_total":null
+      },
+      {
+         "filing_id":1040740,
+         "fec_committee_id":"C00437913",
+         "committee":"/committees/C00437913.json",
+         "committee_name":"OLSON FOR CONGRESS COMMITTEE",
+         "form_type":"F3",
+         "report_title":"OCT QUARTERLY",
+         "date_filed":"2016-01-19",
+         "date_coverage_from":"2015-07-01",
+         "date_coverage_to":"2015-09-30",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00437913/1040740/",
+         "amended":false,
+         "amended_uri":null,
+         "is_amendment":true,
+         "report_period":"Q3",
+         "original_filing":1027374,
+         "original_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00437913/1027374/",
+         "committee_type":"H",
+         "contributions_total":205407.0,
+         "cash_on_hand":415445.23,
+         "disbursements_total":132687.63,
+         "receipts_total":205687.05,
+         "loans_total":"0.0",
+         "debts_total":"0.0"
+      }
+   ]
+}
+```
+
+This endpoint retrieves the most recent filings that are amendments of earlier filings.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/amendments`
+
+# Electioneering Communications
+
+## Get Recent Electioneering Communications
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000871",
+         "committee_name":"AMERICAN LEADERSHIP PROJECT",
+         "payee_organization":"Buying Time",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"2715 M Street NW",
+         "payee_address_2":null,
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":"20007",
+         "expenditure_date":"2008-03-03",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"144000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000002",
+         "filing_id":333398,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-04-15",
+         "unique_id":"76c13c12bc4aab4126feb88282b1811f4074b8af",
+         "electioneering_communication_candidates":[
+            {
+               "id":85,
+               "electioneering_communication_id":77,
+               "fec_candidate_id":"3084",
+               "candidate_name":"Clinton, Hillary",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":333398,
+               "candidate_state":"OH",
+               "candidate_district":null,
+               "transaction_id":"F94.000005",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            },
+            {
+               "id":86,
+               "electioneering_communication_id":77,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":333398,
+               "candidate_state":"OH",
+               "candidate_district":null,
+               "transaction_id":"F94.000006",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"A. Gutierrez & Associates Inc",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"715 South Upper Broadway",
+         "payee_address_2":"Suite 702",
+         "payee_city":"Corpus Christi",
+         "payee_state":"TX",
+         "payee_zip":"78401",
+         "expenditure_date":"2008-02-29",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"285485.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4161",
+         "filing_id":325365,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-03-01",
+         "unique_id":"d977aa7f5b8203415d3b9927e252f26b7ee6abdd",
+         "electioneering_communication_candidates":[
+            {
+               "id":82,
+               "electioneering_communication_id":75,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.4161",
+               "filing_id":325365,
+               "candidate_state":"TX",
+               "candidate_district":null,
+               "transaction_id":"F94.4105",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:44.000-05:00",
+               "updated_at":"2013-05-23T13:44:46.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000871",
+         "committee_name":"AMERICAN LEADERSHIP PROJECT",
+         "payee_organization":"The Davis Group",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"3601 S Congress Avenue",
+         "payee_address_2":null,
+         "payee_city":"Austin",
+         "payee_state":"TX",
+         "payee_zip":"78701",
+         "expenditure_date":"2008-02-29",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"513354.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000001",
+         "filing_id":333398,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-04-15",
+         "unique_id":"0d09ff5a801cf01291a4148c7d324e556d54b16e",
+         "electioneering_communication_candidates":[
+            {
+               "id":83,
+               "electioneering_communication_id":76,
+               "fec_candidate_id":"3084",
+               "candidate_name":"Clinton, Hillary",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":333398,
+               "candidate_state":"TX",
+               "candidate_district":null,
+               "transaction_id":"F94.000002",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            },
+            {
+               "id":84,
+               "electioneering_communication_id":76,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":333398,
+               "candidate_state":"TX",
+               "candidate_district":null,
+               "transaction_id":"F94.000003",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Persuasion FX/shjMedia",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"800 Fourth St. SW Suite S121",
+         "payee_address_2":null,
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":"20002",
+         "expenditure_date":"2008-02-03",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"40600.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4159",
+         "filing_id":321236,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-04",
+         "unique_id":"0274cd42fc23d5618a26a4ed690206bac5d3f08b",
+         "electioneering_communication_candidates":[
+            {
+               "id":81,
+               "electioneering_communication_id":74,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.4159",
+               "filing_id":321236,
+               "candidate_state":"NY",
+               "candidate_district":null,
+               "transaction_id":"F94.4105",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:44.000-05:00",
+               "updated_at":"2013-05-23T13:44:46.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KPWR/Emmis Communications",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"2600 West Olive Ave. 8th Floor",
+         "payee_address_2":null,
+         "payee_city":"Burbank",
+         "payee_state":"CA",
+         "payee_zip":"91505",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4156",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"3a800247838d3e394b8d1e5917cbfada7b523037",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KXOL",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"10281 West Pico Blvd",
+         "payee_address_2":null,
+         "payee_city":"Los Angeles",
+         "payee_state":"CA",
+         "payee_zip":"90064",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4157",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"366c5279fa53948a04021943d42658abf5a0bf35",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Univision Radio",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"750 Battery Street Suite 200",
+         "payee_address_2":null,
+         "payee_city":"San Francisco",
+         "payee_state":"CA",
+         "payee_zip":"94111",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"5220.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4154",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"c55d04edbdc4c470989af5435ff694b71014894c",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KJLH",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"161 North La Brea",
+         "payee_address_2":null,
+         "payee_city":"Inglewood",
+         "payee_state":"CA",
+         "payee_zip":"90301",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"15000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4139",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"4b12ad10c98aeee71167464babf1df871614cf01",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"93.5 KDAY / Magic Broadcasting",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"5055 Wilshire Blvd. Suite 720",
+         "payee_address_2":null,
+         "payee_city":"Los Angeles",
+         "payee_state":"CA",
+         "payee_zip":"90036",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4137",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"3fc48a89c9357bcbe9da242b2800305559ec978c",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Univision Radio Los Angeles",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"655 North Central Avenue, Suite 25",
+         "payee_address_2":null,
+         "payee_city":"Glendale",
+         "payee_state":"CA",
+         "payee_zip":"91203",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"20150.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4153",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"3737ec557b51bb6df4f2d2eab7611a67df4756c7",
+         "electioneering_communication_candidates":[
+            {
+               "id":74,
+               "electioneering_communication_id":73,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.4152",
+               "filing_id":320906,
+               "candidate_state":"CA",
+               "candidate_district":null,
+               "transaction_id":"F94.4105",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:44.000-05:00",
+               "updated_at":"2013-05-23T13:44:46.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"A. Gutierrez & Associates Inc",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"715 South Upper Broadway",
+         "payee_address_2":"Suite 702",
+         "payee_city":"Corpus Christi",
+         "payee_state":"TX",
+         "payee_zip":"78401",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"55000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4152",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"5870302551678b41ffee59424f68ac74b745930e",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Univision Radio Los Angeles",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"655 North Central Avenue, Suite 25",
+         "payee_address_2":null,
+         "payee_city":"Glendale",
+         "payee_state":"CA",
+         "payee_zip":"91203",
+         "expenditure_date":"2008-01-26",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"44700.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4112",
+         "filing_id":317344,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-01-27",
+         "unique_id":"0ccf978f36ad0af08ab46227951aecc556ec09a9",
+         "electioneering_communication_candidates":[
+            {
+               "id":67,
+               "electioneering_communication_id":60,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.4112",
+               "filing_id":317344,
+               "candidate_state":"CA",
+               "candidate_district":null,
+               "transaction_id":"F94.4105",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:40.000-05:00",
+               "updated_at":"2013-05-23T13:44:44.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KHHT FM Clear Channel Broadcasting",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"3400 W. Olive St., Suite 1650",
+         "payee_address_2":null,
+         "payee_city":"Burbank",
+         "payee_state":"CA",
+         "payee_zip":"91505",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4155",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"9d0add7153cc016216932c252180e69927367638",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Levitical Network",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"4859 W. Slauson Ave., #370",
+         "payee_address_2":null,
+         "payee_city":"Los Angeles",
+         "payee_state":"CA",
+         "payee_zip":"90056",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"1500.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4141",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"708c12f80cda48a96214c60c21b901c91dd8dc3b",
+         "electioneering_communication_candidates":[
+            {
+               "id":68,
+               "electioneering_communication_id":66,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.4137",
+               "filing_id":320864,
+               "candidate_state":"CA",
+               "candidate_district":null,
+               "transaction_id":"F94.4105",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:42.000-05:00",
+               "updated_at":"2013-05-23T13:44:45.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KBMB FM",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"1436 Auburn Blvd.",
+         "payee_address_2":null,
+         "payee_city":"Sacramento",
+         "payee_state":"CA",
+         "payee_zip":"95815",
+         "expenditure_date":"2008-02-02",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4150",
+         "filing_id":320906,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-03",
+         "unique_id":"45904fa29d8d6d1aff9721cf218ec62e0369f817",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"KRBV-FM",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"5900 Wilshire Blvd Suite 1900",
+         "payee_address_2":null,
+         "payee_city":"Los Angeles",
+         "payee_state":"CA",
+         "payee_zip":"90036",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"8500.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4140",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"08eaf73d5015c1fa1b1309a3c1e176913b7bbaa2",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Clear Channel Broadcasting",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"340 Townsend St.",
+         "payee_address_2":null,
+         "payee_city":"San Francisco",
+         "payee_state":"CA",
+         "payee_zip":"94107",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"15000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4138",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"385b9eca08a30e6d6d7077e6666eea700141345f",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000822",
+         "committee_name":"PowerPac.org",
+         "payee_organization":"Finest City Broadcasting",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"9660 Granite Ridge Drive Suite200",
+         "payee_address_2":null,
+         "payee_city":"San Diego",
+         "payee_state":"CA",
+         "payee_zip":"92123",
+         "expenditure_date":"2008-01-31",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"10000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.4143",
+         "filing_id":320864,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-02-01",
+         "unique_id":"81e4cfbc636eeefeaa7d1968787ec7308d33ab7b",
+         "electioneering_communication_candidates":[
+
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000871",
+         "committee_name":"AMERICAN LEADERSHIP PROJECT",
+         "payee_organization":"Point of View Productions",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"400 Gordon Drive",
+         "payee_address_2":null,
+         "payee_city":"Exton",
+         "payee_state":"PA",
+         "payee_zip":"19341",
+         "expenditure_date":"2008-03-03",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"33000.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000004",
+         "filing_id":333398,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-04-15",
+         "unique_id":"807756c87911cff021ea3de483dd0e79ac5343cd",
+         "electioneering_communication_candidates":[
+            {
+               "id":88,
+               "electioneering_communication_id":79,
+               "fec_candidate_id":"3084",
+               "candidate_name":"Clinton, Hillary",
+               "back_reference_tran_id_number":"F93.000004",
+               "filing_id":333398,
+               "candidate_state":"OH",
+               "candidate_district":null,
+               "transaction_id":"F94.000010",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            },
+            {
+               "id":89,
+               "electioneering_communication_id":79,
+               "fec_candidate_id":"18641",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000004",
+               "filing_id":333398,
+               "candidate_state":"OH",
+               "candidate_district":null,
+               "transaction_id":"F94.000011",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2008,
+         "fec_committee_id":"C30000871",
+         "committee_name":"AMERICAN LEADERSHIP PROJECT",
+         "payee_organization":"See Change LLC",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"8609 West Knoll Drive",
+         "payee_address_2":null,
+         "payee_city":"West Hollywood",
+         "payee_state":"CA",
+         "payee_zip":"90089",
+         "expenditure_date":"2008-02-22",
+         "communication_date":null,
+         "purpose":null,
+         "election_code":"P2008",
+         "amount":"30941.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000003",
+         "filing_id":333398,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2008-04-15",
+         "unique_id":"6dd27002f7d5c53e95b284aad63d6f9a604b0077",
+         "electioneering_communication_candidates":[
+            {
+               "id":87,
+               "electioneering_communication_id":78,
+               "fec_candidate_id":"3084",
+               "candidate_name":"Clinton, Hillary",
+               "back_reference_tran_id_number":"F93.000003",
+               "filing_id":333398,
+               "candidate_state":"OH",
+               "candidate_district":null,
+               "transaction_id":"F94.000008",
+               "amended_from":null,
+               "created_at":"2012-02-13T21:13:48.000-05:00",
+               "updated_at":"2013-05-23T13:44:47.000-04:00"
+            }
+         ]
+      }
+   ]
+}
+```
+
+This endpoint retrieves the 20 most recent broadcast advertisements that identify one or more federal candidates (and have aired 30 days before a primary election and 60 days before the general election).
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications`
+
+## Get Electioneering Communications by Specific Committee
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "cycle":2012,
+         "fec_committee_id":"C30002034",
+         "committee_name":"United Against Illegal Guns Support Fund",
+         "payee_organization":"Devine Mulvey, Inc.",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"2141 Wisconsin Avenue, NW",
+         "payee_address_2":"Suite H",
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":null,
+         "expenditure_date":"2012-10-01",
+         "communication_date":"2012-10-01",
+         "purpose":"Media Production - 48,000",
+         "election_code":"G2012",
+         "amount":"28160.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000001",
+         "filing_id":812623,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2012-10-02",
+         "unique_id":"72125f7c0025e7f7f2f70a5c6c149377d52069c9",
+         "electioneering_communication_candidates":[
+            {
+               "id":1099,
+               "electioneering_communication_id":996,
+               "fec_candidate_id":"P80003338",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000002",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            },
+            {
+               "id":1100,
+               "electioneering_communication_id":996,
+               "fec_candidate_id":"P80003353",
+               "candidate_name":"Romney, Mitt",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000003",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2012,
+         "fec_committee_id":"C30002034",
+         "committee_name":"United Against Illegal Guns Support Fund",
+         "payee_organization":"Buying Time, LLC",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"650 Massachusetts Avenue, NW",
+         "payee_address_2":"Suite 210",
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":null,
+         "expenditure_date":"2012-09-25",
+         "communication_date":"2012-10-01",
+         "purpose":"Media Buy - 48,000",
+         "election_code":"G2012",
+         "amount":"150500.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000002",
+         "filing_id":812623,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2012-10-02",
+         "unique_id":"251ca3aba6a564f6fec7ddb50cee40595bb6d37b",
+         "electioneering_communication_candidates":[
+            {
+               "id":1101,
+               "electioneering_communication_id":997,
+               "fec_candidate_id":"P80003338",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000005",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            },
+            {
+               "id":1102,
+               "electioneering_communication_id":997,
+               "fec_candidate_id":"P80003353",
+               "candidate_name":"Romney, Mitt",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000006",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            }
+         ]
+      }
+   ]
+}
+```
+
+This endpoint retrieves the most recent broadcast advertisements by a specific committee that identify one or more federal candidates (and have aired 30 days before a primary election and 60 days before the general election).
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/electioneering_communications`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+## Get Electioneering Communications by Date
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "cycle":2012,
+         "fec_committee_id":"C30002034",
+         "committee_name":"United Against Illegal Guns Support Fund",
+         "payee_organization":"Devine Mulvey, Inc.",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"2141 Wisconsin Avenue, NW",
+         "payee_address_2":"Suite H",
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":null,
+         "expenditure_date":"2012-10-01",
+         "communication_date":"2012-10-01",
+         "purpose":"Media Production - 48,000",
+         "election_code":"G2012",
+         "amount":"28160.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000001",
+         "filing_id":812623,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2012-10-02",
+         "unique_id":"72125f7c0025e7f7f2f70a5c6c149377d52069c9",
+         "electioneering_communication_candidates":[
+            {
+               "id":1099,
+               "electioneering_communication_id":996,
+               "fec_candidate_id":"P80003338",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000002",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            },
+            {
+               "id":1100,
+               "electioneering_communication_id":996,
+               "fec_candidate_id":"P80003353",
+               "candidate_name":"Romney, Mitt",
+               "back_reference_tran_id_number":"F93.000001",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000003",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2012,
+         "fec_committee_id":"C30002034",
+         "committee_name":"United Against Illegal Guns Support Fund",
+         "payee_organization":"Buying Time, LLC",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"650 Massachusetts Avenue, NW",
+         "payee_address_2":"Suite 210",
+         "payee_city":"Washington",
+         "payee_state":"DC",
+         "payee_zip":null,
+         "expenditure_date":"2012-09-25",
+         "communication_date":"2012-10-01",
+         "purpose":"Media Buy - 48,000",
+         "election_code":"G2012",
+         "amount":"150500.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000002",
+         "filing_id":812623,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2012-10-02",
+         "unique_id":"251ca3aba6a564f6fec7ddb50cee40595bb6d37b",
+         "electioneering_communication_candidates":[
+            {
+               "id":1101,
+               "electioneering_communication_id":997,
+               "fec_candidate_id":"P80003338",
+               "candidate_name":"Obama, Barack",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000005",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            },
+            {
+               "id":1102,
+               "electioneering_communication_id":997,
+               "fec_candidate_id":"P80003353",
+               "candidate_name":"Romney, Mitt",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":812623,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000006",
+               "amended_from":null,
+               "created_at":"2012-10-02T21:15:32.000-04:00",
+               "updated_at":"2012-10-02T21:15:32.000-04:00"
+            }
+         ]
+      },
+      {
+         "cycle":2012,
+         "fec_committee_id":"C30001051",
+         "committee_name":"AMERICANS FOR PROSPERITY",
+         "payee_organization":"TARGET ENTERPRISE, LLC",
+         "payee_last_name":null,
+         "payee_first_name":null,
+         "payee_middle_name":null,
+         "payee_suffix":null,
+         "payee_address_1":"15260 VENTURA BLVD.",
+         "payee_address_2":"SUITE 1240",
+         "payee_city":"SHERMAN OAKS",
+         "payee_state":"CA",
+         "payee_zip":null,
+         "expenditure_date":"2012-09-20",
+         "communication_date":"2012-10-01",
+         "purpose":"PLACEMENT OF RADIO ADVERTISEMENT (\"OWE IT\")",
+         "election_code":"G2012",
+         "amount":"332044.0",
+         "entity_type":"ORG",
+         "transaction_id":"F93.000002",
+         "filing_id":812707,
+         "back_reference_tran_id_number":null,
+         "back_reference_sched_name":null,
+         "amended_from":null,
+         "filed_date":"2012-10-03",
+         "unique_id":"a83b0a556407c047fc7e600aae1e1fce4fe85d18",
+         "electioneering_communication_candidates":[
+            {
+               "id":1104,
+               "electioneering_communication_id":999,
+               "fec_candidate_id":"P80003338",
+               "candidate_name":"OBAMA, BARACK",
+               "back_reference_tran_id_number":"F93.000002",
+               "filing_id":812707,
+               "candidate_state":null,
+               "candidate_district":null,
+               "transaction_id":"F94.000004",
+               "amended_from":null,
+               "created_at":"2012-10-03T11:30:37.000-04:00",
+               "updated_at":"2012-10-03T11:30:37.000-04:00"
+            }
+         ]
+      }
+   ]
+}
+```
+
+This endpoint retrieves broadcast advertisements that identify one or more federal candidates (and have aired 30 days before a primary election and 60 days before the general election) from a specific date.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications/{year}/{month}/{day}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+year | The four-digit year from 2008-2016
+month | The two-digit month from 01-12
+day | The two-digit day from 01-31
+
+# Independent Expenditures
+
+## Get Recent Independent Expenditures
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+```
+
+This endpoint retrieves the most recent independent expenditures.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures`
