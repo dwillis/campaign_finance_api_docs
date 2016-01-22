@@ -154,20 +154,6 @@ query | The first or last name of the candidate
 
 ## Get a Specific Candidate
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
 curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
@@ -236,20 +222,6 @@ fec-id | The FEC-assigned 9-character ID of a candidate. To find a candidate's o
 
 
 ## Get Top 20 Candidates in Specific Financial Category
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -696,20 +668,6 @@ category | One of the values from the following categories:
 
 ## Get Candidates from a State
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
 curl "http://example.com/api/kittens/2"
  -H "Authorization: meowmeowmeow"
@@ -767,20 +725,6 @@ district | Specify the district number. Use `1` for states with a single represe
 
 
 ## Get Recently Added Candidates
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -1222,20 +1166,6 @@ query | The name of the committee
 
 ## Get a Specific Committee
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
 curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
@@ -1305,19 +1235,451 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 
 ## Get Recently Added Committees
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+```shell
+curl "http://example.com/api/kittens/2"
+ -H "Authorization: meowmeowmeow"
 ```
 
-```python
-import kittn
+> The above command returns JSON structured like this:
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "cycle":2016,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "results":[
+      {
+         "id":"C00577569",
+         "relative_uri":"/committees/C00577569.json",
+         "name":"TRUE CONSERVATIVES",
+         "address":"PO BOX 26141",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22313",
+         "treasurer":"MARSTON, CHRIS",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577569/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null,
+         "receipt_date":"2015-05-07"
+      },
+      {
+         "id":"C00577551",
+         "relative_uri":"/committees/C00577551.json",
+         "name":"IN GOD WE TRUST FOR TIMOTHY R FARKAS",
+         "address":"291 E. LIVINGSTON AVE",
+         "city":"COLUMBUS",
+         "state":"OH",
+         "zip":"43215",
+         "treasurer":"SERGAKIS, CHRISTOPHER",
+         "party":"IND",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577551/",
+         "candidate":"/candidates/P60007416.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-07"
+      },
+      {
+         "id":"C00577445",
+         "relative_uri":"/committees/C00577445.json",
+         "name":"DEFEND OUR NATION PAC",
+         "address":"203 SOUTH UNION STREET",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22314",
+         "treasurer":"MILLER, ROBERT L.",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577445/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"V",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577460",
+         "relative_uri":"/committees/C00577460.json",
+         "name":"BILL OTTO FOR CONGRESS",
+         "address":"11841 SOLOGNE COURT",
+         "city":"MARYLAND HEIGHTS",
+         "state":"MO",
+         "zip":"63043",
+         "treasurer":"FERDMAN, HARVEY MR.",
+         "party":"DEM",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577460/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"H",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577452",
+         "relative_uri":"/committees/C00577452.json",
+         "name":"MAIN STREET PAC",
+         "address":"POST OFFICE BOX 2",
+         "city":"LIMERICK",
+         "state":"ME",
+         "zip":"04048",
+         "treasurer":"LISA FEUERSTEIN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577452/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null,
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577494",
+         "relative_uri":"/committees/C00577494.json",
+         "name":"DAVIS FOR CONGRESS",
+         "address":"17 WEST COURTLAND STREET",
+         "city":"BEL AIR",
+         "state":"MD",
+         "zip":"21014",
+         "treasurer":"MADDOX, LEROY DANIEL JR",
+         "party":"DEM",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577494/",
+         "candidate":"/candidates/H6MD04233.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"H",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577486",
+         "relative_uri":"/committees/C00577486.json",
+         "name":"THE COMMITTEE FOR THE INSTALLATION OF LIMBERBUTT",
+         "address":"8913 LIPPINCOTT RD",
+         "city":"LOUISVILLE",
+         "state":"KY",
+         "zip":"40222",
+         "treasurer":"WEISS, ISAAC",
+         "party":"DEM",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577486/",
+         "candidate":"/candidates/P60007366.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577544",
+         "relative_uri":"/committees/C00577544.json",
+         "name":"ILLINOIS SENATE VICTORY",
+         "address":"120 MARYLAND AVE NE",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20002",
+         "treasurer":"YATES BAROODY",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?C00577544",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"J",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577478",
+         "relative_uri":"/committees/C00577478.json",
+         "name":"LINDA J HART",
+         "address":"4312 CAPRA WAY ",
+         "city":"BENBROOK",
+         "state":"TX",
+         "zip":"76126",
+         "treasurer":"LINDA J HART",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577478/",
+         "candidate":"/candidates/P60007317.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-06"
+      },
+      {
+         "id":"C00577395",
+         "relative_uri":"/committees/C00577395.json",
+         "name":"PEOPLE IN COMMAND/PIC",
+         "address":"3674 RUNNYMEDE BLVD",
+         "city":"CLEVELAND HTS",
+         "state":"OH",
+         "zip":"44121",
+         "treasurer":"TRACEY SAPP",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577395/",
+         "candidate":"/candidates/P00003392.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"U",
+         "interest_group":"",
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577346",
+         "relative_uri":"/committees/C00577346.json",
+         "name":"CITIZENS FOR DANIEL P ZUTLER FOR U S PRESIDENT",
+         "address":"7300 SEA GRAPE AVE",
+         "city":"PORT RICHEY",
+         "state":"FL",
+         "zip":"34668",
+         "treasurer":"REXFORD, BEVERLY ANN",
+         "party":"IND",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577346/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"A",
+         "filing_frequency":"T",
+         "committee_type":"P",
+         "interest_group":null,
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577411",
+         "relative_uri":"/committees/C00577411.json",
+         "name":"COMMITTEE TO ELECT LLOYD KELSO PRESIDENT",
+         "address":"128 EAST GARRISON BLVD SUITE A",
+         "city":"GASTONIA",
+         "state":"NC",
+         "zip":"28053",
+         "treasurer":"DEBRA SETZER KELSO",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577411/",
+         "candidate":"/candidates/P60007267.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577387",
+         "relative_uri":"/committees/C00577387.json",
+         "name":"HIGH SCHOOL DEMOCRATS OF AMERICA",
+         "address":"4100 NORTH LINCOLN BOULEVARD",
+         "city":"OKLAHOMA CITY",
+         "state":"OK",
+         "zip":"73105",
+         "treasurer":"SARAH CLAYTON",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577387/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":null,
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577403",
+         "relative_uri":"/committees/C00577403.json",
+         "name":"TONY SMITHERMAN'S AFTER PARTY COMMITTEE",
+         "address":"5432 MARSHALL ST",
+         "city":"LUBBOCK",
+         "state":"TX",
+         "zip":"79416",
+         "treasurer":"SMITHERMAN, TONY",
+         "party":"OTH",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577403/",
+         "candidate":"/candidates/P60007259.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577379",
+         "relative_uri":"/committees/C00577379.json",
+         "name":"USA STRONG PAC",
+         "address":"49 NORTH FEDERAL HWY #104",
+         "city":"POMPANO BEACH",
+         "state":"FL",
+         "zip":"33062",
+         "treasurer":"DANIELLA ACOSTA",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577379/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null,
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577429",
+         "relative_uri":"/committees/C00577429.json",
+         "name":"MARTY PIATT FOR U.S. PRESIDENT CAMPAIGN COMMITTEE",
+         "address":"1254 WOODHAVEN DRIVE",
+         "city":"OCEANSIDE",
+         "state":"CA",
+         "zip":"92056",
+         "treasurer":"PIATT, MARTY",
+         "party":"UNK",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577429/",
+         "candidate":"/candidates/P60007283.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"P",
+         "interest_group":"",
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577361",
+         "relative_uri":"/committees/C00577361.json",
+         "name":"MULLIN VICTORY FUND",
+         "address":"332 W LEE HWY",
+         "city":"WARRENTON",
+         "state":"VA",
+         "zip":"20186",
+         "treasurer":"RALLS, STEVE",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577361/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"J",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":"",
+         "receipt_date":"2015-05-05"
+      },
+      {
+         "id":"C00577270",
+         "relative_uri":"/committees/C00577270.json",
+         "name":"FLORES FOR CONGRESS",
+         "address":"420 N NELLIS BLVD",
+         "city":"LAS VEGAS",
+         "state":"NV",
+         "zip":"89110",
+         "treasurer":"CISNEROS, NORBERTO",
+         "party":"DEM",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577270/",
+         "candidate":"/candidates/H6NV04012.json",
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"H",
+         "interest_group":"",
+         "receipt_date":"2015-05-04"
+      },
+      {
+         "id":"C00577247",
+         "relative_uri":"/committees/C00577247.json",
+         "name":"ABC",
+         "address":"ABC",
+         "city":"ABC",
+         "state":"TX",
+         "zip":"73344",
+         "treasurer":"GUPTA, MUKUL",
+         "party":"ACE",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577247/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"P",
+         "filing_frequency":"Q",
+         "committee_type":"H",
+         "interest_group":"",
+         "receipt_date":"2015-05-04"
+      },
+      {
+         "id":"C00577262",
+         "relative_uri":"/committees/C00577262.json",
+         "name":"LEAD THE WAY PAC",
+         "address":"308 SAPLING COURT",
+         "city":"CRANBERRY TOWNSHIP",
+         "state":"PA",
+         "zip":"16066",
+         "treasurer":"COLEMAN, ANN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00577262/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":false,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"N",
+         "interest_group":"",
+         "receipt_date":"2015-05-04"
+      }
+   ]
+}
 ```
+
+This endpoint retrieves the 20 most recently added FEC committees.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
+
+## Get Recently Added Independent Expenditure-Only Committees
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -1327,29 +1689,405 @@ curl "http://example.com/api/kittens/2"
 > The above command returns JSON structured like this:
 
 ```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "cycle":2016,
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "offset":null,
+   "results":[
+      {
+         "id":"C00604496",
+         "relative_uri":"/committees/C00604496.json",
+         "name":"Americans United for Values",
+         "address":"P.O. Box 90891",
+         "city":"Washington",
+         "state":"DC",
+         "zip":"20090",
+         "treasurer":"Kinnett, Brian",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00604496/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603688",
+         "relative_uri":"/committees/C00603688.json",
+         "name":"S.D.T.F.B",
+         "address":"1011 hampton ct",
+         "city":"kennesaw",
+         "state":"GA",
+         "zip":"30144",
+         "treasurer":"Wachner, Kristofer John",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603688/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603647",
+         "relative_uri":"/committees/C00603647.json",
+         "name":"Conservative Texans",
+         "address":"873 Amarillo",
+         "city":"Abilene",
+         "state":"TX",
+         "zip":"79602",
+         "treasurer":"Barnett, Mitch",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603647/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603621",
+         "relative_uri":"/committees/C00603621.json",
+         "name":"Our Principles PAC",
+         "address":"P. O. Box 25046",
+         "city":"Alexandria",
+         "state":"VA",
+         "zip":"22313",
+         "treasurer":"Jodoin, Jamie C.",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603621/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603530",
+         "relative_uri":"/committees/C00603530.json",
+         "name":"Conservative Patriot Fund",
+         "address":"873 Amarillo",
+         "city":"Abilene",
+         "state":"TX",
+         "zip":"79602",
+         "treasurer":"Barnett, Mitch",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603530/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603175",
+         "relative_uri":"/committees/C00603175.json",
+         "name":"One Day In America",
+         "address":"1775 I Street, NW",
+         "city":"Washingotn",
+         "state":"DC",
+         "zip":"20006",
+         "treasurer":"Railey-Cisco, Alex-St. James Andrew",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603175/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00603159",
+         "relative_uri":"/committees/C00603159.json",
+         "name":"INDIANA JOBS NOW",
+         "address":"PO BOX 9891",
+         "city":"ARLINGTON",
+         "state":"VA",
+         "zip":"22219",
+         "treasurer":"REISNER, MICHELE",
+         "party":null,
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00603159/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":null,
+         "filing_frequency":null,
+         "committee_type":"F",
+         "interest_group":null
+      },
+      {
+         "id":"C00602987",
+         "relative_uri":"/committees/C00602987.json",
+         "name":"CITIZENS AGAINST EXCESSIVE REGULATIONS",
+         "address":"48 TINTLE ROAD",
+         "city":"KINNELON",
+         "state":"NJ",
+         "zip":"07405",
+         "treasurer":"BENJAMIN, BRIAN",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00602987/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00602896",
+         "relative_uri":"/committees/C00602896.json",
+         "name":"RAMPART PAC",
+         "address":"PO BOX 1171",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22313",
+         "treasurer":"KOCH, TIMOTHY A.",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00602896/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00602649",
+         "relative_uri":"/committees/C00602649.json",
+         "name":"MARATHON PAC",
+         "address":"%BULLDOG COMPLIANCE",
+         "city":"BEVERLY",
+         "state":"MA",
+         "zip":"01915",
+         "treasurer":"GANTT, CHARLES MR.",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00602649/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00602623",
+         "relative_uri":"/committees/C00602623.json",
+         "name":"AMERICA SPEAKS PAC",
+         "address":"1713 S.E. 40TH STREET",
+         "city":"CAPE CORAL",
+         "state":"FL",
+         "zip":"33904",
+         "treasurer":"COOLEY, WILLIAM",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00602623/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00600767",
+         "relative_uri":"/committees/C00600767.json",
+         "name":"TUCKFRUMP.COM",
+         "address":"PO BOX 10472",
+         "city":"COLUMBUS",
+         "state":"OH",
+         "zip":"43201",
+         "treasurer":"LUKE MONTGOMERY",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00600767/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null
+      },
+      {
+         "id":"C00600668",
+         "relative_uri":"/committees/C00600668.json",
+         "name":"FUNDEM",
+         "address":"PO BOX 230536",
+         "city":"LAS VEGAS",
+         "state":"NV",
+         "zip":"89105",
+         "treasurer":"CASTILLO, KANOEKAPUWAILANI",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00600668/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null
+      },
+      {
+         "id":"C00599639",
+         "relative_uri":"/committees/C00599639.json",
+         "name":"AMERICAN INDIANS TRIBAL GOVERNMENT OF GEORGIA",
+         "address":"1900 WEST OAKLAND PARK BLVD.",
+         "city":"FORT LAUDERDALE",
+         "state":"FL",
+         "zip":"33310",
+         "treasurer":"LAROSE, JOSHBUA",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599639/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00599456",
+         "relative_uri":"/committees/C00599456.json",
+         "name":"COLORADO CONSERVATIVE PAC",
+         "address":"PO BOX 26141",
+         "city":"ALEXANDRIA",
+         "state":"VA",
+         "zip":"22313",
+         "treasurer":"MARSTON, CHRIS",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599456/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00599449",
+         "relative_uri":"/committees/C00599449.json",
+         "name":"MAKE AMERICA DANK AGAIN",
+         "address":"420 DANK AVENUE",
+         "city":"GARY",
+         "state":"IN",
+         "zip":"46042",
+         "treasurer":"PURDY, MATTHEW ROBERT",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599449/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":""
+      },
+      {
+         "id":"C00599076",
+         "relative_uri":"/committees/C00599076.json",
+         "name":"RISING TIDE FLORIDA",
+         "address":"601 PENNSYLVANIA AVENUE NW",
+         "city":"WASHINGTON",
+         "state":"DC",
+         "zip":"20004",
+         "treasurer":"DAVID M POWERS",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599076/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null
+      },
+      {
+         "id":"C00599035",
+         "relative_uri":"/committees/C00599035.json",
+         "name":"RIVERSIDE COUNTY CITIZENS FOR SECURITY",
+         "address":"5822 CRIGHTON DRIVE",
+         "city":"DUBLIN",
+         "state":"OH",
+         "zip":"43016",
+         "treasurer":"ROB PHILLIPS",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599035/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null
+      },
+      {
+         "id":"C00599019",
+         "relative_uri":"/committees/C00599019.json",
+         "name":"GET SUPERPACED",
+         "address":"1014 SOUTH CONCORD RD",
+         "city":"WEST CHESTER",
+         "state":"PA",
+         "zip":"19362",
+         "treasurer":"JACK DEMARCO",
+         "party":"",
+         "fec_uri":"http://docquery.fec.gov/cgi-bin/dcdev/forms/C00599019/",
+         "candidate":null,
+         "leadership":false,
+         "super_pac":true,
+         "sponsor_name":null,
+         "designation":"U",
+         "filing_frequency":"Q",
+         "committee_type":"O",
+         "interest_group":null
+      }
+  ]
+}
 ```
 
-This endpoint retrieves the 20 most recently added FEC committees.
+This endpoint retrieves the 20 most recently added FEC independent expenditure-only committees, known as "super PACs".
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/superpacs`
+
 
 ## Get Committee Filings
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -1693,20 +2431,6 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 
 ## Get Recently Added Committees
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
 curl "http://example.com/api/kittens/2"
  -H "Authorization: meowmeowmeow"
@@ -1724,20 +2448,6 @@ This endpoint retrieves the 20 most recently added FEC committees.
 `GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
 
 ## Get Leadership Committees
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
 ```shell
 curl "http://example.com/api/kittens/2"
@@ -6950,3 +7660,127 @@ This endpoint retrieves the most recent independent expenditures.
 ### HTTP Request
 
 `GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures`
+
+## Get Independent Expenditures by Date
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint retrieves the most recent independent expenditures on a specific date (the date of activity, not the date filed with the FEC).
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/{year}/{month}/{day}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+year | The four-digit year from 2008-2016
+month | The two-digit month from 01-12
+day | The two-digit day from 01-31
+
+## Get Independent Expenditures by Specific Committee
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint retrieves most recent independent expenditures by a given committee.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+## Get Independent Expenditures that Support or Oppose a Specific Candidate
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint retrieves most recent independent expenditures in support of or opposition to a given candidate.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/independent_expenditures`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+## Get Independent Expenditures that Support or Oppose Presidential Candidates
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint retrieves most recent independent expenditures in support of or opposition to a given candidate.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/president/independent_expenditures`
