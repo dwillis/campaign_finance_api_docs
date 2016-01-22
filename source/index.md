@@ -90,15 +90,8 @@ The following parameters are optional:
 
 ## Search for Candidates
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -155,7 +148,7 @@ query | The first or last name of the candidate
 ## Get a Specific Candidate
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -224,7 +217,7 @@ fec-id | The FEC-assigned 9-character ID of a candidate. To find a candidate's o
 ## Get Top 20 Candidates in Specific Financial Category
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -669,7 +662,7 @@ category | One of the values from the following categories:
 ## Get Candidates from a State
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -727,7 +720,7 @@ district | Specify the district number. Use `1` for states with a single represe
 ## Get Recently Added Candidates
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -1022,7 +1015,7 @@ CampaignCash::Committee.search("Carson", 2016)
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -1167,7 +1160,7 @@ query | The name of the committee
 ## Get a Specific Committee
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -1236,7 +1229,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 ## Get Recently Added Committees
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -1682,7 +1675,7 @@ This endpoint retrieves the 20 most recently added FEC committees.
 ## Get Recently Added Independent Expenditure-Only Committees
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -2090,7 +2083,7 @@ This endpoint retrieves the 20 most recently added FEC independent expenditure-o
 ## Get Committee Filings
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -2432,7 +2425,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 ## Get Leadership Committees
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.propublica.org/campaign-finance/v1//2"
  -H "Authorization: meowmeowmeow"
 ```
 
@@ -3695,15 +3688,8 @@ location | Two-letter state abbreviation (for the `states` resource type) or fiv
 
 ## Search for Electronic Filings
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -3886,15 +3872,8 @@ query | The committee name or partial name. Spaces are permitted.
 
 ## Get Electronic Filings by Date
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -5029,15 +5008,8 @@ day | The two-digit day from 01-31
 
 ## Get Electronic Filing Form Types
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -5130,15 +5102,8 @@ This endpoint retrieves a list of available form types for FEC electronic filing
 
 ## Get Electronic Filings By Type
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -5671,15 +5636,8 @@ form-type-id | `F` + integer. To get form type IDs, use an electronic filing for
 
 ## Get Summary for a Specific Electronic Filing
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -5914,15 +5872,8 @@ filing_id | Integer representing the ID of a Form 3 electronic filing.
 
 ## Get Recent Amendments
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -6450,15 +6401,8 @@ This endpoint retrieves the most recent filings that are amendments of earlier f
 
 ## Get Recent Electioneering Communications
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7262,15 +7206,8 @@ This endpoint retrieves the 20 most recent broadcast advertisements that identif
 
 ## Get Electioneering Communications by Specific Committee
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7417,15 +7354,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Electioneering Communications by Date
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7620,15 +7550,8 @@ day | The two-digit day from 01-31
 
 ## Get Recent Independent Expenditures
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7645,15 +7568,8 @@ This endpoint retrieves the most recent independent expenditures.
 
 ## Get Independent Expenditures by Date
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7679,15 +7595,8 @@ day | The two-digit day from 01-31
 
 ## Get Independent Expenditures by Specific Committee
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -7711,15 +7620,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Independent Expenditures that Support or Oppose a Specific Candidate
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -8114,15 +8016,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Independent Expenditures that Support or Oppose Presidential Candidates
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -8607,15 +8502,8 @@ This endpoint retrieves the most recent independent expenditures in support of o
 
 ## Get Independent Expenditure Office Totals
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -9306,15 +9194,8 @@ office | one of `house`, `senate` or `president`
 
 ## Get Independent Expenditure Race Totals for a Specific Committee
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -9383,15 +9264,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Recent Late Contributions
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -9593,15 +9467,8 @@ During the last 20 days before a primary or general election, candidate committe
 
 ## Get Recent Late Contributions to a Specific Candidate
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -9624,15 +9491,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Recent Late Contributions to a Specific Committee
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -10165,15 +10025,8 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ## Get Recent Late Contributions by Date
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
@@ -10200,15 +10053,8 @@ day | The two-digit day from 01-31
 
 ## Get Lobbyist Bundlers for a Specific Committee
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-CampaignCash::Candidate.search("Carson", 2016)
-```
-
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.propublica.org/campaign-finance/v1/"
   -H "Authorization: YOUR_API_KEY"
 ```
 
