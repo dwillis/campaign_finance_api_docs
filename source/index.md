@@ -2429,24 +2429,6 @@ Parameter | Description
 --------- | -----------
 fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's official FEC ID, use a committee search request or the [FEC web site](http://www.fec.gov).
 
-## Get Recently Added Committees
-
-```shell
-curl "http://example.com/api/kittens/2"
- -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-```
-
-This endpoint retrieves the 20 most recently added FEC committees.
-
-### HTTP Request
-
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
-
 ## Get Leadership Committees
 
 ```shell
@@ -7744,7 +7726,378 @@ curl "http://example.com/api/kittens"
 > The above command returns JSON structured like this:
 
 ```json
-
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "fec_candidate":"/candidates/P00003392.json",
+   "support_total":854070.71,
+   "oppose_total":5150165.43,
+   "offset":null,
+   "results":[
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":2772.38,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-04-06",
+         "purpose":"Inbound Telephone and Mail Campaign - Anti Hilary Clinton",
+         "payee":"Campaign HQ",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79478",
+         "unique_id":"52a7079592f360439f52f5e297ca394e3cd3cb46"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":1932.12,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-04-15",
+         "purpose":"Call Center and Outbound Mail - Anti- Hilary Campaign",
+         "payee":"Campaign HQ",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79484",
+         "unique_id":"87e71e8c807d84da9a130980b406f07c527caa02"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":124.02,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-04-27",
+         "purpose":"In Bound Telephone and Mail Campaign - Anti- Hilary Clinton",
+         "payee":"Campaign HQ",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.79486",
+         "unique_id":"d6b4a66c8519e9cbb691dc77c26646274b1d24ad"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":481.13,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-04-15",
+         "purpose":"Call Center and Mail Campaign - Anti- Hilary Clinton",
+         "payee":"Client First Consulting Group",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79482",
+         "unique_id":"52b3dc0734dcaa93aee6d17293d9a35215398e4d"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":42800.0,
+         "office":"President",
+         "state":null,
+         "district":null,
+         "date":"2015-03-25",
+         "purpose":"Anti Hilary Clinton Television Ads",
+         "payee":"Rapid Response Televison",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79399",
+         "unique_id":"00eb3fc5ff3ef2eca83339345cd7100a1ea964d4"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":17200.0,
+         "office":"President",
+         "state":null,
+         "district":null,
+         "date":"2015-04-02",
+         "purpose":"Anti Hilary Clinton Television Ads",
+         "payee":"Rapid Response Televison",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79403",
+         "unique_id":"88c4999105af8a36f0c71b4b7f5123004fc41a4a"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":1500.0,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-06-24",
+         "purpose":"Anti-Hillary Clinton TV Internet Ad",
+         "payee":"LLC UJI Productions",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79982",
+         "unique_id":"68dbb8d1d19c687346a4ed39f5c0359e376502dc"
+      },
+      {
+         "fec_committee":"/committees/C99002396.json",
+         "fec_committee_name":"AMERICAN POLITICAL ACTION COMMITTEE",
+         "candidate_name":"Hilary Clinton",
+         "amount":210.0,
+         "office":null,
+         "state":null,
+         "district":null,
+         "date":"2015-04-06",
+         "purpose":"Voice recording for anti-Hilary Clinton TV & radio ad",
+         "payee":"Philip Watson",
+         "date_received":"2015-07-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.79476",
+         "unique_id":"f19de5570eadc1ec7132d0713d92087aab51acac"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":1770.91,
+         "office":"President",
+         "state":"IL",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4445",
+         "unique_id":"4c64c588154b481dc025307fecd02130041db5fd"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":891.57,
+         "office":"President",
+         "state":"IN",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4446",
+         "unique_id":"f88f69fb44d0cddc7b4b92cf6bbc54886dc0f7a3"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":96.83,
+         "office":"President",
+         "state":"AK",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4434",
+         "unique_id":"42a69aef157dd42d69ea878a24547464a4edbb9f"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":880.35,
+         "office":"President",
+         "state":"AZ",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4435",
+         "unique_id":"9e4ea50aa100a13b9e48c625c98573bc2d5ba468"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":403.71,
+         "office":"President",
+         "state":"AR",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4436",
+         "unique_id":"dffea42473d4fdf27a76135e3bcfc0dc95528200"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":5150.8,
+         "office":"President",
+         "state":"CA",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4437",
+         "unique_id":"9d1fb56f632f1fa9f95ce34e262eed1ed69c32b9"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":704.42,
+         "office":"President",
+         "state":"CO",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4438",
+         "unique_id":"b8888fd3a103ac7d0b331eb9000a545728b5bca9"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":503.37,
+         "office":"President",
+         "state":"CT",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4439",
+         "unique_id":"64cc17d0584117527ecd310a0bbc2a998a72f52a"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":127.31,
+         "office":"President",
+         "state":"DE",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4440",
+         "unique_id":"71b860551c2b01451b4c1cb21470c9b03fe2b104"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":2730.02,
+         "office":"President",
+         "state":"FL",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4441",
+         "unique_id":"65eed1c3ee7996c6a5037b6fe7d6d4ea3f09d8b8"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":1327.64,
+         "office":"President",
+         "state":"GA",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4442",
+         "unique_id":"22a3a8486003c6c7e7ce3a118c6bd4491c9e075f"
+      },
+      {
+         "fec_committee":"/committees/C00401786.json",
+         "fec_committee_name":"FREEDOM'S DEFENSE FUND",
+         "candidate_name":"HILLARY RODHAM CLINTON",
+         "amount":193.96,
+         "office":"President",
+         "state":"HI",
+         "district":0,
+         "date":"2015-07-09",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"FORTH RIGHT STRATEGY INC",
+         "date_received":"2015-07-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.4443",
+         "unique_id":"9ae69d1573a26b2d182c156dcd657cf5df6e1d6a"
+      }
+   ]
+}
 ```
 
 This endpoint retrieves most recent independent expenditures in support of or opposition to a given candidate.
@@ -7776,11 +8129,2446 @@ curl "http://example.com/api/kittens"
 > The above command returns JSON structured like this:
 
 ```json
-
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":1908.0,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-22",
+         "purpose":"PAC Mailing",
+         "payee":"The Lukens Company",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10505",
+         "unique_id":"efd895ba2343910b6a16c17293f2ce6982082ae7",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":51313.39,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-22",
+         "purpose":"PAC Postage",
+         "payee":"Intense Printing",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10507",
+         "unique_id":"ec4ca18a0dacc528b49818846dcaef6a5a7e1611",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":1875.0,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-22",
+         "purpose":"PAC Mailing",
+         "payee":"The Lukens Company",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10506",
+         "unique_id":"7c5425587ab8abfef983b3daabf7fed442e74e25",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00490375.json",
+         "fec_committee_id":"C00490375",
+         "fec_committee_name":"NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"BERNARD SANDERS",
+         "amount":100.0,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-22",
+         "purpose":"Online Ad",
+         "payee":"National Nurses United",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"D693181",
+         "unique_id":"4d96698fc5d6f51891fe344894d959395eccb0e3",
+         "filing_id":1041531,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":27304.98,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-22",
+         "purpose":"PAC Printing",
+         "payee":"Intense Printing",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10516",
+         "unique_id":"1ae538448e4eae2efcdc034473cec69ebdedc541",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":857.69,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Digital Media Production/Placement",
+         "payee":"Facebook",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10512",
+         "unique_id":"f95e20e48476d298238c629b5fbb03e8d1d8760d",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":2454.89,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Digital Media Production/Placement",
+         "payee":"Facebook",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10510",
+         "unique_id":"05028ba783ec3a89d4db30e0c3f08a03f49377cb",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":3008.96,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Digital Media Production/Placement",
+         "payee":"Facebook",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10513",
+         "unique_id":"2aa2663654e8802f19ffa7209e9b9508ba6830a2",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00489799.json",
+         "fec_committee_id":"C00489799",
+         "fec_committee_name":"PLANNED PARENTHOOD VOTES",
+         "fec_candidate":"/candidates/P00003392.json",
+         "fec_candidate_id":"P00003392",
+         "candidate_name":"Hillary Clinton",
+         "amount":4000.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"Production of online advertisement",
+         "payee":"76 Words",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"B592912",
+         "unique_id":"78e285fe5ddcd09c8fd05b36d7d0962a82bd7c1a",
+         "filing_id":1041492,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00489799.json",
+         "fec_committee_id":"C00489799",
+         "fec_committee_name":"PLANNED PARENTHOOD VOTES",
+         "fec_candidate":"/candidates/P00003392.json",
+         "fec_candidate_id":"P00003392",
+         "candidate_name":"Hillary Clinton",
+         "amount":95488.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"Online advertising media buy",
+         "payee":"Screen Strategies Media",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"B592913",
+         "unique_id":"a4a59134df6c11b8f2fc3ea737ea94129c10ccfd",
+         "filing_id":1041492,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00490375.json",
+         "fec_committee_id":"C00490375",
+         "fec_committee_name":"NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"BERNARD SANDERS",
+         "amount":120.0,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Site Rental",
+         "payee":"California Nurses Association",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"D693175",
+         "unique_id":"8cb1fb801e56be4be5962785f39374910ddd6e05",
+         "filing_id":1041531,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":1854.97,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Digital Media Production/Placement",
+         "payee":"Facebook",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10509",
+         "unique_id":"3b189bf6e06a4135ce6bac073d6a613a8e46c0b4",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00490375.json",
+         "fec_committee_id":"C00490375",
+         "fec_committee_name":"NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"BERNARD SANDERS",
+         "amount":230.0,
+         "office":"President",
+         "state":"NV",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Site Rental",
+         "payee":"California Nurses Association",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"D693174",
+         "unique_id":"bf6bae5d79c9a5d9238a2f47b378b8e3682957ad",
+         "filing_id":1041531,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00575423.json",
+         "fec_committee_id":"C00575423",
+         "fec_committee_name":"KEEP THE PROMISE III",
+         "fec_candidate":"/candidates/P60006111.json",
+         "fec_candidate_id":"P60006111",
+         "candidate_name":"Ted Cruz",
+         "amount":2445.78,
+         "office":"President",
+         "state":"IA",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Digital Media Production/Placement",
+         "payee":"Facebook",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.10511",
+         "unique_id":"e35dd623d2216bbd8773abd674731dd7be6c0358",
+         "filing_id":1041547,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00573154.json",
+         "fec_committee_id":"C00573154",
+         "fec_committee_name":"CONSERVATIVE, AUTHENTIC, RESPONSIVE LEADERSHIP FOR YOU AND FOR AMERICA",
+         "fec_candidate":"/candidates/P60007242.json",
+         "fec_candidate_id":"P60007242",
+         "candidate_name":"CARLY FIORINA",
+         "amount":46000.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"SPECTRUM MARKETING COMPANIES",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE24.1211",
+         "unique_id":"9c639ef7abb9060174c82a58bf03f2bdacc73caf",
+         "filing_id":1041499,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C90015710.json",
+         "fec_committee_id":"C90015710",
+         "fec_committee_name":null,
+         "fec_candidate":"/candidates/P00003392.json",
+         "fec_candidate_id":"P00003392",
+         "candidate_name":"Hillary Clinton",
+         "amount":192.56,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"Shipping - Banners",
+         "payee":"Laborers' International Union of North America",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"F57.000002",
+         "unique_id":"b9001860aa855b45a78edfcf1efe5ed24130e73b",
+         "filing_id":1041514,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C90015710.json",
+         "fec_committee_id":"C90015710",
+         "fec_committee_name":null,
+         "fec_candidate":"/candidates/P00003392.json",
+         "fec_candidate_id":"P00003392",
+         "candidate_name":"Hillary Clinton",
+         "amount":3842.65,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"Printing and Shipping - T-Shirts",
+         "payee":"K&R Promotional Product",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"F57.000003",
+         "unique_id":"148b963836c7d2abc270af1113ff38f75359ae67",
+         "filing_id":1041514,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C90015710.json",
+         "fec_committee_id":"C90015710",
+         "fec_committee_name":null,
+         "fec_candidate":"/candidates/P00003392.json",
+         "fec_candidate_id":"P00003392",
+         "candidate_name":"Hillary Clinton",
+         "amount":873.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"Printing - Banners",
+         "payee":"The Kelly Company",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"F57.000001",
+         "unique_id":"bac9e25de689cad4f6f1776ca6b779e5165ebb68",
+         "filing_id":1041514,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00573154.json",
+         "fec_committee_id":"C00573154",
+         "fec_committee_name":"CONSERVATIVE, AUTHENTIC, RESPONSIVE LEADERSHIP FOR YOU AND FOR AMERICA",
+         "fec_candidate":"/candidates/P60007242.json",
+         "fec_candidate_id":"P60007242",
+         "candidate_name":"CARLY FIORINA",
+         "amount":41850.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":"2016-01-21",
+         "purpose":"VOTER CONTACT MAIL",
+         "payee":"SPECTRUM MARKETING COMPANIES",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE24.1210",
+         "unique_id":"d63cce176bfd365e6a74ad748d5b0797b3c88121",
+         "filing_id":1041499,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00490375.json",
+         "fec_committee_id":"C00490375",
+         "fec_committee_name":"NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"BERNARD SANDERS",
+         "amount":430.0,
+         "office":"President",
+         "state":"NV",
+         "district":0,
+         "date":"2016-01-21",
+         "purpose":"Site Rental",
+         "payee":"California Nurses Association",
+         "date_received":"2016-01-22",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"D693176",
+         "unique_id":"d6440e9c4f23e3acecdbd5367e66106b3c847af9",
+         "filing_id":1041531,
+         "amended_from":null
+      }
+   ]
+}
 ```
 
-This endpoint retrieves most recent independent expenditures in support of or opposition to a given candidate.
+This endpoint retrieves the most recent independent expenditures in support of or opposition to any presidential candidate.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/president/independent_expenditures`
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/president/independent_expenditures`
+
+## Get Independent Expenditure Office Totals
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "state":"NH",
+         "office":"President",
+         "district":null,
+         "amount":"43813300.1900001"
+      },
+      {
+         "state":"IA",
+         "office":"President",
+         "district":null,
+         "amount":"39169448.72"
+      },
+      {
+         "state":null,
+         "office":"President",
+         "district":null,
+         "amount":"21053952.16"
+      },
+      {
+         "state":"SC",
+         "office":"President",
+         "district":null,
+         "amount":"11535840.63"
+      },
+      {
+         "state":"NH",
+         "office":"President",
+         "district":"0",
+         "amount":"11208105.2"
+      },
+      {
+         "state":"WA",
+         "office":"President",
+         "district":"5",
+         "amount":"7851303.62"
+      },
+      {
+         "state":"IA",
+         "office":"President",
+         "district":"0",
+         "amount":"4238537.85"
+      },
+      {
+         "state":null,
+         "office":"President",
+         "district":"0",
+         "amount":"3491088.69"
+      },
+      {
+         "state":"MA",
+         "office":"President",
+         "district":null,
+         "amount":"2193662.61"
+      },
+      {
+         "state":"NV",
+         "office":"President",
+         "district":null,
+         "amount":"1611572.18"
+      },
+      {
+         "state":"SC",
+         "office":"President",
+         "district":"0",
+         "amount":"1127370.33"
+      },
+      {
+         "state":"NV",
+         "office":"President",
+         "district":"0",
+         "amount":"612167.11"
+      },
+      {
+         "state":"OH",
+         "office":"President",
+         "district":null,
+         "amount":"483992.06"
+      },
+      {
+         "state":"FL",
+         "office":"President",
+         "district":"0",
+         "amount":"411560.62"
+      },
+      {
+         "state":"FL",
+         "office":"President",
+         "district":null,
+         "amount":"265830.34"
+      },
+      {
+         "state":"CA",
+         "office":"President",
+         "district":null,
+         "amount":"213111.59"
+      },
+      {
+         "state":"NY",
+         "office":"President",
+         "district":null,
+         "amount":"170207.67"
+      },
+      {
+         "state":"VT",
+         "office":"President",
+         "district":null,
+         "amount":"167418.43"
+      },
+      {
+         "state":"TX",
+         "office":"President",
+         "district":null,
+         "amount":"141696.36"
+      },
+      {
+         "state":"CA",
+         "office":"President",
+         "district":"0",
+         "amount":"105363.86"
+      },
+      {
+         "state":"VA",
+         "office":"President",
+         "district":"0",
+         "amount":"91814.96"
+      },
+      {
+         "state":"IL",
+         "office":"President",
+         "district":null,
+         "amount":"89425.9"
+      },
+      {
+         "state":"CO",
+         "office":"President",
+         "district":"0",
+         "amount":"88029.96"
+      },
+      {
+         "state":"GA",
+         "office":"President",
+         "district":null,
+         "amount":"79341.72"
+      },
+      {
+         "state":"PA",
+         "office":"President",
+         "district":null,
+         "amount":"77411.91"
+      },
+      {
+         "state":"VA",
+         "office":"President",
+         "district":null,
+         "amount":"74627.83"
+      },
+      {
+         "state":"TX",
+         "office":"President",
+         "district":"0",
+         "amount":"73854.49"
+      },
+      {
+         "state":"MN",
+         "office":"President",
+         "district":null,
+         "amount":"71425.97"
+      },
+      {
+         "state":"MI",
+         "office":"President",
+         "district":null,
+         "amount":"65599.0"
+      },
+      {
+         "state":"NY",
+         "office":"President",
+         "district":"0",
+         "amount":"62426.17"
+      },
+      {
+         "state":"NC",
+         "office":"President",
+         "district":null,
+         "amount":"62289.71"
+      },
+      {
+         "state":"WI",
+         "office":"President",
+         "district":null,
+         "amount":"60247.41"
+      },
+      {
+         "state":"OK",
+         "office":"President",
+         "district":"0",
+         "amount":"51900.56"
+      },
+      {
+         "state":"NJ",
+         "office":"President",
+         "district":null,
+         "amount":"50328.32"
+      },
+      {
+         "state":"TN",
+         "office":"President",
+         "district":null,
+         "amount":"46622.46"
+      },
+      {
+         "state":"PA",
+         "office":"President",
+         "district":"0",
+         "amount":"45506.48"
+      },
+      {
+         "state":"IL",
+         "office":"President",
+         "district":"0",
+         "amount":"44822.82"
+      },
+      {
+         "state":"AR",
+         "office":"President",
+         "district":null,
+         "amount":"43495.65"
+      },
+      {
+         "state":"AL",
+         "office":"President",
+         "district":null,
+         "amount":"43347.75"
+      },
+      {
+         "state":"OH",
+         "office":"President",
+         "district":"0",
+         "amount":"41838.49"
+      },
+      {
+         "state":"WA",
+         "office":"President",
+         "district":null,
+         "amount":"40674.86"
+      },
+      {
+         "state":"CO",
+         "office":"President",
+         "district":null,
+         "amount":"39721.8"
+      },
+      {
+         "state":"LA",
+         "office":"President",
+         "district":"0",
+         "amount":"38787.93"
+      },
+      {
+         "state":"AZ",
+         "office":"President",
+         "district":null,
+         "amount":"38472.35"
+      },
+      {
+         "state":"AL",
+         "office":"President",
+         "district":"0",
+         "amount":"38109.78"
+      },
+      {
+         "state":"MI",
+         "office":"President",
+         "district":"0",
+         "amount":"37710.8"
+      },
+      {
+         "state":"NC",
+         "office":"President",
+         "district":"0",
+         "amount":"37023.95"
+      },
+      {
+         "state":"GA",
+         "office":"President",
+         "district":"0",
+         "amount":"36882.9"
+      },
+      {
+         "state":"IN",
+         "office":"President",
+         "district":null,
+         "amount":"36424.95"
+      },
+      {
+         "state":"NJ",
+         "office":"President",
+         "district":"0",
+         "amount":"35226.36"
+      },
+      {
+         "state":"MO",
+         "office":"President",
+         "district":null,
+         "amount":"34225.45"
+      },
+      {
+         "state":"MD",
+         "office":"President",
+         "district":null,
+         "amount":"33425.08"
+      },
+      {
+         "state":"OK",
+         "office":"President",
+         "district":null,
+         "amount":"32518.19"
+      },
+      {
+         "state":"WA",
+         "office":"President",
+         "district":"0",
+         "amount":"30139.95"
+      },
+      {
+         "state":"MA",
+         "office":"President",
+         "district":"0",
+         "amount":"29926.46"
+      },
+      {
+         "state":"IN",
+         "office":"President",
+         "district":"0",
+         "amount":"29072.02"
+      },
+      {
+         "state":"TN",
+         "office":"President",
+         "district":"0",
+         "amount":"29045.72"
+      },
+      {
+         "state":"AZ",
+         "office":"President",
+         "district":"0",
+         "amount":"28870.97"
+      },
+      {
+         "state":"MO",
+         "office":"President",
+         "district":"0",
+         "amount":"28030.74"
+      },
+      {
+         "state":"MD",
+         "office":"President",
+         "district":"0",
+         "amount":"27651.19"
+      },
+      {
+         "state":"WI",
+         "office":"President",
+         "district":"0",
+         "amount":"27339.25"
+      },
+      {
+         "state":"LA",
+         "office":"President",
+         "district":null,
+         "amount":"26394.81"
+      },
+      {
+         "state":"MN",
+         "office":"President",
+         "district":"0",
+         "amount":"26306.15"
+      },
+      {
+         "state":"KY",
+         "office":"President",
+         "district":null,
+         "amount":"25652.59"
+      },
+      {
+         "state":"KY",
+         "office":"President",
+         "district":"0",
+         "amount":"23972.25"
+      },
+      {
+         "state":"OR",
+         "office":"President",
+         "district":null,
+         "amount":"23448.98"
+      },
+      {
+         "state":"OR",
+         "office":"President",
+         "district":"0",
+         "amount":"22867.47"
+      },
+      {
+         "state":"CT",
+         "office":"President",
+         "district":"0",
+         "amount":"22118.54"
+      },
+      {
+         "state":"CT",
+         "office":"President",
+         "district":null,
+         "amount":"21736.97"
+      },
+      {
+         "state":"MS",
+         "office":"President",
+         "district":"0",
+         "amount":"20335.88"
+      },
+      {
+         "state":"AR",
+         "office":"President",
+         "district":"0",
+         "amount":"20333.4"
+      },
+      {
+         "state":"KS",
+         "office":"President",
+         "district":"0",
+         "amount":"20073.07"
+      },
+      {
+         "state":"UT",
+         "office":"President",
+         "district":"0",
+         "amount":"19390.01"
+      },
+      {
+         "state":"NM",
+         "office":"President",
+         "district":"0",
+         "amount":"18056.27"
+      },
+      {
+         "state":"MS",
+         "office":"President",
+         "district":null,
+         "amount":"17971.44"
+      },
+      {
+         "state":"WV",
+         "office":"President",
+         "district":"0",
+         "amount":"17876.11"
+      },
+      {
+         "state":"NE",
+         "office":"President",
+         "district":"0",
+         "amount":"17590.44"
+      },
+      {
+         "state":"KS",
+         "office":"President",
+         "district":null,
+         "amount":"17436.83"
+      },
+      {
+         "state":"ID",
+         "office":"President",
+         "district":"0",
+         "amount":"16857.7"
+      },
+      {
+         "state":"AK",
+         "office":"President",
+         "district":null,
+         "amount":"16644.95"
+      },
+      {
+         "state":"HI",
+         "office":"President",
+         "district":"0",
+         "amount":"16576.36"
+      },
+      {
+         "state":"ME",
+         "office":"President",
+         "district":"0",
+         "amount":"16539.89"
+      },
+      {
+         "state":"UT",
+         "office":"President",
+         "district":null,
+         "amount":"15973.46"
+      },
+      {
+         "state":"RI",
+         "office":"President",
+         "district":"0",
+         "amount":"15802.3"
+      },
+      {
+         "state":"MT",
+         "office":"President",
+         "district":"0",
+         "amount":"15620.76"
+      },
+      {
+         "state":"DE",
+         "office":"President",
+         "district":"0",
+         "amount":"15382.54"
+      },
+      {
+         "state":"SD",
+         "office":"President",
+         "district":"0",
+         "amount":"15117.84"
+      },
+      {
+         "state":"00",
+         "office":"President",
+         "district":"0",
+         "amount":"15043.55"
+      },
+      {
+         "state":"AK",
+         "office":"President",
+         "district":"0",
+         "amount":"14836.54"
+      },
+      {
+         "state":"ND",
+         "office":"President",
+         "district":"0",
+         "amount":"14831.67"
+      },
+      {
+         "state":"VT",
+         "office":"President",
+         "district":"0",
+         "amount":"14726.6"
+      },
+      {
+         "state":"WY",
+         "office":"President",
+         "district":"0",
+         "amount":"14508.39"
+      },
+      {
+         "state":"NM",
+         "office":"President",
+         "district":null,
+         "amount":"13866.14"
+      },
+      {
+         "state":"WV",
+         "office":"President",
+         "district":null,
+         "amount":"12775.57"
+      },
+      {
+         "state":"NE",
+         "office":"President",
+         "district":null,
+         "amount":"12124.11"
+      },
+      {
+         "state":"ID",
+         "office":"President",
+         "district":null,
+         "amount":"10624.42"
+      },
+      {
+         "state":"HI",
+         "office":"President",
+         "district":null,
+         "amount":"10034.9"
+      },
+      {
+         "state":"ME",
+         "office":"President",
+         "district":null,
+         "amount":"10009.67"
+      },
+      {
+         "state":"RI",
+         "office":"President",
+         "district":null,
+         "amount":"8405.56"
+      },
+      {
+         "state":"MT",
+         "office":"President",
+         "district":null,
+         "amount":"8015.17"
+      },
+      {
+         "state":"DE",
+         "office":"President",
+         "district":null,
+         "amount":"7508.42"
+      },
+      {
+         "state":"SD",
+         "office":"President",
+         "district":null,
+         "amount":"6949.23"
+      },
+      {
+         "state":"ND",
+         "office":"President",
+         "district":null,
+         "amount":"6344.79"
+      },
+      {
+         "state":"WY",
+         "office":"President",
+         "district":null,
+         "amount":"5662.07"
+      },
+      {
+         "state":"AS",
+         "office":"President",
+         "district":null,
+         "amount":"336.98"
+      },
+      {
+         "state":"MP",
+         "office":"President",
+         "district":null,
+         "amount":"336.98"
+      },
+      {
+         "state":"GU",
+         "office":"President",
+         "district":null,
+         "amount":"336.98"
+      },
+      {
+         "state":"VI",
+         "office":"President",
+         "district":null,
+         "amount":"336.96"
+      },
+      {
+         "state":"PR",
+         "office":"President",
+         "district":null,
+         "amount":"336.96"
+      },
+      {
+         "state":"CO",
+         "office":"President",
+         "district":"5",
+         "amount":"19.1"
+      }
+   ]
+}
+```
+
+This endpoint retrieves the amount of money spent in independent expenditures for a given office (either House, Senate or President).
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/race_totals/{office}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+office | one of `house`, `senate` or `president`
+
+## Get Independent Expenditure Race Totals for a Specific Committee
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "fec_committee":"/committees/C00490375.json",
+   "total_amount":971008.12,
+   "house_total":0.0,
+   "senate_total":0.0,
+   "president_total":971008.12,
+   "offset":null,
+   "results":[
+      {
+         "state":null,
+         "office":"President",
+         "district":0,
+         "amount":663477.58
+      },
+      {
+         "state":"IA",
+         "office":"President",
+         "district":0,
+         "amount":181777.86
+      },
+      {
+         "state":"NV",
+         "office":"President",
+         "district":0,
+         "amount":92541.95
+      },
+      {
+         "state":"SC",
+         "office":"President",
+         "district":0,
+         "amount":23911.5
+      },
+      {
+         "state":"NH",
+         "office":"President",
+         "district":0,
+         "amount":9299.23
+      }
+   ]
+}
+```
+
+This endpoint retrieves the total amounts of money that a given committee has spent on individual races (consisting of a state, office and district) during a cycle.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures/races`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+# Late Contributions to Candidates
+
+## Get Recent Late Contributions
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "offset":null,
+   "results":[
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"6DE024C3050E240A79B1",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"NRA Political Victory Fund",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"11250 Waples Mill Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Fairfax",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"65C903E1837EE4CC8AF4",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"50 F STREET NW",
+         "contributor_street_2":"SUITE 900",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6C1DC0CA5724F4C7B86F",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"ALTRIA GROUP, INC. POLITICAL ACTION COMMITTEE (ALTRIAPAC)",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"101 CONSTITUTION AVE NW",
+         "contributor_street_2":"SUITE 400W",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6DFB4ABAF3C0747E39F3",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"FMC CORPORATION GOOD GOVERNMENT PROGRAM",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1050 K STREET, NW",
+         "contributor_street_2":"SUITE 600",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6739A98EA4D6B4888B6D",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Daniel",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Gallagher",
+         "contributor_suffix":null,
+         "contributor_street_1":"1454 Olive Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Homewood",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Information Requested",
+         "contributor_occupation":"Information Requested",
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6927FCB14CA3846CC947",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"Eye of the Tiger PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"PO Box 2485",
+         "contributor_street_2":null,
+         "contributor_city":"Springfield",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"5000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024076,
+         "transaction_id":"69E8D217D148741CFA22",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Peter",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Fisher",
+         "contributor_suffix":null,
+         "contributor_street_1":"114 Glenridge Dr",
+         "contributor_street_2":null,
+         "contributor_city":"East Peoria",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"State of Illinois",
+         "contributor_occupation":"Prisoner Review Board Member",
+         "contribution_date":"2015-09-04",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      }
+   ],
+   "callback":null
+}
+```
+
+During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves the most recent late contributions to candidates.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour`
+
+## Get Recent Late Contributions to a Specific Candidate
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+```
+
+During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves the most recent late contributions to a specific candidate.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/48hour`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+## Get Recent Late Contributions to a Specific Committee
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "offset":null,
+   "results":[
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"65C903E1837EE4CC8AF4",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"50 F STREET NW",
+         "contributor_street_2":"SUITE 900",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"6DE024C3050E240A79B1",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"NRA Political Victory Fund",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"11250 Waples Mill Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Fairfax",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6739A98EA4D6B4888B6D",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Daniel",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Gallagher",
+         "contributor_suffix":null,
+         "contributor_street_1":"1454 Olive Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Homewood",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Information Requested",
+         "contributor_occupation":"Information Requested",
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6C1DC0CA5724F4C7B86F",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"ALTRIA GROUP, INC. POLITICAL ACTION COMMITTEE (ALTRIAPAC)",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"101 CONSTITUTION AVE NW",
+         "contributor_street_2":"SUITE 400W",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6DFB4ABAF3C0747E39F3",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"FMC CORPORATION GOOD GOVERNMENT PROGRAM",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1050 K STREET, NW",
+         "contributor_street_2":"SUITE 600",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024159,
+         "transaction_id":"6927FCB14CA3846CC947",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"Eye of the Tiger PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"PO Box 2485",
+         "contributor_street_2":null,
+         "contributor_city":"Springfield",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-05",
+         "contribution_amount":"5000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024076,
+         "transaction_id":"69E8D217D148741CFA22",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Peter",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Fisher",
+         "contributor_suffix":null,
+         "contributor_street_1":"114 Glenridge Dr",
+         "contributor_street_2":null,
+         "contributor_city":"East Peoria",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"State of Illinois",
+         "contributor_occupation":"Prisoner Review Board Member",
+         "contribution_date":"2015-09-04",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"63D1AA766A9774C98B5D",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"COMMUNITY BANKERS ASSOCIATION OF ILLINOIS FEDPAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"901 COMMUNITY DRIVE",
+         "contributor_street_2":null,
+         "contributor_city":"Springfield",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"6BB7B7691DCA7490D85A",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"William",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Pape",
+         "contributor_suffix":null,
+         "contributor_street_1":"11230 Oak Trail Drive",
+         "contributor_street_2":null,
+         "contributor_city":"Peoria",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Information Requested",
+         "contributor_occupation":"Information Requested",
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"683E8888AC022415A884",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Michael",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Steelman",
+         "contributor_suffix":null,
+         "contributor_street_1":"1313 Washington",
+         "contributor_street_2":null,
+         "contributor_city":"Bushnell",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Farmers and Merchants State Bank",
+         "contributor_occupation":"Banker",
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"6F1B57C8368FE4C8184E",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"PETROLEUM MARKETERS ASSOCIATION OF AMERICAN\\SMALL BUSINESS COMMITTEE",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1901 NORTH FORT MYER DRIVE",
+         "contributor_street_2":"SUITE 500",
+         "contributor_city":"Arlington",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"1500.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"6E922530EF14E4D00B43",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"National Electrical Contractors Association PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"3 Bethesda Metro Center Suite #110",
+         "contributor_street_2":null,
+         "contributor_city":"Bethesda",
+         "contributor_state":"MD",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024029,
+         "transaction_id":"6545F7F66ED494E22A41",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"Union Pacific Corporation Fund for Effective Government",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"700 13th St NW",
+         "contributor_street_2":"Suite 350",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-02",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023976,
+         "transaction_id":"632DD3C846DB34785924",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"ARAB AMERICAN LEADERSHIP COUNCIL PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1600 K STREET NW SUITE 601",
+         "contributor_street_2":null,
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-01",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"6AD4FE210F59A4DDB820",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"BUILD POLITICAL ACTION COMMITTEE OF THE NATIONAL ASSOCIATION OF HOME BUILDERS (BUILDPAC)",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1201 15TH STREET, NW",
+         "contributor_street_2":null,
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"6574676AF2A3046F0B69",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"EYEPAC POLITICAL ACTION COMMITTEE FOR AMERICAN SOCIETY OF CATARACT AND REFRACTIVE SURGERY",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"4000 LEGATO ROAD, SUITE 700",
+         "contributor_street_2":null,
+         "contributor_city":"FAIRFAX",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"6EAB1B3227E6348B39FE",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Sandra",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Yeh-Kane",
+         "contributor_suffix":null,
+         "contributor_street_1":"4920 Foxhall Lane",
+         "contributor_street_2":null,
+         "contributor_city":"Springfield",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Information Requested",
+         "contributor_occupation":"Information Requested",
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"6B8344EE57E914824877",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"American Council of Engineering Companies (ACEC PAC)",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1015 15th Street, NW",
+         "contributor_street_2":"8th floor",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"6AC3D11195E184DCD94A",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Dennis",
+         "contributor_middle_name":"P",
+         "contributor_last_name":"LaHood",
+         "contributor_suffix":null,
+         "contributor_street_1":"1001 Highview Rd",
+         "contributor_street_2":null,
+         "contributor_city":"East Peoria",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"None",
+         "contributor_occupation":"Retired",
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1023880,
+         "transaction_id":"63CA7C8D8BEAB4EA5B9B",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Timothy",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Vanfleet",
+         "contributor_suffix":null,
+         "contributor_street_1":"3800 Vanderbilt Cir.",
+         "contributor_street_2":null,
+         "contributor_city":"Springfield",
+         "contributor_state":"IL",
+         "contributor_zip":null,
+         "contributor_employer":"Self Employed",
+         "contributor_occupation":"Physician",
+         "contribution_date":"2015-08-31",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      }
+   ],
+   "callback":null
+}
+```
+
+During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves the most recent late contributions to a specific committee.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/48hour`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
+
+## Get Recent Late Contributions by Date
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+```
+
+During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves late contributions from a specific date.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour/{year}/{month}/{day}`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+year | The four-digit year from 2001-2016
+month | The two-digit month from 01-12
+day | The two-digit day from 01-31
+
+# Lobbyist Bundlers
+
+## Get Lobbyist Bundlers for a Specific Committee
+
+```ruby
+require 'campaign_cash'
+
+CampaignCash::Base.api_key = YOUR_API_KEY
+CampaignCash::Candidate.search("Carson", 2016)
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: YOUR_API_KEY"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA.39106543",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"",
+         "bundler_first_name":"MATTHEW",
+         "bundler_middle_name":"THOMAS",
+         "bundler_last_name":"ECHOLS",
+         "bundler_suffix":"",
+         "bundler_street_1":"945 NORTHCLIFFE DR NW",
+         "bundler_street_2":"",
+         "bundler_city":"ATLANTA",
+         "bundler_state":"GA",
+         "bundler_zip":"303181639",
+         "bundler_employer":"THE COCA-COLA COMPANY",
+         "bundler_occupation":"SENIOR VICE PRESIDENT",
+         "bundled_amount":"39900.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA-39104721",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"GAYLORD",
+         "bundler_middle_name":"T.",
+         "bundler_last_name":"HUGHEY",
+         "bundler_suffix":"JR.",
+         "bundler_street_1":"305 FERRELL PL",
+         "bundler_street_2":"",
+         "bundler_city":"TYLER",
+         "bundler_state":"TX",
+         "bundler_zip":"757027109",
+         "bundler_employer":"GAYLORD HUGHEY LAW",
+         "bundler_occupation":"ATTORNEY/LOBBYIST",
+         "bundled_amount":"43100.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA-39026407",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"DIRK",
+         "bundler_middle_name":"",
+         "bundler_last_name":"VAN DONGEN",
+         "bundler_suffix":"",
+         "bundler_street_1":"2721 31ST ST NW",
+         "bundler_street_2":"STE 300 ",
+         "bundler_city":"WASHINGTON",
+         "bundler_state":"DC",
+         "bundler_zip":"200083522",
+         "bundler_employer":"NATIONAL ASSOCIATION OF WHOLESALERS",
+         "bundler_occupation":"EXECUTIVE",
+         "bundled_amount":"24200.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39005836",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"AL",
+         "bundler_middle_name":"R.",
+         "bundler_last_name":"CARDENAS",
+         "bundler_suffix":"",
+         "bundler_street_1":"200 SOUTH BISCAYNE BLVD",
+         "bundler_street_2":"STE. 4100 ",
+         "bundler_city":"MIAMI",
+         "bundler_state":"FL",
+         "bundler_zip":"331312362",
+         "bundler_employer":"SQUIRE PATTON BOGGS (US) LLP",
+         "bundler_occupation":"SENIOR PARTNER",
+         "bundled_amount":"18900.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39011605",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"TRE'",
+         "bundler_middle_name":"",
+         "bundler_last_name":"EVERS",
+         "bundler_suffix":"",
+         "bundler_street_1":"605 EAST ROBINSON STREET",
+         "bundler_street_2":"SUITE 310 ",
+         "bundler_city":"ORLANDO",
+         "bundler_state":"FL",
+         "bundler_zip":"328012040",
+         "bundler_employer":"CONSENSUS COMMUNICATIONS",
+         "bundler_occupation":"LOBBYIST AND POLITICAL CONSULTANT",
+         "bundled_amount":"18900.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39014257",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"WILLIAM",
+         "bundler_middle_name":"G.",
+         "bundler_last_name":"HARRISON",
+         "bundler_suffix":"JR.",
+         "bundler_street_1":"213 BUNKERS COVE ROAD",
+         "bundler_street_2":"",
+         "bundler_city":"PANAMA CITY",
+         "bundler_state":"FL",
+         "bundler_zip":"324013909",
+         "bundler_employer":"HARRISON RIVARD DUNCAN & BUZZETT",
+         "bundler_occupation":"ATTORNEY",
+         "bundled_amount":"29600.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39014901",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"RICHARD",
+         "bundler_middle_name":"F.",
+         "bundler_last_name":"HOHLT",
+         "bundler_suffix":"",
+         "bundler_street_1":"7901 KENT ROAD",
+         "bundler_street_2":"",
+         "bundler_city":"ALEXANDRIA",
+         "bundler_state":"VA",
+         "bundler_zip":"223081328",
+         "bundler_employer":"SELF-EMPLOYED",
+         "bundler_occupation":"CONSULTANT",
+         "bundled_amount":"27000.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39042816",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"WILLIAM",
+         "bundler_middle_name":"P.",
+         "bundler_last_name":"KILLMER",
+         "bundler_suffix":"",
+         "bundler_street_1":"900 EMERALD DRIVE",
+         "bundler_street_2":"",
+         "bundler_city":"ALEXANDRIA",
+         "bundler_state":"VA",
+         "bundler_zip":"22308    ",
+         "bundler_employer":"MORTGAGE BANKING ASSOCIATION",
+         "bundler_occupation":"SENIOR VICE PRESIDENT",
+         "bundled_amount":"36200.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39041218",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"HON.",
+         "bundler_first_name":"THOMAS",
+         "bundler_middle_name":"G.",
+         "bundler_last_name":"LOEFFLER",
+         "bundler_suffix":"",
+         "bundler_street_1":"5200 KELLER SPRINGS",
+         "bundler_street_2":"SUITE 825 ",
+         "bundler_city":"DALLAS",
+         "bundler_state":"TX",
+         "bundler_zip":"752482746",
+         "bundler_employer":"AKIN GUMP",
+         "bundler_occupation":"SR. PARTNER",
+         "bundled_amount":"31500.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39041478",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"IGNACIO",
+         "bundler_middle_name":"E.",
+         "bundler_last_name":"SANCHEZ",
+         "bundler_suffix":"",
+         "bundler_street_1":"500 8TH STREET NW",
+         "bundler_street_2":"",
+         "bundler_city":"WASHINGTON",
+         "bundler_state":"DC",
+         "bundler_zip":"200042131",
+         "bundler_employer":"DLA PIPER",
+         "bundler_occupation":"PARTNER",
+         "bundled_amount":"32400.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1015098,
+         "transaction_id":"SA-39026407",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"DIRK",
+         "bundler_middle_name":"",
+         "bundler_last_name":"VAN DONGEN",
+         "bundler_suffix":"",
+         "bundler_street_1":"2721 31ST STREET NORTHWEST",
+         "bundler_street_2":"SUITE 300 ",
+         "bundler_city":"WASHINGTON",
+         "bundler_state":"DC",
+         "bundler_zip":"200083522",
+         "bundler_employer":"NATIONAL ASSOCIATION OF WHOLESALERS",
+         "bundler_occupation":"EXECUTIVE",
+         "bundled_amount":"33900.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA-39040840",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MS.",
+         "bundler_first_name":"MARIA",
+         "bundler_middle_name":"",
+         "bundler_last_name":"CINO",
+         "bundler_suffix":"",
+         "bundler_street_1":"723 S UNION ST",
+         "bundler_street_2":"",
+         "bundler_city":"ALEXANDRIA",
+         "bundler_state":"VA",
+         "bundler_zip":"223143889",
+         "bundler_employer":"HEWLETT-PACKARD",
+         "bundler_occupation":"GOVERNMENT RELATIONS",
+         "bundled_amount":"18025.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA-39014901",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"RICHARD",
+         "bundler_middle_name":"F.",
+         "bundler_last_name":"HOHLT",
+         "bundler_suffix":"",
+         "bundler_street_1":"7901 KENT RD",
+         "bundler_street_2":"",
+         "bundler_city":"ALEXANDRIA",
+         "bundler_state":"VA",
+         "bundler_zip":"223081328",
+         "bundler_employer":"SELF-EMPLOYED",
+         "bundler_occupation":"CONSULTANT",
+         "bundled_amount":"27400.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00579458",
+         "fec_filing_id":1029579,
+         "transaction_id":"SA-39188060",
+         "entity_type":"IND",
+         "bundler_fec_id":null,
+         "bundler_organization_name":"",
+         "bundler_prefix":"MR.",
+         "bundler_first_name":"WILLIAM",
+         "bundler_middle_name":"P.",
+         "bundler_last_name":"KILLMER",
+         "bundler_suffix":"",
+         "bundler_street_1":"1919 M ST NW",
+         "bundler_street_2":"5TH FLOOR",
+         "bundler_city":"WASHINGTON",
+         "bundler_state":"DC",
+         "bundler_zip":"200363521",
+         "bundler_employer":"MORTGAGE BANKERS ASSOCIATION",
+         "bundler_occupation":"SENIOR VICE PRESIDENT - POLITICAL AFF.",
+         "bundled_amount":"26900.0",
+         "start_date":"2016-01-22",
+         "end_date":"2016-01-22"
+      }
+   ]
+}
+```
+
+Committees must report registered lobbyists who act as "bundlers", collecting donations for the committee from multiple contributors. This endpoint retrieves the most recent lobbyist bundlers reported by a specific committee.
+
+### HTTP Request
+
+`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/lobbyist_bundlers`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's official FEC ID, use a candidate search request or the [FEC web site](http://www.fec.gov).
