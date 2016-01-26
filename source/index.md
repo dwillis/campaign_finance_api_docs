@@ -5,7 +5,7 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='mailto:apihelp@propublica.org'>Request an API Key</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -41,34 +41,27 @@ The data returned by the Campaign Finance API is subject to the [official sale a
 
 > To authorize, use this code:
 
-```ruby
-require 'campaign_cash'
-
-CampaignCash::Base.api_key = YOUR_API_KEY
-
-```
-
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > Make sure to replace `YOUR_API_KEY` with your API key.
 
-To use the Campaign Finance API, you must sign up for an API key. Usage is limited to 5000 requests per day (rate limits are subject to change). The API key must be included in all API requests to the server, as a query string parameter:
+To use the Campaign Finance API, you must sign up for an API key. Usage is limited to 5000 requests per day (rate limits are subject to change). The API key must be included in all API requests to the server, set as a header:
 
-`Authorization: YOUR_API_KEY`
+`X-API-Key: PROPUBLICA_API_KEY`
 
 <aside class="notice">
-You must replace <code>YOUR_API_KEY</code> with your personal API key.
+You must replace <code>PROPUBLICA_API_KEY</code> with your personal API key.
 </aside>
 
 # Requests
 
 The Campaign Finance API uses a RESTful style. See individual methods below for permitted requests. The API only accepts GET requests. All requests begin with:
 
-`https://api.propublica.org/svc/elections/us/{version}/finances`
+`https://api.propublica.org/campaign-finance/{version}/`
 
 The current version is `v1`.
 
@@ -78,19 +71,20 @@ These parameters are used in all request types. See below for URI structures and
 
   * *version* The API version (in URI path). The current version is `v1`.
   * *campaign-cycle* An even-numbered year between 1996 and 2016 (in URI path). The current cycle in `2016`.
-  * *api-key* Your ProPublica API key (in query string).
+  * *format* The format of the response (`.json` or `.xml`) added to the end of the request.
 
 The following parameters are optional:  
 
   * *callback* JSONP callback function (in query string).
+  * *offset* The first 20 results are shown by default. To page through the results, set offset to the appropriate multiple of 20.
 
 # Candidates
 
 ## Search for Candidates
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/search.json?query=Wilson"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -100,7 +94,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 Pro Publica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "num_results":2,
    "offset":null,
    "results":[
@@ -130,7 +124,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 }
 ```
 
-This endpoint has two
+This endpoint retrieves federal candidates by last name, using a query string parameter.
 
 ### HTTP Request
 
@@ -146,8 +140,8 @@ query | The first or last name of the candidate
 ## Get a Specific Candidate
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
-  -H "Authorization: meowmeowmeow"
+curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/P60005915.json"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -215,8 +209,8 @@ fec-id | The FEC-assigned 9-character ID of a candidate. To find a candidate's o
 ## Get Top 20 Candidates in Specific Financial Category
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
-  -H "Authorization: meowmeowmeow"
+curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac-total.json"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -227,7 +221,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
    "category":"Contributions from PACs",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "relative_uri":"/candidates/S4NC00089.json",
@@ -660,8 +654,8 @@ category | One of the values from the following categories:
 ## Get Candidates from a State
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+curl "https://api.propublica.org/campaign-finance/v1/2016/seats/DE.json"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -671,7 +665,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "num_results":2,
    "results":[
       {
@@ -719,7 +713,7 @@ district | Specify the district number. Use `1` for states with a single represe
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -729,7 +723,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"P60005162",
@@ -1014,7 +1008,7 @@ CampaignCash::Committee.search("Carson", 2016)
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -1159,7 +1153,7 @@ query | The name of the committee
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
-  -H "Authorization: meowmeowmeow"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -1169,7 +1163,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"C00553560",
@@ -1228,7 +1222,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -1238,7 +1232,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"C00577569",
@@ -1674,7 +1668,7 @@ This endpoint retrieves the 20 most recently added FEC committees.
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -1684,7 +1678,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "offset":null,
    "results":[
       {
@@ -2082,7 +2076,7 @@ This endpoint retrieves the 20 most recently added FEC independent expenditure-o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -2090,7 +2084,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
 ```json
 {
    "status":"OK",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "committee":"/committees/C00553560.json",
    "fec_committee_id":"C00553560",
@@ -2424,7 +2418,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1//2"
- -H "Authorization: meowmeowmeow"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -2434,7 +2428,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "offset":null,
    "results":[
       {
@@ -3516,7 +3510,7 @@ fec-id | The FEC-assigned 9-character ID of a presidential candidate's main comm
 ```json
 {
    "status":"OK",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "results":[
@@ -3688,7 +3682,7 @@ location | Two-letter state abbreviation (for the `states` resource type) or fiv
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -3698,7 +3692,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":null,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -3872,7 +3866,7 @@ query | The committee name or partial name. Spaces are permitted.
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -3882,7 +3876,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":"2016-01-10",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -5008,7 +5002,7 @@ day | The two-digit day from 01-31
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -5017,7 +5011,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -5102,7 +5096,7 @@ This endpoint retrieves a list of available form types for FEC electronic filing
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -5112,7 +5106,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":null,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -5636,7 +5630,7 @@ form-type-id | `F` + integer. To get form type IDs, use an electronic filing for
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -5645,7 +5639,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":{
       "form_type":"F3PA",
@@ -5872,7 +5866,7 @@ filing_id | Integer representing the ID of a Form 3 electronic filing.
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -5881,7 +5875,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -6401,7 +6395,7 @@ This endpoint retrieves the most recent filings that are amendments of earlier f
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -6410,7 +6404,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -7206,7 +7200,7 @@ This endpoint retrieves the 20 most recent broadcast advertisements that identif
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7215,7 +7209,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -7354,7 +7348,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7363,7 +7357,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -7550,7 +7544,7 @@ day | The two-digit day from 01-31
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7568,7 +7562,7 @@ This endpoint retrieves the most recent independent expenditures.
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7595,7 +7589,7 @@ day | The two-digit day from 01-31
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7620,7 +7614,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -7629,7 +7623,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "fec_candidate":"/candidates/P00003392.json",
    "support_total":854070.71,
@@ -8016,7 +8010,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -8025,7 +8019,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -8502,7 +8496,7 @@ This endpoint retrieves the most recent independent expenditures in support of o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -8511,7 +8505,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -9194,7 +9188,7 @@ office | one of `house`, `senate` or `president`
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -9203,7 +9197,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "fec_committee":"/committees/C00490375.json",
    "total_amount":971008.12,
@@ -9264,7 +9258,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -9273,7 +9267,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -9467,7 +9461,7 @@ During the last 20 days before a primary or general election, candidate committe
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -9491,7 +9485,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -9500,7 +9494,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -10025,7 +10019,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -10053,7 +10047,7 @@ day | The two-digit day from 01-31
 
 ```shell
 curl "https://api.propublica.org/campaign-finance/v1/"
-  -H "Authorization: YOUR_API_KEY"
+  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
@@ -10062,7 +10056,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016/",
+   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
