@@ -78,6 +78,10 @@ The following parameters are optional:
   * *callback* JSONP callback function (in query string).
   * *offset* The first 20 results are shown by default. To page through the results, set offset to the appropriate multiple of 20.
 
+# Responses
+
+The API provides JSON and XML responses for every type of request, and supports JSONP callbacks. Responses that are not date-based return the first 20 results; pagination is available via an `offset` query string parameter using multiples of 20.
+
 # Candidates
 
 ## Search for Candidates
