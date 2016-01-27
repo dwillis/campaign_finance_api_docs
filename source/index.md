@@ -94,7 +94,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/search.json
    "status":"OK",
    "copyright":"Copyright (c) 2016 Pro Publica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "num_results":2,
    "offset":null,
    "results":[
@@ -128,7 +128,7 @@ This endpoint retrieves federal candidates by last name, using a query string pa
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/search`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/search`
 
 ### Query Parameters
 
@@ -197,7 +197,7 @@ This endpoint retrieves a specific FEC candidate for a given campaign cycle.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}`
 
 ### URL Parameters
 
@@ -221,7 +221,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
    "category":"Contributions from PACs",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "relative_uri":"/candidates/S4NC00089.json",
@@ -631,7 +631,7 @@ This endpoint retrieves a specific FEC candidate for a given campaign cycle.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/leaders/{category}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/leaders/{category}`
 
 ### URL Parameters
 
@@ -665,7 +665,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/seats/DE.json"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "num_results":2,
    "results":[
       {
@@ -698,7 +698,7 @@ This endpoint retrieves an array of FEC candidates for a given state (and option
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/states/{state}/{chamber}/{district}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/states/{state}/{chamber}/{district}`
 
 ### URL Parameters
 
@@ -712,7 +712,7 @@ district | Specify the district number. Use `1` for states with a single represe
 ## Get Recently Added Candidates
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -723,7 +723,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"P60005162",
@@ -993,14 +993,14 @@ This endpoint retrieves the 20 most recently added FEC candidates.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/new`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/new`
 
 # Committees
 
 ## Search for Committees
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/search.json?query=Americans%20for%20a%20Better"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -1011,7 +1011,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/svc/elections/us/v3/finances/2016",
+   "base_uri":"https://api.propublica.org/svc/elections/us/v3/finances/2016",
    "num_results":8,
    "offset":null,
    "results":[
@@ -1133,7 +1133,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/search`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/search`
 
 ### Query Parameters
 
@@ -1145,7 +1145,7 @@ query | The name of the committee
 ## Get a Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00553560.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -1156,7 +1156,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"C00553560",
@@ -1203,7 +1203,7 @@ This endpoint retrieves a specific FEC committee for a given campaign cycle.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}`
 
 ### URL Parameters
 
@@ -1214,7 +1214,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 ## Get Recently Added Committees
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/new.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -1225,7 +1225,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "results":[
       {
          "id":"C00577569",
@@ -1655,12 +1655,12 @@ This endpoint retrieves the 20 most recently added FEC committees.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/new`
 
 ## Get Recently Added Independent Expenditure-Only Committees
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/superpacs.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -1671,7 +1671,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "offset":null,
    "results":[
       {
@@ -2062,13 +2062,13 @@ This endpoint retrieves the 20 most recently added FEC independent expenditure-o
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/superpacs`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/superpacs`
 
 
 ## Get Committee Filings
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00553560/filings.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -2077,7 +2077,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
 ```json
 {
    "status":"OK",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "committee":"/committees/C00553560.json",
    "fec_committee_id":"C00553560",
@@ -2399,7 +2399,7 @@ This endpoint retrieves the 20 most recently added FEC committees. Electronic fi
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/filings`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/filings`
 
 ### URL Parameters
 
@@ -2410,7 +2410,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a committee's o
 ## Get Leadership Committees
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1//2"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/leadership.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -2421,7 +2421,7 @@ curl "https://api.propublica.org/campaign-finance/v1//2"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "cycle":2016,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "offset":null,
    "results":[
       {
@@ -2832,11 +2832,16 @@ This endpoint retrieves committees designated as "[leadership PACs](http://www.f
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/leadership`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/leadership`
 
 # Presidential Campaigns
 
 ## Presidential Candidate Totals
+
+```shell
+curl "https://api.propublica.org/campaign-finance/v1/2016/president/totals.json"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
+```
 
 > The above command returns JSON structured like this:
 
@@ -3430,9 +3435,14 @@ This endpoint retrieves totals (receipts and disbursements, plus several calcula
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/president/totals`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/president/totals`
 
 ## Presidential Candidate Details
+
+```shell
+curl "https://api.propublica.org/campaign-finance/v1/2016/president/candidates/C00458844.json"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
+```
 
 > The above command returns JSON structured like this:
 
@@ -3487,23 +3497,28 @@ This endpoint retrieves campaign finance details for a particular presidential c
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/president/candidates/{candidate-name | fec-id}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/president/candidates/{candidate-name | fec-id}`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
 candidate-name | The last name of a presidential candidate, in lower case.
-fec-id | The FEC-assigned 9-character ID of a presidential candidate's main committee. To find a committee's official FEC ID, use the presidential totals request or the [FEC web site](http://www.fec.gov).
+fec-id | The FEC-assigned 9-character ID of a presidential candidate's main committee. To find a committee's official FEC ID, use the presidential totals request or the [FEC web site](http://www.fec.gov). Use _either_ a candidate's name or an FEC ID, but not both.
 
 ## Presidential State/Zip Code Totals
+
+```shell
+curl "https://api.propublica.org/campaign-finance/v1/2016/president/states/NM.json"
+ -H "X-API-Key: PROPUBLICA_API_KEY"
+```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
    "status":"OK",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "results":[
@@ -3660,7 +3675,7 @@ This endpoint retrieves total individual itemized contributions to presidential 
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/president/{resource-type}/{location}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/president/{resource-type}/{location}`
 
 ### URL Parameters
 
@@ -3674,7 +3689,7 @@ location | Two-letter state abbreviation (for the `states` resource type) or fiv
 ## Search for Electronic Filings
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/search.json?query=united%20egg"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -3685,7 +3700,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":null,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -3847,7 +3862,7 @@ This endpoint retrieves information about FEC reports filed electronically by a 
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/search`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/search`
 
 ### Query Parameters
 
@@ -3858,7 +3873,7 @@ query | The committee name or partial name. Spaces are permitted.
 ## Get Electronic Filings by Date
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/2016/01/10.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -3869,7 +3884,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":"2016-01-10",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -4981,7 +4996,7 @@ This endpoint retrieves information about FEC reports filed electronically on a 
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/{year}/{month}/{day}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/{year}/{month}/{day}`
 
 ### Query Parameters
 
@@ -4994,7 +5009,7 @@ day | The two-digit day from 01-31
 ## Get Electronic Filing Form Types
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/types.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -5004,7 +5019,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -5083,12 +5098,12 @@ This endpoint retrieves a list of available form types for FEC electronic filing
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/types`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/types`
 
 ## Get Electronic Filings By Type
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/types/F24.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -5099,7 +5114,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
    "date":null,
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -5611,7 +5626,7 @@ This endpoint retrieves the most recent electronic filings by form type.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/types/{form-type-id}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/types/{form-type-id}`
 
 ### Query Parameters
 
@@ -5619,10 +5634,10 @@ Parameter | Description
 --------- | -----------
 form-type-id | `F` + integer. To get form type IDs, use an electronic filing form types request.
 
-## Get Summary for a Specific Electronic Filing
+## Get Summary for a Specific Presidential Electronic Filing
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/1029629.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -5632,222 +5647,125 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
-   "results":{
-      "form_type":"F3PA",
-      "filer_committee_id_number":"C00580100",
-      "committee_name":"DONALD J. TRUMP FOR PRESIDENT, INC.",
-      "change_of_address":null,
-      "street_1":"725 FIFTH AVENUE",
-      "street_2":null,
-      "city":"NEW YORK",
-      "state":"NY",
-      "zip_code":"10022",
-      "activity_primary":null,
-      "activity_general":null,
-      "report_code":"Q3",
-      "election_code":null,
-      "date_of_election":null,
-      "state_of_election":null,
-      "coverage_from_date":"20150701",
-      "coverage_through_date":"20150930",
-      "treasurer_last_name":"JOST",
-      "treasurer_first_name":"TIMOTHY",
-      "treasurer_middle_name":null,
-      "treasurer_prefix":null,
-      "treasurer_suffix":null,
-      "date_signed":"20151217",
-      "col_a_cash_on_hand_beginning_period":"487736.16",
-      "col_a_total_receipts":"3926511.65",
-      "col_a_subtotal":"4414247.81",
-      "col_a_total_disbursements":"4159474.93",
-      "col_a_cash_on_hand_close_of_period":"254772.88",
-      "col_a_debts_to":"0.00",
-      "col_a_debts_by":"1804747.23",
-      "col_a_expenditures_subject_to_limits":"0.00",
-      "col_a_net_contributions":"3930766.57",
-      "col_a_net_operating_expenditures":"5440690.92",
-      "col_a_federal_funds":"0.00",
-      "col_a_individuals_itemized":"1041004.55",
-      "col_a_individuals_unitemized":"2776974.38",
-      "col_a_individual_contribution_total":"3817978.93",
-      "col_a_political_party_committees_receipts":"57.62",
-      "col_a_other_political_committees_pacs":"0.00",
-      "col_a_the_candidate":"100779.63",
-      "col_a_total_contributions":"3918816.18",
-      "col_a_transfers_from_aff_other_party_cmttees":"0.00",
-      "col_a_received_from_or_guaranteed_by_cand":"0.00",
-      "col_a_other_loans":"0.00",
-      "col_a_total_loans":"0.00",
-      "col_a_operating":"7695.47",
-      "col_a_fundraising":"0.00",
-      "col_a_legal_and_accounting":"0.00",
-      "col_a_total_offsets_to_expenditures":"7695.47",
-      "col_a_other_receipts":"0.00",
-      "col_a_operating_expenditures":"4035076.35",
-      "col_a_transfers_to_other_authorized_committees":"40050.00",
-      "col_a_fundraising_disbursements":"0.00",
-      "col_a_exempt_legal_accounting_disbursement":"0.00",
-      "col_a_made_or_guaranteed_by_candidate":"0.00",
-      "col_a_other_repayments":"0.00",
-      "col_a_total_loan_repayments_made":"0.00",
-      "col_a_individuals":"84348.58",
-      "col_a_political_party_committees_refunds":"0.00",
-      "col_a_other_political_committees":"0.00",
-      "col_a_total_contributions_refunds":"84348.58",
-      "col_a_other_disbursements":"0.00",
-      "col_a_items_on_hand_to_be_liquidated":"0.00",
-      "col_a_alabama":"0.00",
-      "col_a_alaska":"0.00",
-      "col_a_arizona":"0.00",
-      "col_a_arkansas":"0.00",
-      "col_a_california":"0.00",
-      "col_a_colorado":"0.00",
-      "col_a_connecticut":"0.00",
-      "col_a_delaware":"0.00",
-      "col_a_dist_of_columbia":"0.00",
-      "col_a_florida":"0.00",
-      "col_a_georgia":"0.00",
-      "col_a_hawaii":"0.00",
-      "col_a_idaho":"0.00",
-      "col_a_illinois":"0.00",
-      "col_a_indiana":"0.00",
-      "col_a_iowa":"0.00",
-      "col_a_kansas":"0.00",
-      "col_a_kentucky":"0.00",
-      "col_a_louisiana":"0.00",
-      "col_a_maine":"0.00",
-      "col_a_maryland":"0.00",
-      "col_a_massachusetts":"0.00",
-      "col_a_michigan":"0.00",
-      "col_a_minnesota":"0.00",
-      "col_a_mississippi":"0.00",
-      "col_a_missouri":"0.00",
-      "col_a_montana":"0.00",
-      "col_a_nebraska":"0.00",
-      "col_a_nevada":"0.00",
-      "col_a_new_hampshire":"0.00",
-      "col_a_new_jersey":"0.00",
-      "col_a_new_mexico":"0.00",
-      "col_a_new_york":"0.00",
-      "col_a_north_carolina":"0.00",
-      "col_a_north_dakota":"0.00",
-      "col_a_ohio":"0.00",
-      "col_a_oklahoma":"0.00",
-      "col_a_oregon":"0.00",
-      "col_a_pennsylvania":"0.00",
-      "col_a_rhode_island":"0.00",
-      "col_a_south_carolina":"0.00",
-      "col_a_south_dakota":"0.00",
-      "col_a_tennessee":"0.00",
-      "col_a_texas":"0.00",
-      "col_a_utah":"0.00",
-      "col_a_vermont":"0.00",
-      "col_a_virginia":"0.00",
-      "col_a_washington":"0.00",
-      "col_a_west_virginia":"0.00",
-      "col_a_wisconsin":"0.00",
-      "col_a_wyoming":"0.00",
-      "col_a_puerto_rico":"0.00",
-      "col_a_guam":"0.00",
-      "col_a_virgin_islands":"0.00",
-      "col_a_totals":"0.00",
-      "col_b_federal_funds":"0.00",
-      "col_b_individuals_itemized":"1094079.55",
-      "col_b_individuals_unitemized":"2816148.71",
-      "col_b_individual_contribution_total":"3910228.26",
-      "col_b_political_party_committees_receipts":"57.62",
-      "col_b_other_political_committees_pacs":"0.00",
-      "col_b_the_candidate":"104829.27",
-      "col_b_total_contributions_other_than_loans":"4015115.15",
-      "col_b_transfers_from_aff_other_party_cmttees":"0.00",
-      "col_b_received_from_or_guaranteed_by_cand":"1804747.23",
-      "col_b_other_loans":"0.00",
-      "col_b_total_loans":"1804747.23",
-      "col_b_operating":"9059.72",
-      "col_b_fundraising":"0.00",
-      "col_b_legal_and_accounting":"0.00",
-      "col_b_total_offsets_to_operating_expenditures":"9059.72",
-      "col_b_other_receipts":"0.00",
-      "col_b_total_receipts":"5828922.10",
-      "col_b_operating_expenditures":"5449750.64",
-      "col_b_transfers_to_other_authorized_committees":"40050.00",
-      "col_b_fundraising_disbursements":"0.00",
-      "col_b_exempt_legal_accounting_disbursement":"0.00",
-      "col_b_made_or_guaranteed_by_the_candidate":"0.00",
-      "col_b_other_repayments":"0.00",
-      "col_b_total_loan_repayments_made":"0.00",
-      "col_b_individuals":"84348.58",
-      "col_b_political_party_committees_refunds":"0.00",
-      "col_b_other_political_committees":"0.00",
-      "col_b_total_contributions_refunds":"84348.58",
-      "col_b_other_disbursements":"0.00",
-      "col_b_total_disbursements":"5574149.22",
-      "col_b_alabama":"0.00",
-      "col_b_alaska":"0.00",
-      "col_b_arizona":"0.00",
-      "col_b_arkansas":"0.00",
-      "col_b_california":"0.00",
-      "col_b_colorado":"0.00",
-      "col_b_connecticut":"0.00",
-      "col_b_delaware":"0.00",
-      "col_b_dist_of_columbia":"0.00",
-      "col_b_florida":"0.00",
-      "col_b_georgia":"0.00",
-      "col_b_hawaii":"0.00",
-      "col_b_idaho":"0.00",
-      "col_b_illinois":"0.00",
-      "col_b_indiana":"0.00",
-      "col_b_iowa":"0.00",
-      "col_b_kansas":"0.00",
-      "col_b_kentucky":"0.00",
-      "col_b_louisiana":"0.00",
-      "col_b_maine":"0.00",
-      "col_b_maryland":"0.00",
-      "col_b_massachusetts":"0.00",
-      "col_b_michigan":"0.00",
-      "col_b_minnesota":"0.00",
-      "col_b_mississippi":"0.00",
-      "col_b_missouri":"0.00",
-      "col_b_montana":"0.00",
-      "col_b_nebraska":"0.00",
-      "col_b_nevada":"0.00",
-      "col_b_new_hampshire":"0.00",
-      "col_b_new_jersey":"0.00",
-      "col_b_new_mexico":"0.00",
-      "col_b_new_york":"0.00",
-      "col_b_north_carolina":"0.00",
-      "col_b_north_dakota":"0.00",
-      "col_b_ohio":"0.00",
-      "col_b_oklahoma":"0.00",
-      "col_b_oregon":"0.00",
-      "col_b_pennsylvania":"0.00",
-      "col_b_rhode_island":"0.00",
-      "col_b_south_carolina":"0.00",
-      "col_b_south_dakota":"0.00",
-      "col_b_tennessee":"0.00",
-      "col_b_texas":"0.00",
-      "col_b_utah":"0.00",
-      "col_b_vermont":"0.00",
-      "col_b_virginia":"0.00",
-      "col_b_washington":"0.00",
-      "col_b_west_virginia":"0.00",
-      "col_b_wisconsin":"0.00",
-      "col_b_wyoming":"0.00",
-      "col_b_puerto_rico":"0.00",
-      "col_b_guam":"0.00",
-      "col_b_virgin_islands":"0.00",
-      "col_b_totals":"0.00"
-   }
+   "results":[
+      {
+         "filing_id":1029629,
+         "fec_form_type":"F3PN",
+         "report":"Q3",
+         "primary_general":"P",
+         "date_coverage_from":"2015-07-01",
+         "date_coverage_to":"2015-09-30",
+         "cash_on_hand_beginning":"2582819.11",
+         "cash_on_hand_close":"1651309.13",
+         "total_receipts_period":"1052657.62",
+         "total_disbursements_period":"1984167.6",
+         "total_receipts_cycle":"4762210.55",
+         "total_disbursements_cycle":"3110901.42",
+         "total_debts_owed":"0.0",
+         "individual_contributions_period":"835899.34",
+         "party_contributions_period":"0.0",
+         "pac_contributions_period":"16750.0",
+         "candidate_contributions_period":"0.0",
+         "total_contributions_period":"852649.34",
+         "individual_contributions_cycle":"2983650.49",
+         "party_contributions_cycle":"0.0",
+         "pac_contributions_cycle":"53550.0",
+         "candidate_contributions_cycle":"0.0",
+         "total_contributions_cycle":"3037200.49",
+         "federal_funds_period":"0.0",
+         "transfers_in_period":"200000.0",
+         "candidate_loans_period":"0.0",
+         "other_loans_period":"0.0",
+         "total_loans_period":"0.0",
+         "federal_funds_cycle":"0.0",
+         "transfers_in_cycle":"1725000.0",
+         "candidate_loans_cycle":"0.0",
+         "other_loans_cycle":"0.0",
+         "total_loans_cycle":"0.0",
+         "operating_offsets_period":"0.0",
+         "fundraising_offsets_period":"0.0",
+         "legal_offsets_period":"0.0",
+         "total_offsets_period":"0.0",
+         "operating_offsets_cycle":"0.0",
+         "fundraising_offsets_cycle":"0.0",
+         "legal_offsets_cycle":"0.0",
+         "total_offsets_cycle":"0.0",
+         "operating_expenditures_period":"1979167.6",
+         "transfers_out_period":"0.0",
+         "fundraising_expenses_period":"0.0",
+         "legal_expenses_period":"0.0",
+         "operating_expenditures_cycle":"3094501.42",
+         "transfers_out_cycle":"0.0",
+         "fundraising_expenses_cycle":"0.0",
+         "legal_expenses_cycle":"0.0",
+         "candidate_loan_repayments_period":"0.0",
+         "other_loan_repayments_period":"0.0",
+         "total_loan_repayments_period":"0.0",
+         "candidate_loan_repayments_cycle":"0.0",
+         "other_loan_repayments_cycle":"0.0",
+         "total_loan_repayments_cycle":"0.0",
+         "individual_refunds_period":"5000.0",
+         "party_refunds_period":"0.0",
+         "pac_refunds_period":"0.0",
+         "total_refunds_period":"5000.0",
+         "individual_refunds_cycle":"16400.0",
+         "party_refunds_cycle":"0.0",
+         "pac_refunds_cycle":"0.0",
+         "total_refunds_cycle":"16400.0",
+         "other_disbursements_period":"0.0",
+         "other_disbursements_cycle":"0.0",
+         "liquidate_period":"0.0",
+         "net_individual_contributions":"830899.34",
+         "net_party_contributions":"0.0",
+         "net_pac_contributions":null,
+         "net_candidate_contributions":"0.0",
+         "net_transfers_in":"200000.0",
+         "net_total_contributions":"847649.34",
+         "net_operating_expenses":"1979167.6",
+         "net_fundraising_expenses":"0.0",
+         "net_legal_expenses":"0.0",
+         "net_disbursements":"1984167.6",
+         "contributions_less_than_200":"76618.58",
+         "num_contributions_less_than_200":418,
+         "contributions_200_499":"36243.2",
+         "num_contributions_200_499":146,
+         "contributions_500_1499":"220785.26",
+         "num_contributions_500_1499":262,
+         "net_primary":"1465281.43",
+         "net_general":"186027.7",
+         "flag_most_current_report":null,
+         "flag_valid_report":null,
+         "cycle":2016,
+         "created_at":null,
+         "updated_at":null,
+         "refunds_less_than_200":null,
+         "refunds_200_499":null,
+         "refunds_500_1499":null,
+         "num_refunds_less_than_200":null,
+         "num_refunds_200_499":null,
+         "num_refunds_500_1499":null,
+         "committee_uri":"/committees/C00578757.json",
+         "candidate_uri":"/candidates/P60007697.json",
+         "num_refunds_2500":null,
+         "refunds_2500":null,
+         "num_refunds_1500_2499":null,
+         "refunds_1500_2499":null,
+         "num_contributions_1500_2499":58,
+         "contributions_1500_2499":"119651.0",
+         "num_contributions_2500":138,
+         "contributions_2500":"372600.0"
+      }
+   ]
 }
 ```
 
-This endpoint retrieves summary figures from a specific FEC electronic filing (Form 3 filings only).
+This endpoint retrieves summary figures from a specific FEC electronic filing (Form 3 filings by presidential candidates only).
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/{filing_id}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/{filing_id}`
 
 ### Query Parameters
 
@@ -5858,7 +5776,7 @@ filing_id | Integer representing the ID of a Form 3 electronic filing.
 ## Get Recent Amendments
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/filings/amendments.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -5868,7 +5786,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -6380,14 +6298,14 @@ This endpoint retrieves the most recent filings that are amendments of earlier f
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/filings/amendments`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/filings/amendments`
 
 # Electioneering Communications
 
 ## Get Recent Electioneering Communications
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/electioneering_communications.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -6397,8 +6315,8 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
-   "cycle":2016,
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2008/",
+   "cycle":2008,
    "results":[
       {
          "cycle":2008,
@@ -7187,12 +7105,12 @@ This endpoint retrieves the 20 most recent broadcast advertisements that identif
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications`
 
 ## Get Electioneering Communications by Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C30002034/electioneering_communications.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -7202,7 +7120,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -7329,7 +7247,7 @@ This endpoint retrieves the most recent broadcast advertisements by a specific c
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/electioneering_communications`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/electioneering_communications`
 
 ### Query Parameters
 
@@ -7340,7 +7258,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Electioneering Communications by Date
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/electioneering_communications/2012/10/01.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -7350,7 +7268,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -7521,7 +7439,7 @@ This endpoint retrieves broadcast advertisements that identify one or more feder
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications/{year}/{month}/{day}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/electioneering_communications/{year}/{month}/{day}`
 
 ### Query Parameters
 
@@ -7536,39 +7454,539 @@ day | The two-digit day from 01-31
 ## Get Recent Independent Expenditures
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/independent_expenditures.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
+   "cycle":2016,
+   "results":[
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH06189.json",
+         "fec_candidate_id":"H0OH06189",
+         "candidate_name":"BILL JOHNSON",
+         "amount":4.3,
+         "office":"House",
+         "state":"OH",
+         "district":6,
+         "date":"2015-04-30",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-07-15",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14029",
+         "unique_id":"963a1d7aeed6d207b0816f3ca7d8ed73805d0339",
+         "filing_id":1014561,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00216614.json",
+         "fec_committee_id":"C00216614",
+         "fec_committee_name":"DEMOCRATIC PARTY COMMITTEE ABROAD",
+         "fec_candidate":"/candidates/S6LA00227.json",
+         "fec_candidate_id":"S6LA00227",
+         "candidate_name":"MARY LANDRIEU",
+         "amount":182.53,
+         "office":"Senate",
+         "state":"LA",
+         "district":null,
+         "date":"2014-12-08",
+         "purpose":"Reimbursement - See Memo Entries",
+         "payee":"Kathryn Solon",
+         "date_received":"2015-01-31",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-06-07521-0029",
+         "unique_id":"67a2b7fb7fb169a366a6554175294156bafaeb6e",
+         "filing_id":991172,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H8OH05036.json",
+         "fec_candidate_id":"H8OH05036",
+         "candidate_name":"ROBERT LATTA",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":5,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14011",
+         "unique_id":"a5198be0688ef58b880a1cdef23da7cf39f774e2",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH08029.json",
+         "fec_candidate_id":"H0OH08029",
+         "candidate_name":"JOHN A BOEHNER",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":8,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14012",
+         "unique_id":"2caacd137f4950a36951b66557154123a986ebf2",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH18077.json",
+         "fec_candidate_id":"H0OH18077",
+         "candidate_name":"ROBERT GIBBS",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":7,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14008",
+         "unique_id":"d143f4e8045097185f24ad1982176918a73e2fcc",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H2OH03067.json",
+         "fec_candidate_id":"H2OH03067",
+         "candidate_name":"MICHAEL R TURNER",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":10,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14013",
+         "unique_id":"dbc4b13b7da4b24ec9efa6083d782d597c039d70",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH16097.json",
+         "fec_candidate_id":"H0OH16097",
+         "candidate_name":"JAMES RENACCI",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":16,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14006",
+         "unique_id":"d17ebb84d3a7b2b0bdab402321c856ec7a39df4d",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH12062.json",
+         "fec_candidate_id":"H0OH12062",
+         "candidate_name":"PATRICK J TIBERI",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":12,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14010",
+         "unique_id":"3731351adbfaed2a409d58fefb09821746104fc7",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00216614.json",
+         "fec_committee_id":"C00216614",
+         "fec_committee_name":"DEMOCRATIC PARTY COMMITTEE ABROAD",
+         "fec_candidate":"/candidates/S6LA00227.json",
+         "fec_candidate_id":"S6LA00227",
+         "candidate_name":"MARY LANDRIEU",
+         "amount":182.53,
+         "office":"Senate",
+         "state":"LA",
+         "district":null,
+         "date":"2014-12-08",
+         "purpose":"Postcards",
+         "payee":"Flyeralarm",
+         "date_received":"2015-01-31",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-06-07521-08816",
+         "unique_id":"6154d462c88f3f35e3d913f88d2a05f85014d70b",
+         "filing_id":991172,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00029447.json",
+         "fec_committee_id":"C00029447",
+         "fec_committee_name":"INTERNATIONAL ASSOCIATION OF FIREFIGHTERS INTERESTED IN REGISTRATION AND EDUCATION PAC",
+         "fec_candidate":"/candidates/S0NH00219.json",
+         "fec_candidate_id":"S0NH00219",
+         "candidate_name":"JEANNE SHAHEEN",
+         "amount":1179.88,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-03-31",
+         "purpose":"Payment for Yard Signs Disclosed on 10/30 24-HR Notice & Post-Gen Report",
+         "payee":"Financial Innovations",
+         "date_received":"2015-04-20",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"D28916",
+         "unique_id":"221197a47afdaa6178be1b3baa6c525af61e9ba7",
+         "filing_id":1005311,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH06189.json",
+         "fec_candidate_id":"H0OH06189",
+         "candidate_name":"BILL JOHNSON",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":6,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14005",
+         "unique_id":"2795319137b2104f0a2c45adcdddb10fa92ae60b",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00563981.json",
+         "fec_committee_id":"C00563981",
+         "fec_committee_name":"FORWARD MASSACHUSETTS",
+         "fec_candidate":"/candidates/H4MA06090.json",
+         "fec_candidate_id":"H4MA06090",
+         "candidate_name":"Seth Moulton",
+         "amount":-156.0,
+         "office":"House",
+         "state":"MA",
+         "district":6,
+         "date":"2015-02-27",
+         "purpose":"Payroll VOID - Employee did not work",
+         "payee":"Margie Mendez",
+         "date_received":"2015-03-04",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-03-00311-00421",
+         "unique_id":"001d5ba810f5bd1acf7981640d058adfe0cad770",
+         "filing_id":996036,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H6OH04082.json",
+         "fec_candidate_id":"H6OH04082",
+         "candidate_name":"JAMES D JORDAN",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":4,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14007",
+         "unique_id":"ff4e5b7bc9a212a766fd65e9a1f1157325354c85",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H4OH11066.json",
+         "fec_candidate_id":"H4OH11066",
+         "candidate_name":"MARK ZETZER",
+         "amount":16.5,
+         "office":"House",
+         "state":"OH",
+         "district":11,
+         "date":"2014-12-31",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-01-30",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14009",
+         "unique_id":"33402329cc1f1a2390f17ea90a537dda9631a5cc",
+         "filing_id":990671,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00563981.json",
+         "fec_committee_id":"C00563981",
+         "fec_committee_name":"FORWARD MASSACHUSETTS",
+         "fec_candidate":"/candidates/H4MA06090.json",
+         "fec_candidate_id":"H4MA06090",
+         "candidate_name":"Seth Moulton",
+         "amount":-188.5,
+         "office":"House",
+         "state":"MA",
+         "district":6,
+         "date":"2015-02-27",
+         "purpose":"Payroll VOID - Employee did not work",
+         "payee":"Crisbeth Sanchez",
+         "date_received":"2015-03-04",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-03-00314-00424",
+         "unique_id":"b61af1d8988023ea3cc3f99f7f6a03aac5ce0760",
+         "filing_id":996036,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00563981.json",
+         "fec_committee_id":"C00563981",
+         "fec_committee_name":"FORWARD MASSACHUSETTS",
+         "fec_candidate":"/candidates/H4MA06090.json",
+         "fec_candidate_id":"H4MA06090",
+         "candidate_name":"Seth Moulton",
+         "amount":-130.0,
+         "office":"House",
+         "state":"MA",
+         "district":6,
+         "date":"2015-02-27",
+         "purpose":"Payroll VOID - Employee did not work",
+         "payee":"Belkis Rosario",
+         "date_received":"2015-03-04",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-03-00313-00423",
+         "unique_id":"579736a980eb09949622f58a16e979840f8af588",
+         "filing_id":996036,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00563981.json",
+         "fec_committee_id":"C00563981",
+         "fec_committee_name":"FORWARD MASSACHUSETTS",
+         "fec_candidate":"/candidates/H4MA06090.json",
+         "fec_candidate_id":"H4MA06090",
+         "candidate_name":"Seth Moulton",
+         "amount":-65.0,
+         "office":"House",
+         "state":"MA",
+         "district":6,
+         "date":"2015-02-27",
+         "purpose":"Payroll VOID - Employee did not work",
+         "payee":"Jonny Hillaire",
+         "date_received":"2015-03-04",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-03-00312-00422",
+         "unique_id":"5e636166739c37cf681f3f575e5643d6d36d15d0",
+         "filing_id":996036,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00563981.json",
+         "fec_committee_id":"C00563981",
+         "fec_committee_name":"FORWARD MASSACHUSETTS",
+         "fec_candidate":"/candidates/H4MA06090.json",
+         "fec_candidate_id":"H4MA06090",
+         "candidate_name":"Seth Moulton",
+         "amount":-78.0,
+         "office":"House",
+         "state":"MA",
+         "district":6,
+         "date":"2015-02-27",
+         "purpose":"Payroll VOID - Employee did not work",
+         "payee":"Freslyn Garcia-Gonzalez",
+         "date_received":"2015-03-04",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"24-03-00310-00420",
+         "unique_id":"40af4cf6eb1a59508e1f68924fe0106f2a03c851",
+         "filing_id":996036,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H6OH04082.json",
+         "fec_candidate_id":"H6OH04082",
+         "candidate_name":"JAMES D JORDAN",
+         "amount":4.3,
+         "office":"House",
+         "state":"OH",
+         "district":4,
+         "date":"2015-04-30",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-07-15",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14031",
+         "unique_id":"4059b36e5efe5941b354848017a42e1937ff97c3",
+         "filing_id":1014561,
+         "amended_from":null
+      },
+      {
+         "fec_committee":"/committees/C00097196.json",
+         "fec_committee_id":"C00097196",
+         "fec_committee_name":"OHIO RIGHT TO LIFE SOCIETY, INC. PAC",
+         "fec_candidate":"/candidates/H0OH16097.json",
+         "fec_candidate_id":"H0OH16097",
+         "candidate_name":"JAMES RENACCI",
+         "amount":4.3,
+         "office":"House",
+         "state":"OH",
+         "district":16,
+         "date":"2015-04-30",
+         "purpose":"Printing Ballot Cards",
+         "payee":"Able Printing Company",
+         "date_received":"2015-07-15",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.14030",
+         "unique_id":"80bcb7ef9f68debcd4a8a3ab8792dbd237404d8a",
+         "filing_id":1014561,
+         "amended_from":null
+      }
+   ]
+}
 ```
 
 This endpoint retrieves the most recent independent expenditures.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures`
 
 ## Get Independent Expenditures by Date
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/independent_expenditures/2015/01/31.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
+   "cycle":2016,
+   "date":"2015-01-31",
+   "results":[
+      {
+         "fec_committee":"/committees/C00448696.json",
+         "fec_committee_id":"C00448696",
+         "fec_committee_name":"SENATE CONSERVATIVES FUND",
+         "fec_candidate":"/candidates/S0UT00165.json",
+         "fec_candidate_id":"S0UT00165",
+         "candidate_name":"Mike Lee",
+         "amount":28.75,
+         "office":"Senate",
+         "state":"UT",
+         "district":null,
+         "date":"2015-01-31",
+         "purpose":"IE-Lee-Online Processing",
+         "payee":"Senate Conservatives Fund",
+         "date_received":"2015-07-31",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"E4E72CD473970430A95C",
+         "unique_id":"a9ef7c98a2085d2438ca55d06c94e8dbfdfe26e6",
+         "filing_id":1019911,
+         "amended_from":null,
+         "dissemination_date":"2015-01-31"
+      }
+   ]
+}
 ```
 
 This endpoint retrieves the most recent independent expenditures on a specific date (the date of activity, not the date filed with the FEC).
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/{year}/{month}/{day}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/{year}/{month}/{day}`
 
 ### Query Parameters
 
@@ -7581,21 +7999,451 @@ day | The two-digit day from 01-31
 ## Get Independent Expenditures by Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00489856/independent_expenditures.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
+   "cycle":2016,
+   "fec_committee":"/committees/C00489856.json",
+   "total_amount":1614228.03,
+   "offset":null,
+   "results":[
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"Bernard Sanders",
+         "amount":575358.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":null,
+         "purpose":"media placement",
+         "payee":"Red Eagle Media Group",
+         "date_received":"2016-01-26",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6435",
+         "unique_id":"0bd905a707c92cf3f7d312aeb6e665101dfe7b70",
+         "filing_id":1042603,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/P60007168.json",
+         "fec_candidate_id":"P60007168",
+         "candidate_name":"Bernard Sanders",
+         "amount":16220.0,
+         "office":"President",
+         "state":"IA",
+         "district":null,
+         "date":null,
+         "purpose":"media production",
+         "payee":"Red Eagle Media Group",
+         "date_received":"2016-01-26",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6434",
+         "unique_id":"a054c1ed90a1d532775cb59e8a65a07f01070d9d",
+         "filing_id":1042603,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S6NH00091.json",
+         "fec_candidate_id":"S6NH00091",
+         "candidate_name":"Margaret Wood Hassan",
+         "amount":38467.25,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-12-21",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-12-29",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6412",
+         "unique_id":"76ef26a88a011eb21aab03ab2f3b129ecbba8d68",
+         "filing_id":1037587,
+         "amended_from":1037251
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":115401.75,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-12-21",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-12-29",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6410",
+         "unique_id":"5943514cdde587186443d3e5082c638cc006a355",
+         "filing_id":1037587,
+         "amended_from":1037251
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S6NH00091.json",
+         "fec_candidate_id":"S6NH00091",
+         "candidate_name":"Margaret Wood Hassan",
+         "amount":13337.03,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-11-24",
+         "purpose":"online advertising",
+         "payee":"Targeted Victory",
+         "date_received":"2015-11-27",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6391",
+         "unique_id":"c21fc0c0ec67888cfb050c297a7485251cbfd1f9",
+         "filing_id":1034405,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S6NH00091.json",
+         "fec_candidate_id":"S6NH00091",
+         "candidate_name":"Margaret Wood Hassan",
+         "amount":85050.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-11-24",
+         "purpose":"media placement",
+         "payee":"Crossroads Media, LLC",
+         "date_received":"2015-11-27",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6392",
+         "unique_id":"21b0a2138f48b441c24e2377ce391b0fd15b9d9e",
+         "filing_id":1034405,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S6NH00091.json",
+         "fec_candidate_id":"S6NH00091",
+         "candidate_name":"Margaret Wood Hassan",
+         "amount":12875.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-11-24",
+         "purpose":"media production",
+         "payee":"Something Else Strategies, LLC",
+         "date_received":"2015-11-27",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6394",
+         "unique_id":"de50f0b2cd6b9d95a0929bbcf199de09088ec442",
+         "filing_id":1034405,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":86054.25,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-10-26",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-10-27",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6383",
+         "unique_id":"fea2a0088d01710a8f444d41ba835bd932f984a6",
+         "filing_id":1031278,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S6NH00091.json",
+         "fec_candidate_id":"S6NH00091",
+         "candidate_name":"Margaret Wood Hassan",
+         "amount":28684.75,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-10-26",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-10-27",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6384",
+         "unique_id":"069cd67178c17d52b7851464f17a9c82076f86be",
+         "filing_id":1031278,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/.json",
+         "fec_candidate_id":null,
+         "candidate_name":"Maggie Hassan",
+         "amount":5000.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-10-06",
+         "purpose":"online media",
+         "payee":"Targeted Victory",
+         "date_received":"2015-10-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"O",
+         "transaction_id":"SE.6367",
+         "unique_id":"6f80c74ad66a1effd4c838ba37e408ab99b25901",
+         "filing_id":1026925,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":675.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-10-06",
+         "purpose":"online advertising",
+         "payee":"Targeted Victory",
+         "date_received":"2015-10-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6372",
+         "unique_id":"d63089993a3e4519960ecf52784436bae2093bf1",
+         "filing_id":1026925,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":34200.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-10-05",
+         "purpose":"research",
+         "payee":"Wilson Perkins Allen",
+         "date_received":"2015-10-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6371",
+         "unique_id":"2b126b2e549bbe0f5711313a48048d5d30d67463",
+         "filing_id":1026925,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":13945.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-09-11",
+         "purpose":"media production",
+         "payee":"Something Else Strategies, LLC",
+         "date_received":"2015-09-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6354",
+         "unique_id":"a9d8f2146fe9474d8758b8716088088fe3338957",
+         "filing_id":1024482,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ESAFUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":91689.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-08-27",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-10-06",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6357",
+         "unique_id":"9d6b582d322e6fe2fad088f34b7c9e36f1b09778",
+         "filing_id":1026925,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":40000.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-08-27",
+         "purpose":"media consulting",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-09-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6355",
+         "unique_id":"f911a49629a6721ea63026084bfd3e18ba078966",
+         "filing_id":1024482,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":87000.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-07-17",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-09-08",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6341",
+         "unique_id":"a6591121ed332c93a570ed9b20b53f5ed6ff7086",
+         "filing_id":1024244,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":240050.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-07-17",
+         "purpose":"media placement",
+         "payee":"Crossroads Media, LLC",
+         "date_received":"2015-09-11",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6317",
+         "unique_id":"f0eae995fe5f52d86ebc2dd66520f3999cc7bb64",
+         "filing_id":1024482,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":45500.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-07-06",
+         "purpose":"online advertising",
+         "payee":"Targeted Victory",
+         "date_received":"2015-07-08",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6309",
+         "unique_id":"29210ce2a8c35c00ca78d2434903578c9f3890a0",
+         "filing_id":1012855,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":6000.0,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-06-22",
+         "purpose":"web development",
+         "payee":"Targeted Victory",
+         "date_received":"2015-07-31",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6287",
+         "unique_id":"01ef9cfebfd81099bd8f3726ce9255c45aad14e8",
+         "filing_id":1019888,
+         "amended_from":null
+      },
+      {
+         "fec_committee_name":"ENDING SPENDING ACTION FUND",
+         "fec_candidate":"/candidates/S0NH00235.json",
+         "fec_candidate_id":"S0NH00235",
+         "candidate_name":"Kelly A. Ayotte",
+         "amount":2525.27,
+         "office":"Senate",
+         "state":"NH",
+         "district":null,
+         "date":"2015-05-06",
+         "purpose":"direct voter contact",
+         "payee":"Norway Hill Associates, Inc.",
+         "date_received":"2015-07-31",
+         "fec_uri":null,
+         "amendment":null,
+         "support_or_oppose":"S",
+         "transaction_id":"SE.6288",
+         "unique_id":"a21ecb3638723059a7f101566e5fa2ba7832daaf",
+         "filing_id":1019888,
+         "amended_from":null
+      }
+   ]
+}
 ```
 
 This endpoint retrieves most recent independent expenditures by a given committee.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures`
 
 ### Query Parameters
 
@@ -7606,7 +8454,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Independent Expenditures that Support or Oppose a Specific Candidate
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/P00003392/independent_expenditures.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -7616,7 +8464,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "fec_candidate":"/candidates/P00003392.json",
    "support_total":854070.71,
@@ -7991,7 +8839,7 @@ This endpoint retrieves most recent independent expenditures in support of or op
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/independent_expenditures`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/independent_expenditures`
 
 ### Query Parameters
 
@@ -8002,7 +8850,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Independent Expenditures that Support or Oppose Presidential Candidates
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/president/independent_expenditures.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -8012,7 +8860,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -8483,12 +9331,12 @@ This endpoint retrieves the most recent independent expenditures in support of o
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/president/independent_expenditures`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/president/independent_expenditures`
 
 ## Get Independent Expenditure Office Totals
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/independent_expenditures/race_totals/president.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -8498,7 +9346,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -9169,7 +10017,7 @@ This endpoint retrieves the amount of money spent in independent expenditures fo
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/race_totals/{office}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/independent_expenditures/race_totals/{office}`
 
 ### Query Parameters
 
@@ -9180,7 +10028,7 @@ office | one of `house`, `senate` or `president`
 ## Get Independent Expenditure Race Totals for a Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00490375/independent_expenditures/races.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -9190,7 +10038,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "fec_committee":"/committees/C00490375.json",
    "total_amount":971008.12,
@@ -9237,7 +10085,7 @@ This endpoint retrieves the total amounts of money that a given committee has sp
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures/races`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/independent_expenditures/races`
 
 ### Query Parameters
 
@@ -9250,7 +10098,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Recent Late Contributions
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/contributions/48hour.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -9260,7 +10108,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -9448,25 +10296,535 @@ During the last 20 days before a primary or general election, candidate committe
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour`
 
 ## Get Recent Late Contributions to a Specific Candidate
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2014/candidates/H4NY11138/48hour.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2014/",
+   "cycle":2014,
+   "offset":null,
+   "results":[
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":972424,
+         "transaction_id":"C10115420",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00007922",
+         "contributor_organization_name":"LIUNA PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"905 16th St NW",
+         "contributor_street_2":"Fl 2",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"LiUna! PAC",
+         "contributor_occupation":"Legislative & Political Director",
+         "contribution_date":"2014-11-03",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":972135,
+         "transaction_id":"C10114340",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00007922",
+         "contributor_organization_name":"LIUNA PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"905 16th St NW",
+         "contributor_street_2":"Fl 2",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"LiUna! PAC",
+         "contributor_occupation":"Legislative & Political Director",
+         "contribution_date":"2014-11-01",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":972135,
+         "transaction_id":"C10114334",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00002089",
+         "contributor_organization_name":"Communication Workers of AmericaCWA-COPE",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"501 3rd St NW",
+         "contributor_street_2":null,
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-11-01",
+         "contribution_amount":"1500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":970648,
+         "transaction_id":"C10111815",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00112888",
+         "contributor_organization_name":"Lorillard Tobacco Company PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"714 Green Valley Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Greensboro",
+         "contributor_state":"NC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-10-28",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":970648,
+         "transaction_id":"C10112501",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00012476",
+         "contributor_organization_name":"UA Political Educational Committee",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"THREE PARK PLACE",
+         "contributor_street_2":null,
+         "contributor_city":"ANNAPOLIS",
+         "contributor_state":"MD",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-10-29",
+         "contribution_amount":"1500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":968525,
+         "transaction_id":"C10106422",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00107300",
+         "contributor_organization_name":"American Airlines PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1101 17th St NW",
+         "contributor_street_2":null,
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"American Airlines",
+         "contributor_occupation":null,
+         "contribution_date":"2014-10-23",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":968525,
+         "transaction_id":"C10106591",
+         "entity_type":"IND",
+         "contributor_fec_id":null,
+         "contributor_organization_name":null,
+         "contributor_prefix":null,
+         "contributor_first_name":"Michael",
+         "contributor_middle_name":null,
+         "contributor_last_name":"Doppelt",
+         "contributor_suffix":null,
+         "contributor_street_1":"235 W 70th St",
+         "contributor_street_2":"Apt 3F",
+         "contributor_city":"New York",
+         "contributor_state":"NY",
+         "contributor_zip":null,
+         "contributor_employer":"Lightyear Capital",
+         "contributor_occupation":"Private Equity-Fundraiser",
+         "contribution_date":"2014-10-23",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":968525,
+         "transaction_id":"C10107257",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00373423",
+         "contributor_organization_name":"Bricklayers and Allied Craftworkers",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"3750 Monroe Ave",
+         "contributor_street_2":"Ste 17A",
+         "contributor_city":"Pittsford",
+         "contributor_state":"NY",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-10-23",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":964070,
+         "transaction_id":"C10102045",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00373423",
+         "contributor_organization_name":"Bricklayers and Allied Craftworkers",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"3750 Monroe Ave",
+         "contributor_street_2":"Ste 17A",
+         "contributor_city":"Pittsford",
+         "contributor_state":"NY",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-10-20",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":961162,
+         "transaction_id":"C10099748",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00003251",
+         "contributor_organization_name":"NEA Fund for Children & Public Education",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1201 16th St NW",
+         "contributor_street_2":"Ste 420",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"NEA Fund for Children and Public Educa",
+         "contributor_occupation":"Chairperson",
+         "contribution_date":"2014-10-17",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":932956,
+         "transaction_id":"C9906322",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00027359",
+         "contributor_organization_name":"Ironworkers Political Action League (IPAL)",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1750 New York Ave NW",
+         "contributor_street_2":null,
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-20",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":932059,
+         "transaction_id":"C9902228",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C70003108",
+         "contributor_organization_name":"International Association of Fire Fighters",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1750 New York Ave NW",
+         "contributor_street_2":null,
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-16",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":931012,
+         "transaction_id":"C9901568",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00010082",
+         "contributor_organization_name":"National Cable & Telecom",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"25 MASSACHUSETTS AVENUE, NW #100",
+         "contributor_street_2":null,
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-13",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":931012,
+         "transaction_id":"C9901567",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00009936",
+         "contributor_organization_name":"AFGE Political Action Committee",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"80 F St NW",
+         "contributor_street_2":"attn:Derrick Thomas, National Vice",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"American Federation of Govt. Employees",
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-13",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":931012,
+         "transaction_id":"C9901474",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00088591",
+         "contributor_organization_name":"Employees of Northrop Grumman Corp. PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"520 S Grand Ave",
+         "contributor_street_2":"Ste 700",
+         "contributor_city":"Los Angeles",
+         "contributor_state":"CA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-13",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":930498,
+         "transaction_id":"C9900257",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00003251",
+         "contributor_organization_name":"The NEA Fund for Children & Public Education",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1201 16th St NW",
+         "contributor_street_2":"Ste 420",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":"NEA Fund for Children and Public Educa",
+         "contributor_occupation":"Chairperson",
+         "contribution_date":"2014-06-11",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":930498,
+         "transaction_id":"C9900269",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00068692",
+         "contributor_organization_name":"Federal Express PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"942 S Shady Grove Rd",
+         "contributor_street_2":"# Memphis",
+         "contributor_city":"Memphis",
+         "contributor_state":"TN",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-11",
+         "contribution_amount":"1500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":930498,
+         "transaction_id":"C9900255",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00144766",
+         "contributor_organization_name":"National Beer Wholesales Association PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1101 King St",
+         "contributor_street_2":"Ste 600",
+         "contributor_city":"Alexandria",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-10",
+         "contribution_amount":"2500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":930498,
+         "transaction_id":"C9900263",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00012468",
+         "contributor_organization_name":"The Coca-Cola Company",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1 COCA-COLA PLAZA NW",
+         "contributor_street_2":null,
+         "contributor_city":"ATLANTA",
+         "contributor_state":"GA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-10",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      },
+      {
+         "cycle":2014,
+         "fec_committee_id":"C00415331",
+         "fec_filing_id":930498,
+         "transaction_id":"C9897888",
+         "entity_type":"PAC",
+         "contributor_fec_id":"C00364778",
+         "contributor_organization_name":"BANK OF AMERICA CORPORATION FEDERAL PAC",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"1455 Pennsylvania Ave NW",
+         "contributor_street_2":"DC8-455-09-01",
+         "contributor_city":"Washington",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2014-06-09",
+         "contribution_amount":"1500.0",
+         "fec_candidate_id":"H4NY11138",
+         "office_state":"NY"
+      }
+   ],
+   "callback":null
+}
 ```
 
 During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves the most recent late contributions to a specific candidate.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/48hour`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/{fec-id}/48hour`
 
 ### Query Parameters
 
@@ -9477,7 +10835,7 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Recent Late Contributions to a Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00575050/48hour.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -9487,7 +10845,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "offset":null,
    "results":[
@@ -10000,7 +11358,7 @@ During the last 20 days before a primary or general election, candidate committe
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/48hour`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/48hour`
 
 ### Query Parameters
 
@@ -10011,20 +11369,80 @@ fec-id | The FEC-assigned 9-character ID of a committee. To find a candidate's o
 ## Get Recent Late Contributions by Date
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/contributions/48hour/2015/09/07.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
+   "cycle":2016,
+   "offset":null,
+   "results":[
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"65C903E1837EE4CC8AF4",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"50 F STREET NW",
+         "contributor_street_2":"SUITE 900",
+         "contributor_city":"WASHINGTON",
+         "contributor_state":"DC",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"2000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      },
+      {
+         "cycle":2016,
+         "fec_committee_id":"C00575050",
+         "fec_filing_id":1024237,
+         "transaction_id":"6DE024C3050E240A79B1",
+         "entity_type":"PAC",
+         "contributor_fec_id":null,
+         "contributor_organization_name":"NRA Political Victory Fund",
+         "contributor_prefix":null,
+         "contributor_first_name":null,
+         "contributor_middle_name":null,
+         "contributor_last_name":null,
+         "contributor_suffix":null,
+         "contributor_street_1":"11250 Waples Mill Rd",
+         "contributor_street_2":null,
+         "contributor_city":"Fairfax",
+         "contributor_state":"VA",
+         "contributor_zip":null,
+         "contributor_employer":null,
+         "contributor_occupation":null,
+         "contribution_date":"2015-09-07",
+         "contribution_amount":"1000.0",
+         "fec_candidate_id":"H6IL18088",
+         "office_state":"IL"
+      }
+   ],
+   "callback":null
+}
 ```
 
 During the last 20 days before a primary or general election, candidate committees must file reports of any contributions of $1,000 or more within 48 hours of receipt. This endpoint retrieves late contributions from a specific date.
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour/{year}/{month}/{day}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/contributions/48hour/{year}/{month}/{day}`
 
 ### Query Parameters
 
@@ -10039,7 +11457,7 @@ day | The two-digit day from 01-31
 ## Get Lobbyist Bundlers for a Specific Committee
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/"
+curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00579458/lobbyist_bundlers.json"
   -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -10049,7 +11467,7 @@ curl "https://api.propublica.org/campaign-finance/v1/"
 {
    "status":"OK",
    "copyright":"Copyright (c) 2016 ProPublica Inc. All Rights Reserved.",
-   "base_uri":"http://api.propublica.org/campaign-finance/v1/2016/",
+   "base_uri":"https://api.propublica.org/campaign-finance/v1/2016/",
    "cycle":2016,
    "results":[
       {
@@ -10396,7 +11814,7 @@ Committees must report registered lobbyists who act as "bundlers", collecting do
 
 ### HTTP Request
 
-`GET http://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/lobbyist_bundlers`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/committees/{fec-id}/lobbyist_bundlers`
 
 ### Query Parameters
 
