@@ -35,7 +35,9 @@ Using the Campaign Finance API, you can retrieve data from United States [Federa
 
 The ProPublica Campaign Finance database is updated daily (electronic filings are updated every 15 minutes). For general information about FEC data, visit the [FEC Web site](http://www.fec.gov/disclosure.shtml).
 
-The data returned by the Campaign Finance API is subject to the [official sale and use restrictions](http://www.fec.gov/pages/brochures/sale_and_use_brochure.pdf) set by the Federal Election Commission. By accessing this data via the ProPublica API, you understand and acknowledge that you are using the data subject to all applicable local, state and federal law, including the FEC restrictions.
+### Legal
+
+Usage constitues agreement to our [Data Terms of Use](https://www.propublica.org/about/propublica-data-terms-of-use). The data returned by the Campaign Finance API is subject to the [official sale and use restrictions](http://www.fec.gov/pages/brochures/sale_and_use_brochure.pdf) set by the Federal Election Commission. By accessing this data via the ProPublica API, you understand and acknowledge that you are using the data subject to all applicable local, state and federal law, including the FEC restrictions.
 
 
 # Authentication
