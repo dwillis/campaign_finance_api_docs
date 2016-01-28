@@ -81,10 +81,13 @@ html, body {
     }
   }
 
+  &>a {
+    padding-left: 17px;
+  }
+
   // This is the logo at the top of the ToC
   &>img {
     display: block;
-    padding-left: 17px;
   }
 
   &>.search {

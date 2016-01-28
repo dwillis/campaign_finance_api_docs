@@ -1,5 +1,5 @@
 ---
-title: ProPublica Campaign Finance API Reference
+title: ProPublica Campaign Finance API Documentation
 
 language_tabs:
   - shell
@@ -7,6 +7,7 @@ language_tabs:
 toc_footers:
   - <a href='mailto:apihelp@propublica.org'>Request an API Key</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - © Copyright 2016 ProPublica Inc.
 
 includes:
   - errors
@@ -14,7 +15,7 @@ includes:
 search: true
 ---
 
-# Introduction
+# Campaign Finance API Documentation
 
 Using the Campaign Finance API, you can retrieve data from United States [Federal Election Commission](http://www.fec.gov/disclosure.shtml) filings and other sources. The API, which [originated at The New York Times](http://open.blogs.nytimes.com/2008/10/14/announcing-the-new-york-times-campaign-finance-api/) in 2008, covers summary information for candidates and committees, as well as certain types of itemized data. This document describes the requests that users can make of the API and the responses that it returns.
 
