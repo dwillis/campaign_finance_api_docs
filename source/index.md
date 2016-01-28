@@ -49,7 +49,7 @@ curl "api_endpoint_here"
 
 > Make sure to replace `PROPUBLICA_API_KEY` with your API key.
 
-To use the Campaign Finance API, you must sign up for an API key. Usage is limited to 5000 requests per day (rate limits are subject to change). The API key must be included in all API requests to the server, set as a header:
+To use the Campaign Finance API, you must sign up for an API key by emailing [apihelp@propublica.org](mailto:apihelp@propublica.org). Usage is limited to 5000 requests per day (rate limits are subject to change). The API key must be included in all API requests to the server, set as a header:
 
 `X-API-Key: PROPUBLICA_API_KEY`
 
