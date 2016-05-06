@@ -79,11 +79,11 @@ These parameters are used in all request types. See below for URI structures and
 The following parameters are optional:  
 
   * *callback* JSONP callback function (in query string).
-  * *offset* The first 20 results are shown by default. To page through the results, set offset to the appropriate multiple of 20.
+  * *offset* The first 20 results are shown by default for most requests. To page through the results, set offset to the appropriate multiple of 20. Date-based responses return all relevant results.
 
 # Responses
 
-The API provides JSON and XML responses for every type of request, and supports JSONP callbacks. Responses that are not date-based return the first 20 results; pagination is available via an `offset` query string parameter using multiples of 20.
+The API provides JSON and XML responses for every type of request, and supports JSONP callbacks. Responses that are not date-based or containing aggregate totals return the first 20 results; pagination is available via an `offset` query string parameter using multiples of 20.
 
 # Candidates
 
@@ -7464,7 +7464,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/electioneering_communi
 }
 ```
 
-This endpoint retrieves broadcast advertisements that identify one or more federal candidates (and have aired 30 days before a primary election and 60 days before the general election) from a specific date.
+This endpoint retrieves all broadcast advertisements that identify one or more federal candidates (and have aired 30 days before a primary election and 60 days before the general election) from a specific date.
 
 ### HTTP Request
 
@@ -7960,7 +7960,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/independent_expenditur
 }
 ```
 
-This endpoint retrieves the most recent independent expenditures.
+This endpoint retrieves the 20 most recent independent expenditures and optionally can be offset by multiples of 20.
 
 ### HTTP Request
 
@@ -8011,7 +8011,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/independent_expenditur
 }
 ```
 
-This endpoint retrieves the most recent independent expenditures on a specific date (the date of activity, not the date filed with the FEC).
+This endpoint retrieves all independent expenditures on a specific date (the date of activity, not the date filed with the FEC).
 
 ### HTTP Request
 
@@ -8468,7 +8468,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/committees/C00489856/i
 }
 ```
 
-This endpoint retrieves most recent independent expenditures by a given committee.
+This endpoint retrieves the 20 most recent independent expenditures by a given committee.
 
 ### HTTP Request
 
@@ -8864,7 +8864,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/P00003392/i
 }
 ```
 
-This endpoint retrieves most recent independent expenditures in support of or opposition to a given candidate.
+This endpoint retrieves the 20 most recent independent expenditures in support of or opposition to a given candidate.
 
 ### HTTP Request
 
@@ -9356,7 +9356,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/president/independent_
 }
 ```
 
-This endpoint retrieves the most recent independent expenditures in support of or opposition to any presidential candidate.
+This endpoint retrieves the 20 most recent independent expenditures in support of or opposition to any presidential candidate.
 
 ### HTTP Request
 
