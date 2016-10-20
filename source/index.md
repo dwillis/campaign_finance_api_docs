@@ -113,8 +113,8 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/search.json
             "party":"DEM"
          },
          "committee":"/committees/C00442921.json",
-         "state":"/seats/IN.json",
-         "district":"/seats/IN/house/07.json"
+         "state":"/races/IN.json",
+         "district":"/races/IN/house/07.json"
       },
       {
          "candidate":{
@@ -164,10 +164,10 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/P60005915.j
          "id":"H4WA05077",
          "name":"MCMORRIS RODGERS, CATHY",
          "party":"REP",
-         "district":"/seats/WA/house/05.json",
+         "district":"/races/WA/house/05.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?H4WA05077",
          "committee":"/committees/C00390476.json",
-         "state":"/seats/WA.json",
+         "state":"/races/WA.json",
          "mailing_address":"32 EAST 25TH",
          "mailing_city":"SPOKANE",
          "mailing_state":"WA",
@@ -234,7 +234,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S4NC00089.json",
          "name":"BURR, RICHARD",
          "party":"REP",
-         "state":"/seats/NC.json",
+         "state":"/races/NC.json",
          "district":"00",
          "committee":"/committees/C00385526.json",
          "status":"I",
@@ -254,7 +254,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S8NY00082.json",
          "name":"SCHUMER, CHARLES E",
          "party":"DEM",
-         "state":"/seats/NY.json",
+         "state":"/races/NY.json",
          "district":"00",
          "committee":"/committees/C00346312.json",
          "status":"I",
@@ -274,7 +274,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0OH00133.json",
          "name":"PORTMAN, ROB",
          "party":"REP",
-         "state":"/seats/OH.json",
+         "state":"/races/OH.json",
          "district":"00",
          "committee":"/committees/C00458463.json",
          "status":"I",
@@ -294,7 +294,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/H6CA22125.json",
          "name":"MCCARTHY, KEVIN",
          "party":"REP",
-         "state":"/seats/CA.json",
+         "state":"/races/CA.json",
          "district":"23",
          "committee":"/committees/C00420935.json",
          "status":"I",
@@ -314,7 +314,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S4PA00121.json",
          "name":"TOOMEY, PATRICK JOSEPH",
          "party":"REP",
-         "state":"/seats/PA.json",
+         "state":"/races/PA.json",
          "district":"00",
          "committee":"/committees/C00461046.json",
          "status":"I",
@@ -334,7 +334,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0MO00183.json",
          "name":"BLUNT, ROY",
          "party":"REP",
-         "state":"/seats/MO.json",
+         "state":"/races/MO.json",
          "district":"00",
          "committee":"/committees/C00304758.json",
          "status":"I",
@@ -354,7 +354,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S6GA00119.json",
          "name":"ISAKSON, JOHN HARDY",
          "party":"REP",
-         "state":"/seats/GA.json",
+         "state":"/races/GA.json",
          "district":"00",
          "committee":"/committees/C00384693.json",
          "status":"I",
@@ -374,7 +374,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0CO00211.json",
          "name":"BENNET, MICHAEL F",
          "party":"DEM",
-         "state":"/seats/CO.json",
+         "state":"/races/CO.json",
          "district":"00",
          "committee":"/committees/C00458398.json",
          "status":"I",
@@ -394,7 +394,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S2WA00189.json",
          "name":"MURRAY, PATTY",
          "party":"DEM",
-         "state":"/seats/WA.json",
+         "state":"/races/WA.json",
          "district":"00",
          "committee":"/committees/C00257642.json",
          "status":"I",
@@ -414,7 +414,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S4SC00240.json",
          "name":"SCOTT, TIMOTHY E",
          "party":"REP",
-         "state":"/seats/SC.json",
+         "state":"/races/SC.json",
          "district":"00",
          "committee":"/committees/C00540302.json",
          "status":"I",
@@ -434,7 +434,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S2SD00068.json",
          "name":"THUNE, JOHN",
          "party":"REP",
-         "state":"/seats/SD.json",
+         "state":"/races/SD.json",
          "district":"00",
          "committee":"/committees/C00409581.json",
          "status":"I",
@@ -454,7 +454,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S4AK00099.json",
          "name":"MURKOWSKI, LISA",
          "party":"REP",
-         "state":"/seats/AK.json",
+         "state":"/races/AK.json",
          "district":"00",
          "committee":"/committees/C00384529.json",
          "status":"I",
@@ -474,7 +474,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/H8WI01024.json",
          "name":"RYAN, PAUL D.",
          "party":"REP",
-         "state":"/seats/WI.json",
+         "state":"/races/WI.json",
          "district":"01",
          "committee":"/committees/C00330894.json",
          "status":"I",
@@ -494,7 +494,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/H0OH08029.json",
          "name":"BOEHNER, JOHN A.",
          "party":"REP",
-         "state":"/seats/OH.json",
+         "state":"/races/OH.json",
          "district":"08",
          "committee":"/committees/C00237198.json",
          "status":"I",
@@ -514,7 +514,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0IL00261.json",
          "name":"KIRK, MARK STEVEN",
          "party":"REP",
-         "state":"/seats/IL.json",
+         "state":"/races/IL.json",
          "district":"00",
          "committee":"/committees/C00350785.json",
          "status":"I",
@@ -534,7 +534,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S6FL00319.json",
          "name":"MURPHY, PATRICK E",
          "party":"DEM",
-         "state":"/seats/FL.json",
+         "state":"/races/FL.json",
          "district":"00",
          "committee":"/committees/C00493825.json",
          "status":"O",
@@ -554,7 +554,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0IA00028.json",
          "name":"GRASSLEY, CHARLES E SENATOR",
          "party":"REP",
-         "state":"/seats/IA.json",
+         "state":"/races/IA.json",
          "district":"00",
          "committee":"/committees/C00230482.json",
          "status":"I",
@@ -574,7 +574,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/H2PA09035.json",
          "name":"SHUSTER, WILLIAM MR.",
          "party":"REP",
-         "state":"/seats/PA.json",
+         "state":"/races/PA.json",
          "district":"09",
          "committee":"/committees/C00364935.json",
          "status":"I",
@@ -594,7 +594,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S0KS00091.json",
          "name":"MORAN, JERRY",
          "party":"REP",
-         "state":"/seats/KS.json",
+         "state":"/races/KS.json",
          "district":"00",
          "committee":"/committees/C00458315.json",
          "status":"I",
@@ -614,7 +614,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/leaders/pac
          "relative_uri":"/candidates/S8ID00027.json",
          "name":"CRAPO, MICHAEL D",
          "party":"REP",
-         "state":"/seats/ID.json",
+         "state":"/races/ID.json",
          "district":"00",
          "committee":"/committees/C00330886.json",
          "status":"I",
@@ -661,7 +661,7 @@ category | One of the values from the following categories:
 ## Get Candidates from a State
 
 ```shell
-curl "https://api.propublica.org/campaign-finance/v1/2016/seats/DE.json"
+curl "https://api.propublica.org/campaign-finance/v1/2016/races/DE.json"
  -H "X-API-Key: PROPUBLICA_API_KEY"
 ```
 
@@ -683,7 +683,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/seats/DE.json"
             "party":"DEM"
          },
          "committee":"/committees/C00460899.json",
-         "state":"/seats/DE.json",
+         "state":"/races/DE.json",
          "district":null
       },
       {
@@ -694,7 +694,7 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/seats/DE.json"
             "party":"REP"
          },
          "committee":"/committees/C00574129.json",
-         "state":"/seats/DE.json",
+         "state":"/races/DE.json",
          "district":null
       }
    ]
@@ -705,7 +705,7 @@ This endpoint retrieves an array of FEC candidates for a given state (and option
 
 ### HTTP Request
 
-`GET https://api.propublica.org/campaign-finance/v1/{cycle}/candidates/states/{state}/{chamber}/{district}`
+`GET https://api.propublica.org/campaign-finance/v1/{cycle}/races/{state}/{chamber}/{district}`
 
 ### URL Parameters
 
@@ -713,8 +713,7 @@ Parameter | Description
 --------- | -----------
 state | Two-letter state abbreviation
 chamber | `house` or `senate` (optional)
-district | Specify the district number. Use `1` for states with a single representative. (House requests only - districts with Senate requests will be ignored.)
-
+district | Specify the district number. Don't include for states with a single representative (AL, DE, DC, MT, ND, SD, VT). (House requests only - districts with Senate requests will be ignored.)
 
 ## Get Recently Added Candidates
 
@@ -749,12 +748,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"H6MN06157",
          "relative_uri":"/candidates/H6MN06157.json",
          "name":"HELLAND, ROBERT RANDOLPH",
-         "district":"/seats/MN/house/06.json",
+         "district":"/races/MN/house/06.json",
          "mailing_city":"ST PAUL ",
          "mailing_state":"MN",
          "mailing_zip":"55105",
          "party":"UNK",
-         "state":"/seats/MN.json",
+         "state":"/races/MN.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?H6MN06157",
          "committee":"/committees/C00587907.json"
       },
@@ -801,12 +800,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"S0NH00235",
          "relative_uri":"/candidates/S0NH00235.json",
          "name":"AYOTTE, KELLY A",
-         "district":"/seats/NH/senate.json",
+         "district":"/races/NH/senate.json",
          "mailing_city":"MANCHESTER",
          "mailing_state":"NH",
          "mailing_zip":"03105",
          "party":"REP",
-         "state":"/seats/NH.json",
+         "state":"/races/NH.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?S0NH00235",
          "committee":"/committees/C00464297.json"
       },
@@ -814,12 +813,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"H0WI08075",
          "relative_uri":"/candidates/H0WI08075.json",
          "name":"RIBBLE, REID J. REP.",
-         "district":"/seats/WI/house/08.json",
+         "district":"/races/WI/house/08.json",
          "mailing_city":"SHERWOOD",
          "mailing_state":"WI",
          "mailing_zip":"54169",
          "party":"REP",
-         "state":"/seats/WI.json",
+         "state":"/races/WI.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?H0WI08075",
          "committee":"/committees/C00463620.json"
       },
@@ -827,12 +826,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"S6CO00242",
          "relative_uri":"/candidates/S6CO00242.json",
          "name":"KINLAW, MICHAEL",
-         "district":"/seats/CO/senate.json",
+         "district":"/races/CO/senate.json",
          "mailing_city":"COLORADO SPRINGS",
          "mailing_state":"CO",
          "mailing_zip":"80949",
          "party":"REP",
-         "state":"/seats/CO.json",
+         "state":"/races/CO.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?S6CO00242",
          "committee":"/committees/C00576298.json"
       },
@@ -970,12 +969,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"H4ME02200",
          "relative_uri":"/candidates/H4ME02200.json",
          "name":"CAIN, EMILY",
-         "district":"/seats/ME/house/02.json",
+         "district":"/races/ME/house/02.json",
          "mailing_city":"BANGOR",
          "mailing_state":"ME",
          "mailing_zip":"04402",
          "party":"DEM",
-         "state":"/seats/ME.json",
+         "state":"/races/ME.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?H4ME02200",
          "committee":"/committees/C00546077.json"
       },
@@ -983,12 +982,12 @@ curl "https://api.propublica.org/campaign-finance/v1/2016/candidates/new.json"
          "id":"H6AL02142",
          "relative_uri":"/candidates/H6AL02142.json",
          "name":"GERRITSON, REBECCA (BECKY)",
-         "district":"/seats/AL/house/02.json",
+         "district":"/races/AL/house/02.json",
          "mailing_city":"WETUMPKA",
          "mailing_state":"AL",
          "mailing_zip":"36902",
          "party":"REP",
-         "state":"/seats/AL.json",
+         "state":"/races/AL.json",
          "fec_uri":"http://docquery.fec.gov/cgi-bin/fecimg/?H6AL02142",
          "committee":"/committees/C00588244.json"
       }
